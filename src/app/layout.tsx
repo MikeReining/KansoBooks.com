@@ -13,7 +13,12 @@ export const metadata: Metadata = {
     "KansoBooks helps small-business owners get their books ready, correct, and packaged without giving up ownership of their financial files.",
   metadataBase: new URL("https://kansobooks.com"),
   icons: {
-    icon: "/brand/kanso-logo.png",
+    icon: [
+      {
+        url: "/brand/favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
     apple: "/brand/kanso-logo.png",
   },
 };
