@@ -1,6 +1,6 @@
 # Deploy Setup
 
-**Status:** Pending external service setup
+**Status:** Initial production deploy complete
 **Authority:** Deployment checklist for `KansoBooks.com`. Product and data
 boundaries remain governed by `docs/KansoBooksManifesto.md`,
 `docs/KansoBooksWedge.md`, and `docs/phases/FoundationSetup.md`.
@@ -17,10 +17,24 @@ to `main` can safely ship the public website and control-plane routes.
 - [x] GitHub remote: `https://github.com/MikeReining/KansoBooks.com.git`
 - [x] Foundation commit pushed.
 - [x] Local build passes.
-- [ ] Vercel project connected.
-- [ ] Production domain connected.
-- [ ] Supabase project created.
+- [x] Vercel project connected.
+- [x] Production domain connected.
+- [x] Supabase project created.
 - [ ] Lemon Squeezy store/products/webhooks created.
+
+## Live URLs
+
+```text
+https://kanso-books-com.vercel.app/
+https://kansobooks.com/
+https://www.kansobooks.com/
+```
+
+Current domain behavior:
+
+- `https://kansobooks.com/` redirects to `https://www.kansobooks.com/`
+- `https://www.kansobooks.com/` returns `200 OK`
+- `https://kanso-books-com.vercel.app/` returns `200 OK`
 
 ## Vercel
 
@@ -136,8 +150,8 @@ Before the first production announcement:
 - [ ] `npm run typecheck`
 - [ ] `npm run lint`
 - [ ] `npm run build`
-- [ ] Vercel production deploy succeeds
-- [ ] homepage loads at apex domain
-- [ ] `www` redirects or resolves cleanly
+- [x] Vercel production deploy succeeds
+- [x] homepage loads at apex domain
+- [x] `www` redirects or resolves cleanly
 - [ ] Lemon Squeezy test webhook returns `200`
 - [ ] webhook event is recorded idempotently in Supabase

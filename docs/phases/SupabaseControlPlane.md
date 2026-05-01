@@ -1,6 +1,6 @@
 # Supabase Control Plane
 
-**Status:** Initial schema drafted
+**Status:** Initial schema applied in Supabase
 **Authority:** Backend control-plane schema for the website. Subordinate to the
 local-first boundary in `docs/KansoBooksManifesto.md` and
 `docs/KansoBooksWedge.md`.
