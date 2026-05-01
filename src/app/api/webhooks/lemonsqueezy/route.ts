@@ -31,16 +31,19 @@ function verifySignature(rawBody: string, signatureHeader: string | null) {
 function parseWebhookPayload(rawBody: string) {
   const payload = JSON.parse(rawBody) as LemonSqueezyWebhookPayload;
   const eventName = payload.meta?.event_name;
-  const externalId = payload.data?.id;
+  const resourceId = payload.data?.id;
   const resourceType = payload.data?.type;
+  const externalEventId =
+    payload.meta?.webhook_id ?? `${eventName}:${resourceType}:${resourceId}`;
 
-  if (!eventName || !externalId || !resourceType) {
+  if (!eventName || !resourceId || !resourceType) {
     throw new Error("Invalid Lemon Squeezy webhook payload");
   }
 
   return {
     eventName,
-    externalId,
+    externalEventId,
+    resourceId,
     resourceType,
     payload,
   };

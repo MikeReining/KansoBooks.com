@@ -1,6 +1,9 @@
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+
 export type LemonSqueezyWebhookPayload = {
   meta?: {
     event_name?: string;
+    webhook_id?: string;
     custom_data?: Record<string, unknown>;
   };
   data?: {
@@ -12,7 +15,8 @@ export type LemonSqueezyWebhookPayload = {
 
 export type VerifiedLemonSqueezyEvent = {
   eventName: string;
-  externalId: string;
+  externalEventId: string;
+  resourceId: string;
   resourceType: string;
   payload: LemonSqueezyWebhookPayload;
 };
@@ -20,7 +24,24 @@ export type VerifiedLemonSqueezyEvent = {
 export async function recordLemonSqueezyWebhook(
   event: VerifiedLemonSqueezyEvent,
 ) {
-  // Supabase schema lands in the next slice. This boundary prevents webhook
-  // parsing from spreading into route handlers once persistence is added.
-  void event;
+  const supabase = createSupabaseAdminClient();
+  const { error } = await supabase.from("webhook_events").upsert(
+    {
+      provider: "lemonsqueezy",
+      event_name: event.eventName,
+      external_event_id: event.externalEventId,
+      resource_type: event.resourceType,
+      resource_id: event.resourceId,
+      payload: event.payload,
+      processed_at: new Date().toISOString(),
+    },
+    {
+      onConflict: "provider,external_event_id",
+      ignoreDuplicates: true,
+    },
+  );
+
+  if (error) {
+    throw error;
+  }
 }
