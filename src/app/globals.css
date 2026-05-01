@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@config "../../tailwind.config.ts";
+
+@layer base {
+  :root {
+    --background: hsl(0 0% 100%);
+    --foreground: hsl(0 0% 14.5%);
+
+    --card: hsl(0 0% 100%);
+    --card-foreground: hsl(0 0% 14.5%);
+    --popover: hsl(0 0% 100%);
+    --popover-foreground: hsl(0 0% 14.5%);
+
+    --primary: hsl(211 84% 38%);
+    --primary-hover: hsl(211 84% 32%);
+    --primary-soft: hsl(214 80% 96%);
+    --primary-foreground: hsl(0 0% 100%);
+    --secondary: hsl(0 0% 100%);
+    --secondary-foreground: hsl(0 0% 14.5%);
+
+    --muted: hsl(0 0% 97%);
+    --muted-foreground: hsl(0 0% 45%);
+    --accent: hsl(214 80% 96%);
+    --accent-foreground: hsl(0 0% 14.5%);
+
+    --border: hsl(0 0% 90%);
+    --input: hsl(0 0% 90%);
+    --ring: hsl(211 84% 38%);
+
+    --success: hsl(151 55% 35%);
+    --success-soft: hsl(150 60% 96%);
+    --warning: hsl(38 92% 45%);
+    --warning-soft: hsl(45 90% 96%);
+    --destructive: hsl(0 72% 48%);
+    --destructive-soft: hsl(0 86% 97%);
+    --info: hsl(211 84% 38%);
+    --info-soft: hsl(214 80% 96%);
+    --graphite: hsl(0 0% 20.5%);
+
+    --radius: 0.5rem;
+  }
+
+  @supports (color: oklch(1 0 0)) {
+    :root {
+      --background: oklch(0.985 0 0);
+      --foreground: oklch(0.145 0 0);
+      --card: oklch(1 0 0);
+      --card-foreground: oklch(0.145 0 0);
+      --popover: oklch(1 0 0);
+      --popover-foreground: oklch(0.145 0 0);
+      --primary: oklch(0.55 0.12 240);
+      --primary-hover: oklch(0.5 0.12 240);
+      --primary-soft: oklch(0.93 0.03 240);
+      --primary-foreground: oklch(0.985 0 0);
+      --secondary: oklch(1 0 0);
+      --secondary-foreground: oklch(0.145 0 0);
+      --muted: oklch(0.97 0 0);
+      --muted-foreground: oklch(0.556 0 0);
+      --accent: oklch(0.93 0.03 240);
+      --accent-foreground: oklch(0.145 0 0);
+      --border: oklch(0.92 0 0);
+      --input: oklch(0.92 0 0);
+      --ring: oklch(0.55 0.12 240);
+      --success: oklch(0.65 0.1 150);
+      --success-soft: oklch(0.94 0.03 150);
+      --warning: oklch(0.78 0.12 85);
+      --warning-soft: oklch(0.96 0.03 85);
+      --destructive: oklch(0.577 0.245 27.325);
+      --destructive-soft: oklch(0.96 0.02 27);
+      --info: oklch(0.55 0.12 240);
+      --info-soft: oklch(0.93 0.03 240);
+      --graphite: oklch(0.205 0 0);
+    }
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+}
