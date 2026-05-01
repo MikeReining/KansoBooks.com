@@ -7,6 +7,7 @@ import {
   FolderOpen,
   LockKeyhole,
 } from "lucide-react";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 
@@ -28,9 +29,15 @@ export default function Home() {
       <header className="border-b border-border bg-card">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
           <a className="flex items-center gap-3" href="#" aria-label="KansoBooks">
-            <span className="flex size-8 items-center justify-center rounded-full bg-foreground text-primary-foreground">
-              <span className="h-px w-5 bg-primary-foreground" />
-            </span>
+            <Image
+              alt=""
+              aria-hidden="true"
+              className="size-8"
+              height={32}
+              priority
+              src="/brand/kanso-logo.png"
+              width={32}
+            />
             <span className="text-base font-semibold text-foreground">
               Kanso<span className="font-normal">Books</span>
             </span>
