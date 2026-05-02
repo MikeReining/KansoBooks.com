@@ -211,46 +211,51 @@ const accountantOutputItems = [
   },
 ];
 
-const comparisonCards = [
+const kansoDifferenceCards = [
   {
-    name: "QuickBooks",
-    description: "Powerful software, but you still do the work.",
+    title: "Cloud accounting software",
+    summary: "Tools for doing the bookkeeping yourself.",
     points: [
-      "Monthly subscription",
-      "Manual review and cleanup",
-      "Still easy to feel unsure",
+      "You learn the system",
+      "You categorize and clean up",
+      "You still wonder if it's right",
     ],
-    annualPrice: "$456",
-    priceDetail: "$38/month",
-    icon: "quickbooks",
+    costLabel: "Free to paid SaaS",
+    outcome: "More effort. More uncertainty.",
+    tone: "old-software",
   },
   {
-    name: "Bench / Bookkeeper",
-    description: "Peace of mind, but expensive.",
+    title: "Traditional bookkeeping",
+    summary: "Relief from the work, but at service pricing.",
     points: [
       "Human help",
-      "Monthly bookkeeping service",
-      "Higher cost for small operators",
+      "Higher service cost",
+      "Slower handoff and follow-up",
     ],
-    annualPrice: "$2,388",
-    priceDetail: "$199/month",
-    icon: "bench",
+    costLabel: "Hundreds per month",
+    outcome: "Less work. Higher price.",
+    tone: "bookkeeping-service",
+  },
+  {
+    title: "KansoBooks",
+    summary: "Finished books with proof behind the numbers.",
+    points: [
+      "Eve drafts, Kanso proves, you review",
+      "Reports with proof trail",
+      "Tax and audit ready books",
+    ],
+    costLabel: "Kanso Core included",
+    outcome: "Bookkeeper-level confidence.",
+    tone: "kanso",
   },
 ] satisfies Array<{
-  name: string;
-  description: string;
+  title: string;
+  summary: string;
   points: string[];
-  annualPrice: string;
-  priceDetail: string;
-  icon: "quickbooks" | "bench";
+  costLabel: string;
+  outcome: string;
+  tone: "old-software" | "bookkeeping-service" | "kanso";
 }>;
-
-const kansoPricingBenefits = [
-  "AI-speed bookkeeping",
-  "Proof-grade review",
-  "Accountant-ready package",
-  "Local software",
-];
 
 const privacyBullets = [
   "Your books are stored locally on your computer",
@@ -465,128 +470,309 @@ function ComparisonIcon({ type }: { type: "quickbooks" | "bench" }) {
   );
 }
 
-function ComparisonCard({
-  name,
-  description,
-  points,
-  annualPrice,
-  priceDetail,
-  icon,
-}: (typeof comparisonCards)[number]) {
+function DifferenceOldSoftwareIcon() {
   return (
-    <div className="flex min-h-[430px] flex-col rounded-lg border border-border bg-card p-7 shadow-[0_14px_35px_rgba(15,23,42,0.07)]">
-      <ComparisonIcon type={icon} />
-      <h3 className="mt-7 text-2xl font-semibold tracking-normal text-foreground">
-        {name}
-      </h3>
-      <p className="mt-5 max-w-[250px] text-lg leading-7 text-muted-foreground">
-        {description}
-      </p>
-
-      <div className="mt-6 border-t border-border pt-6">
-        <div className="grid gap-5">
-          {points.map((point) => (
-            <div
-              className="flex items-center gap-4 text-base leading-6 text-muted-foreground"
-              key={point}
-            >
-              <span className="size-2 rounded-full bg-muted-foreground" />
-              <span>{point}</span>
-            </div>
+    <div className="relative mx-auto flex size-24 items-center justify-center text-muted-foreground">
+      <div className="relative h-[62px] w-[76px] rounded border-2 border-muted-foreground/70 bg-card">
+        <div className="flex h-3 items-center gap-1 border-b-2 border-muted-foreground/60 px-2">
+          <span className="size-1.5 rounded-full bg-muted-foreground/70" />
+          <span className="size-1.5 rounded-full bg-muted-foreground/70" />
+          <span className="size-1.5 rounded-full bg-muted-foreground/70" />
+        </div>
+        <div className="grid grid-cols-2 gap-px p-3">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <span
+              className="h-3 border border-muted-foreground/35"
+              key={index}
+            />
           ))}
         </div>
       </div>
-
-      <div className="mt-auto border-t border-border pt-7">
-        <p className="text-5xl font-semibold tracking-normal text-foreground">
-          {annualPrice}
-          <span className="text-2xl font-normal">/year</span>
-        </p>
-        <p className="mt-3 text-base leading-6 text-muted-foreground">
-          {priceDetail}
-        </p>
-      </div>
+      <DollarSign
+        className="absolute right-2 top-9 size-7 text-muted-foreground"
+        strokeWidth={1.7}
+        aria-hidden="true"
+      />
     </div>
   );
 }
 
-function PricingSection() {
+function DifferenceBookkeepingIcon() {
+  return (
+    <div className="relative mx-auto flex size-24 items-center justify-center text-foreground">
+      <User
+        className="absolute left-3 top-2 size-16"
+        strokeWidth={1.6}
+        aria-hidden="true"
+      />
+      <Briefcase
+        className="absolute bottom-5 right-5 size-12 bg-card"
+        strokeWidth={1.6}
+        aria-hidden="true"
+      />
+      <span className="absolute bottom-3 right-2 flex size-8 items-center justify-center rounded-full border-2 border-card bg-info-soft text-info">
+        <Check className="size-5" strokeWidth={2.4} aria-hidden="true" />
+      </span>
+    </div>
+  );
+}
+
+function DifferenceKansoIcon() {
+  return (
+    <div className="mx-auto flex size-24 items-center justify-center">
+      <Image
+        alt=""
+        aria-hidden="true"
+        className="size-20"
+        height={80}
+        src="/brand/kanso-logo.png"
+        width={80}
+      />
+    </div>
+  );
+}
+
+function KansoDifferenceIcon({
+  tone,
+}: {
+  tone: (typeof kansoDifferenceCards)[number]["tone"];
+}) {
+  if (tone === "old-software") {
+    return <DifferenceOldSoftwareIcon />;
+  }
+
+  if (tone === "bookkeeping-service") {
+    return <DifferenceBookkeepingIcon />;
+  }
+
+  return <DifferenceKansoIcon />;
+}
+
+function KansoDifferencePoint({
+  children,
+  featured,
+}: {
+  children: React.ReactNode;
+  featured: boolean;
+}) {
+  if (featured) {
+    return (
+      <li className="flex items-center gap-4 text-base leading-6 text-foreground">
+        <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-success-soft text-success">
+          <Check className="size-5" strokeWidth={3} aria-hidden="true" />
+        </span>
+        <span>{children}</span>
+      </li>
+    );
+  }
+
+  return (
+    <li className="flex items-center gap-4 text-base leading-6 text-foreground">
+      <span className="ml-1 size-2 shrink-0 rounded-full bg-muted-foreground/65" />
+      <span>{children}</span>
+    </li>
+  );
+}
+
+function KansoDifferenceCard({
+  title,
+  summary,
+  points,
+  costLabel,
+  outcome,
+  tone,
+}: (typeof kansoDifferenceCards)[number]) {
+  const featured = tone === "kanso";
+
+  return (
+    <article
+      className={`relative grid grid-rows-[84px_96px_164px_82px_52px] rounded-lg border bg-card p-5 text-center shadow-[0_16px_45px_rgba(15,23,42,0.06)] ${
+        featured
+          ? "border-info shadow-[0_20px_55px_rgba(20,70,130,0.14)]"
+          : "border-border"
+      }`}
+    >
+      <div className="flex items-center justify-center gap-4">
+        {featured ? (
+          <Image
+            alt=""
+            aria-hidden="true"
+            className="size-12 shrink-0"
+            height={48}
+            src="/brand/kanso-logo.png"
+            width={48}
+          />
+        ) : (
+          <div className="shrink-0 scale-[0.52]">
+            <KansoDifferenceIcon tone={tone} />
+          </div>
+        )}
+        <h3 className="text-left text-2xl font-semibold leading-8 tracking-normal text-foreground">
+          {featured ? (
+            <>
+              Kanso<span className="font-normal">Books</span>
+            </>
+          ) : (
+            title
+          )}
+        </h3>
+      </div>
+
+      <p className="mx-auto flex max-w-[290px] items-center justify-center px-2 text-lg leading-7 text-muted-foreground">
+        {summary}
+      </p>
+
+      <div className="border-t border-border pt-6 text-left">
+        <ul className="grid gap-4">
+          {points.map((point) => (
+            <KansoDifferencePoint featured={featured} key={point}>
+              {point}
+            </KansoDifferencePoint>
+          ))}
+        </ul>
+      </div>
+
+      <div className="border-t border-border pt-6">
+        {featured ? (
+          <div className="grid grid-cols-2 gap-5 text-left">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-info">
+                Kanso Core
+              </p>
+              <p className="mt-2 text-2xl font-semibold tracking-normal text-foreground">
+                Included
+              </p>
+            </div>
+            <div className="border-l border-border pl-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-info">
+                Eve + Automation
+              </p>
+              <p className="mt-2 text-2xl font-semibold tracking-normal text-info">
+                $99/year
+              </p>
+            </div>
+          </div>
+        ) : (
+          <p className="text-2xl font-semibold leading-8 tracking-normal text-foreground">
+            {costLabel}
+          </p>
+        )}
+      </div>
+
+      <p
+        className={`border-t border-border pt-5 text-base font-semibold leading-7 ${
+          featured ? "text-info" : "text-muted-foreground"
+        }`}
+      >
+        {outcome}
+      </p>
+    </article>
+  );
+}
+
+function KansoDifferenceSection() {
   return (
     <section
       id="pricing"
-      className="border-b border-border bg-info-soft/25 px-6 py-16 sm:px-10 lg:py-20"
+      className="relative overflow-hidden border-b border-border bg-card px-6 py-14 sm:px-10 lg:py-18"
     >
-      <div className="mx-auto max-w-[1080px] text-center">
+      <span id="kanso-difference" className="sr-only" aria-hidden="true" />
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-24 top-6 hidden h-[420px] w-[420px] text-info/10 lg:block"
+        fill="none"
+        viewBox="0 0 420 420"
+      >
+        <circle cx="210" cy="210" r="198" stroke="currentColor" />
+        <circle cx="210" cy="210" r="178" stroke="currentColor" />
+        <circle cx="210" cy="210" r="158" stroke="currentColor" />
+      </svg>
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-32 bottom-8 hidden h-[460px] w-[460px] text-info/10 lg:block"
+        fill="none"
+        viewBox="0 0 460 460"
+      >
+        <circle cx="230" cy="230" r="216" stroke="currentColor" />
+        <circle cx="230" cy="230" r="194" stroke="currentColor" />
+        <circle cx="230" cy="230" r="172" stroke="currentColor" />
+      </svg>
+
+      <div className="relative mx-auto max-w-[1320px] text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-info">
-          Value Without The Old Rent
+          The Kanso Difference
         </p>
-        <h2 className="mx-auto mt-6 max-w-[860px] text-4xl font-semibold leading-[1.12] tracking-normal text-foreground sm:text-5xl lg:text-6xl">
-          Bookkeeper-quality output.
-          <br />
-          Software-level price.
+        <h2 className="mx-auto mt-6 max-w-[900px] text-4xl font-semibold leading-[1.12] tracking-normal text-foreground sm:text-5xl lg:text-6xl">
+          Why Kanso feels different.
         </h2>
-        <p className="mx-auto mt-7 max-w-[690px] text-lg leading-8 text-muted-foreground">
-          KansoBooks gives you the finished books package small businesses pay
-          bookkeepers for, without the monthly software rent, endless cleanup,
-          or expensive human data entry.
+        <p className="mx-auto mt-7 max-w-[820px] text-lg leading-8 text-muted-foreground">
+          QuickBooks and Wave give you tools. Bookkeepers give you relief.
+          KansoBooks gives you a third path: finished books you can verify, at a
+          price small businesses can actually afford.
+        </p>
+        <p className="mx-auto mt-5 max-w-[760px] text-lg font-semibold leading-8 text-foreground">
+          Eve prepares the work. Kanso proves the numbers. You review what needs
+          you.
         </p>
 
-        <div className="mt-12 grid gap-7 text-left lg:grid-cols-[1fr_1fr_1.1fr]">
-          {comparisonCards.map((card) => (
-            <ComparisonCard key={card.name} {...card} />
+        <div className="mt-10 grid gap-6 text-left lg:grid-cols-[1fr_1fr_1.15fr]">
+          {kansoDifferenceCards.map((card) => (
+            <KansoDifferenceCard key={card.title} {...card} />
           ))}
+        </div>
 
-          <div className="rounded-lg border border-info bg-card p-7 shadow-[0_18px_45px_rgba(37,99,235,0.16)]">
+        <div className="mx-auto mt-7 grid max-w-[1120px] gap-6 rounded-lg border border-info/25 bg-info-soft/25 px-6 py-5 text-left shadow-sm lg:grid-cols-[0.9fr_1.35fr_auto] lg:items-center">
+          <div className="flex items-center gap-5">
+            <ShieldCheck
+              className="size-12 shrink-0 text-info"
+              strokeWidth={1.7}
+              aria-hidden="true"
+            />
             <div>
-              <span className="flex size-14 items-center justify-center rounded-full border border-border bg-card shadow-sm">
-                <Image
-                  alt=""
-                  aria-hidden="true"
-                  className="size-10"
-                  height={40}
-                  src="/brand/kanso-logo.png"
-                  width={40}
-                />
-              </span>
-              <h3 className="mt-7 text-3xl font-semibold tracking-normal text-foreground">
-                Kanso<span className="font-normal">Books</span>
-              </h3>
-            </div>
-
-            <p className="mt-5 text-lg leading-7 text-muted-foreground">
-              Eve prepares the work.
-              <br />
-              Kanso proves it.
-            </p>
-
-            <div className="mt-6 border-t border-border pt-6">
-              <div className="grid gap-4">
-                {kansoPricingBenefits.map((benefit) => (
-                  <SmallCheckLine key={benefit}>{benefit}</SmallCheckLine>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-7 border-t border-border pt-6 text-center">
-              <p className="text-5xl font-semibold tracking-normal text-foreground">
-                $99<span className="text-2xl font-normal">/year</span>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-info">
+                Kanso Core
               </p>
-              <Button
-                asChild
-                className="mt-6 h-14 w-full text-lg shadow-[0_12px_25px_rgba(20,70,130,0.18)]"
-              >
-                <a href={WAITLIST_URL}>Join Waitlist</a>
-              </Button>
+              <p className="mt-2 text-3xl font-semibold tracking-normal text-foreground">
+                Included
+              </p>
+              <p className="mt-1 text-sm leading-5 text-muted-foreground">
+                Download and try it.
+              </p>
             </div>
           </div>
+
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-info">
+              Eve + Automation
+            </p>
+            <p className="mt-2 text-xl font-semibold leading-8 text-foreground">
+              Bookkeeper-quality AI + automations for $99/year.
+              <br />
+              Easy to Demo and Try.
+            </p>
+          </div>
+
+          <Button
+            asChild
+            className="h-14 px-7 text-base shadow-[0_12px_25px_rgba(20,70,130,0.18)]"
+          >
+            <a href={WAITLIST_URL}>
+              Join Waitlist
+              <ArrowRight className="size-5" aria-hidden="true" />
+            </a>
+          </Button>
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-[720px] items-center justify-center gap-5 text-base leading-7 text-muted-foreground">
-          <ShieldCheck className="size-9 shrink-0 text-info" aria-hidden="true" />
-          <p>
-            Save the human judgment for your accountant, not the data entry.
-          </p>
-        </div>
+        <Button
+          asChild
+          className="mt-8 h-12 px-0 text-lg text-info hover:text-info"
+          variant="ghost"
+        >
+          <a href="#workflow">
+            See how Kanso works
+            <ArrowRight className="size-6" aria-hidden="true" />
+          </a>
+        </Button>
       </div>
     </section>
   );
@@ -971,17 +1157,27 @@ function WhoThisIsForSection() {
   );
 }
 
-function MigrationMetaTile({
-  label,
-  icon: Icon,
+function MigrationMetaList({
+  items,
 }: {
-  label: string;
-  icon: LucideIcon;
+  items: Array<{ label: string; icon: LucideIcon }>;
 }) {
   return (
-    <div className="flex min-h-[74px] min-w-[88px] flex-col items-center justify-center rounded-lg bg-info-soft/55 px-3 py-3 text-center text-xs leading-4 text-muted-foreground">
-      <Icon className="size-5 text-muted-foreground" aria-hidden="true" />
-      <span className="mt-1">{label}</span>
+    <div className="mt-7 rounded-lg bg-info-soft/55 px-5 py-4">
+      <div className="grid gap-3">
+        {items.map(({ label, icon: Icon }) => (
+          <div
+            className="flex items-center gap-3 text-sm font-medium leading-5 text-foreground"
+            key={label}
+          >
+            <Icon
+              className="size-5 shrink-0 text-muted-foreground"
+              aria-hidden="true"
+            />
+            <span>{label}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -1006,7 +1202,7 @@ function MigrationStepCard({
 
 function QuickBooksMigrationVisual() {
   return (
-    <div className="relative grid gap-6 lg:grid-cols-[1fr_1.14fr_1fr]">
+    <div className="relative grid gap-6 lg:grid-cols-3">
       <MigrationStepCard>
         <div className="mx-auto flex size-40 items-center justify-center rounded-full bg-info-soft/45">
           <div className="relative flex size-24 items-center justify-center rounded-lg bg-info-soft text-info">
@@ -1026,11 +1222,7 @@ function QuickBooksMigrationVisual() {
         <p className="mx-auto mt-4 max-w-[240px] text-base leading-7 text-muted-foreground">
           Bring over useful history, categories, balances, and notes.
         </p>
-        <div className="mt-7 flex justify-center gap-3">
-          {migrationMetaItems.map((item) => (
-            <MigrationMetaTile key={item.label} {...item} />
-          ))}
-        </div>
+        <MigrationMetaList items={migrationMetaItems} />
       </MigrationStepCard>
 
       <MigrationStepCard featured>
@@ -1099,11 +1291,7 @@ function QuickBooksMigrationVisual() {
         <p className="mx-auto mt-4 max-w-[250px] text-base leading-7 text-muted-foreground">
           Your accountant gets a finished package, not a QuickBooks mess.
         </p>
-        <div className="mt-7 flex justify-center gap-3">
-          {packageMetaItems.map((item) => (
-            <MigrationMetaTile key={item.label} {...item} />
-          ))}
-        </div>
+        <MigrationMetaList items={packageMetaItems} />
       </MigrationStepCard>
     </div>
   );
@@ -2358,7 +2546,7 @@ export default function Home() {
       <DemoSection />
       <ProofGradeTrustSection />
       <AccountantReadyOutputSection />
-      <PricingSection />
+      <KansoDifferenceSection />
       <WhoThisIsForSection />
       <QuickBooksMigrationSection />
       <PrivacyOwnershipSection />
