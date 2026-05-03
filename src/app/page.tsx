@@ -85,6 +85,7 @@ const footerColumns = [
   {
     title: "Company",
     links: [
+      { label: "Manifesto", href: "/manifesto" },
       { label: "Join waitlist", href: WAITLIST_URL },
       { label: "X", href: "https://x.com/kansobooks" },
     ],
@@ -129,15 +130,15 @@ const proofItems = [
 
 const userWorkflowSteps = [
   {
-    label: "Add your statements and receipts",
+    label: "Add monthly statements and receipts",
     icon: FileText,
   },
   {
-    label: "Review what needs your attention",
+    label: "Review the few items that need you",
     icon: Eye,
   },
   {
-    label: "Send the finished package",
+    label: "Share reports or the year-end package",
     icon: Send,
   },
 ];
@@ -148,11 +149,11 @@ const handledWorkflowSteps = [
     icon: "eve",
   },
   {
-    label: "Kanso checks every match, balance, and issue",
+    label: "Kanso checks matches, balances, and issues every month",
     icon: "kanso",
   },
   {
-    label: "Tax & audit ready books for your accountant",
+    label: "Clean financial statements plus tax & audit ready books",
     icon: "package",
   },
 ] satisfies Array<{
@@ -588,7 +589,7 @@ function KansoDifferenceCard({
     <article
       className={`relative grid grid-rows-[84px_96px_164px_82px_52px] rounded-lg border bg-card p-5 text-center shadow-[0_16px_45px_rgba(15,23,42,0.06)] ${
         featured
-          ? "border-info shadow-[0_20px_55px_rgba(20,70,130,0.14)]"
+          ? "border-2 border-info shadow-[0_0_0_5px_rgba(20,70,130,0.06),0_20px_55px_rgba(20,70,130,0.14)]"
           : "border-border"
       }`}
     >
@@ -715,7 +716,7 @@ function KansoDifferenceSection() {
           you.
         </p>
 
-        <div className="mt-10 grid gap-6 text-left lg:grid-cols-[1fr_1fr_1.15fr]">
+        <div className="mt-10 grid gap-6 text-left lg:grid-cols-3">
           {kansoDifferenceCards.map((card) => (
             <KansoDifferenceCard key={card.title} {...card} />
           ))}
@@ -2184,11 +2185,13 @@ function SimpleWorkflowSection() {
           Simple Workflow
         </p>
         <h2 className="mx-auto mt-7 max-w-[980px] text-4xl font-semibold leading-[1.08] tracking-normal text-foreground sm:text-5xl lg:text-6xl">
-          Your part is tiny. The books still get done.
+          Get clean monthly financial statements plus tax &amp; audit ready
+          books.
         </h2>
         <p className="mx-auto mt-6 max-w-[960px] text-lg leading-8 text-muted-foreground sm:text-xl">
-          Eve handles the tedious work. Kanso checks the result. You only review
-          the few things that need you.
+          Eve handles the monthly cleanup. Kanso checks the numbers and evidence.
+          You review the few things that need you, then year-end is already in
+          shape.
         </p>
 
         <div className="mt-9 overflow-hidden rounded-lg border border-border bg-card text-left shadow-[0_20px_55px_rgba(15,23,42,0.08)]">
@@ -2243,7 +2246,10 @@ function SimpleWorkflowSection() {
             strokeWidth={1.9}
             aria-hidden="true"
           />
-          <p>No monthly bookkeeping ritual. No guessing. No hidden black box.</p>
+          <p>
+            Monthly statements stay clean. Year-end books are ready without a
+            scramble.
+          </p>
         </div>
 
         <Button
