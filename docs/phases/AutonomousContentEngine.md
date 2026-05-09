@@ -25,6 +25,14 @@ path guard. Reviewer closeout verified the gates pass, no finished public
 articles were published, crawler training policy remains deferred, and the
 product/trust boundaries remain intact.
 
+## Phase 3 Status
+
+**Status:** PASS / Skill system closed as of 2026-05-09.
+
+Phase 3 adds canonical Kanso content skills, shared templates, claim-audit and
+final-audit checklists, and the Hermes skill directory strategy. It does not
+publish public content or add content routes.
+
 ## Goal
 
 Build an autonomous proof-grade publishing system for `KansoBooks.com` so
