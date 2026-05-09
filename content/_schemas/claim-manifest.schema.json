@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kansobooks.com/schemas/claim-manifest.schema.json",
+  "title": "KansoBooks Claim Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "pageId", "claims"],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "pageId": { "type": "string", "minLength": 1 },
+    "risk": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "text", "type", "source", "refresh"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+          "text": { "type": "string", "minLength": 1 },
+          "type": {
+            "type": "string",
+            "enum": [
+              "product",
+              "pricing",
+              "competitor",
+              "performance",
+              "accounting-workflow",
+              "tax-legal",
+              "positioning",
+              "crawler-policy"
+            ]
+          },
+          "source": { "type": "string", "minLength": 1 },
+          "sourceCheckedAt": { "type": "string", "format": "date" },
+          "refresh": {
+            "type": "string",
+            "enum": ["stable", "on-release", "monthly", "quarterly", "six-months", "annual", "before-publish"]
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    }
+  }
+}

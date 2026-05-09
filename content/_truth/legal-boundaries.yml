@@ -1,0 +1,28 @@
+schemaVersion: 1
+status: canonical-seed
+owner: KansoBooks
+lastReviewed: 2026-05-09
+nextReview: 2026-06-09
+defaultProfessionalBoundary: Ask your accountant before relying on this for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+contentMay:
+  - explain general books-readiness workflows
+  - explain evidence trails and accountant handoff packages
+  - describe what KansoBooks can verify from records
+  - route tax, legal, filing, payroll, and audit questions to professional judgment
+contentMustNot:
+  - provide tax filing advice
+  - provide legal advice
+  - provide audit opinions
+  - tell a reader whether a specific expense is deductible
+  - state payroll, sales tax, entity-treatment, or filing guidance without a high-risk source-backed sprint
+  - imply KansoBooks replaces a CPA, bookkeeper, lawyer, tax preparer, or auditor
+riskClasses:
+  low:
+    description: Product positioning, local-first ownership, content navigation, non-sensitive templates.
+    sourceRequirement: canonical Kanso docs or product truth files
+  medium:
+    description: General bookkeeping workflows, reconciliation concepts, accountant handoff readiness.
+    sourceRequirement: canonical Kanso docs plus public sources when factual claims require them
+  high:
+    description: Tax, legal, payroll, sales tax, filing, entity-specific, audit, or current competitor-price claims.
+    sourceRequirement: primary official source, dated verification, final audit escalation if ambiguous

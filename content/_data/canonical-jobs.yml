@@ -1,0 +1,31 @@
+schemaVersion: 1
+status: canonical-seed
+owner: KansoBooks
+lastReviewed: 2026-05-09
+nextReview: 2026-06-09
+jobs:
+  - id: prepare-books-for-accountant
+    name: Prepare books for accountant handoff
+    readerJob: Get the books ready, know what is still uncertain, and send the accountant a package that explains itself.
+    pillar: accountant-ready-books
+    duplicatePolicy: Merge or reject any page that solves the same reader job without a distinct artifact or decision context.
+  - id: validate-ai-bookkeeping-work
+    name: Validate AI-drafted bookkeeping work
+    readerJob: Understand what AI can draft, what deterministic checks must prove, and what still needs human or accountant judgment.
+    pillar: ai-bookkeeping-with-proof
+    duplicatePolicy: Reject pages that hype AI bookkeeping without proof, review, or source boundaries.
+  - id: understand-books-readiness
+    name: Know whether bookkeeping work is actually done
+    readerJob: Distinguish categorized transactions from finished books with reconciliation, evidence, review items, and accountant handoff outputs.
+    pillar: small-business-bookkeeping-basics
+    duplicatePolicy: Merge generic definitions into readiness-focused pages unless they support a separate decision.
+  - id: choose-bookkeeping-system
+    name: Choose a bookkeeping system or alternative
+    readerJob: Compare options by ownership, proof, accountant handoff, cost posture, and operational risk.
+    pillar: alternatives-and-buying-decisions
+    duplicatePolicy: Reject comparison variants that do not change the buying decision.
+  - id: use-handoff-template
+    name: Use a bookkeeping handoff artifact
+    readerJob: Apply a checklist, template, or sample package to prepare cleaner accountant handoff materials.
+    pillar: templates-tools-artifacts
+    duplicatePolicy: One artifact owns one task; article pages may link to it but must not fork the artifact facts.

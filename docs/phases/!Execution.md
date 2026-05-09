@@ -399,6 +399,17 @@ Required:
 - focused regression checks for touched files
 - default local checks when shared website/content infrastructure changed
 
+### Manual Git Handoff
+
+Use only when the agent cannot complete the git action directly.
+
+Required:
+
+- any command block handed to the founder for staging, committing, pushing, or
+  PR work must start with `cd /Users/mike/Documents/GitHub/KansoBooks.com`
+- include the complete git sequence from that working directory
+- do not assume the founder's shell is already in the repo
+
 ### Phase Or Release Close
 
 Use when a full target doc, release, or archive closes.

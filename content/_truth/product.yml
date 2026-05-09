@@ -1,0 +1,60 @@
+schemaVersion: 1
+status: canonical-seed
+owner: KansoBooks
+lastReviewed: 2026-05-09
+nextReview: 2026-06-09
+sources:
+  - docs/KansoBooksManifesto.md
+  - docs/KansoBooksVision.md
+  - docs/KansoBooksWedge.md
+truths:
+  - id: product-local-first
+    claim: KansoBooks is local-first and the user's books live in files they own.
+    allowedLanguage:
+      - "Your books live in simple files you own."
+      - "local-first bookkeeping files"
+      - "user-owned books"
+    forbiddenLanguage:
+      - "your books live in KansoBooks cloud"
+      - "cloud accounting database"
+    source: docs/KansoBooksManifesto.md#the-right-analogy
+    refresh: on-product-change
+  - id: product-ai-drafts-kanso-proves-user-approves
+    claim: AI prepares bookkeeping work, Kanso validates it, and the user approves what becomes true.
+    allowedLanguage:
+      - "AI prepares. Kanso proves. The user approves."
+      - "Eve drafts. Kanso proves. You approve."
+    forbiddenLanguage:
+      - "AI is the source of truth"
+      - "fully automated bookkeeping"
+      - "guaranteed correct"
+    source: docs/KansoBooksVision.md#trust-model
+    refresh: stable
+  - id: product-accountant-package
+    claim: KansoBooks helps prepare a cleaner package for accountant review.
+    allowedLanguage:
+      - "package for your accountant"
+      - "tax-time handoff ready"
+      - "books with an evidence trail"
+    forbiddenLanguage:
+      - "replaces your accountant"
+      - "tax filing advice"
+      - "audit-ready guarantee"
+    source: docs/KansoBooksWedge.md#one-sentence-wedge
+    refresh: on-product-change
+boundaries:
+  cloudDataForbidden:
+    - bank transactions
+    - statements
+    - receipts
+    - invoices
+    - ledgers
+    - reconciliation state
+    - accountant packages
+    - local books files
+  cloudDataAllowed:
+    - user profile and auth state
+    - merchant customer and license state
+    - entitlement state
+    - verified webhook receipts
+    - product download access metadata

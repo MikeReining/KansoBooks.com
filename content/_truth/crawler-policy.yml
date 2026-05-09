@@ -1,0 +1,39 @@
+schemaVersion: 1
+status: initial-policy-seed
+owner: KansoBooks
+lastReviewed: 2026-05-09
+nextReview: 2026-06-09
+policy:
+  searchAndRetrieval:
+    default: allow
+    rationale: Public resource pages should be crawlable, extractable, and citable by search and answer engines.
+    userAgents:
+      - Googlebot
+      - Bingbot
+      - OAI-SearchBot
+      - ChatGPT-User
+      - PerplexityBot
+      - Perplexity-User
+      - Claude-SearchBot
+      - Claude-User
+      - Applebot
+  training:
+    default: undecided
+    rationale: Training-crawler access is a business policy decision for Phase 2, not silently decided in Phase 1.
+    pendingDecisionDate: Phase 2 Content Infrastructure
+    candidateUserAgents:
+      - GPTBot
+      - ClaudeBot
+      - Applebot-Extended
+      - CCBot
+      - Google-Extended
+officialSourcesToRefreshBeforeImplementation:
+  - https://developers.openai.com/api/docs/bots
+  - https://docs.perplexity.ai/docs/resources/perplexity-crawlers
+  - https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
+  - https://support.apple.com/en-ca/119829
+  - https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers
+rules:
+  - robots.txt is not a security mechanism.
+  - Sensitive or non-public content must use noindex, authentication, or removal tooling, not crawler hints.
+  - Crawler user-agent names and official policies must be refreshed before Phase 2 implementation.

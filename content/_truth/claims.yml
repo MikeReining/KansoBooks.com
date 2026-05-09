@@ -1,0 +1,37 @@
+schemaVersion: 1
+status: canonical-seed
+owner: KansoBooks
+lastReviewed: 2026-05-09
+nextReview: 2026-06-09
+claimTypes:
+  - product
+  - pricing
+  - competitor
+  - performance
+  - accounting-workflow
+  - tax-legal
+  - positioning
+  - crawler-policy
+sourceRules:
+  product: content/_truth/product.yml or canonical product docs
+  pricing: content/_truth/pricing.yml plus current public source for competitor prices
+  competitor: content/_truth/competitors.yml plus dated competitor source for current claims
+  performance: internal benchmark or remove the claim
+  accounting-workflow: general educational source or explicit Kanso thesis boundary
+  tax-legal: primary official source only; escalate if any ambiguity remains
+  positioning: canonical Kanso docs
+  crawler-policy: content/_truth/crawler-policy.yml plus current official crawler docs
+forbiddenPhrases:
+  - tax and audit ready
+  - audit-ready books
+  - AI bookkeeper does your books
+  - guaranteed correct
+  - replaces your accountant
+  - fully automated bookkeeping
+preferredPhrases:
+  tax and audit ready: tax-time handoff ready
+  audit-ready books: books with an evidence trail
+  AI bookkeeper does your books: AI drafts the bookkeeping work
+  guaranteed correct: checked against evidence and reconciliation rules
+  replaces your accountant: helps you send your accountant a cleaner package
+  fully automated bookkeeping: AI-assisted bookkeeping with review and proof

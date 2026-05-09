@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kansobooks.com/schemas/content-metadata.schema.json",
+  "title": "KansoBooks Publishable Content Metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "seoTitle",
+    "description",
+    "slug",
+    "canonicalPath",
+    "type",
+    "tier",
+    "pillar",
+    "state",
+    "intent",
+    "risk",
+    "jurisdiction",
+    "professionalBoundary",
+    "author",
+    "reviewer",
+    "lastReviewed",
+    "nextReview",
+    "primaryQuery",
+    "canonicalJob",
+    "claimManifest",
+    "answerUnits"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "title": { "type": "string", "minLength": 1 },
+    "seoTitle": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "canonicalPath": { "type": "string", "pattern": "^/" },
+    "type": {
+      "type": "string",
+      "enum": ["resource", "comparison", "glossary", "template", "artifact", "hub"]
+    },
+    "tier": { "type": "integer", "minimum": 1, "maximum": 4 },
+    "pillar": {
+      "type": "string",
+      "enum": [
+        "accountant-ready-books",
+        "ai-bookkeeping-with-proof",
+        "small-business-bookkeeping-basics",
+        "alternatives-and-buying-decisions",
+        "templates-tools-artifacts",
+        "accountant-distribution"
+      ]
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "candidate",
+        "scored",
+        "briefed",
+        "researched",
+        "artifact-selected",
+        "drafted",
+        "optimized",
+        "audited",
+        "published",
+        "indexed",
+        "measuring",
+        "refresh-needed",
+        "refreshing",
+        "retired",
+        "blocked",
+        "escalated"
+      ]
+    },
+    "intent": { "type": "string", "minLength": 1 },
+    "risk": { "type": "string", "enum": ["low", "medium", "high"] },
+    "jurisdiction": {
+      "type": "string",
+      "enum": ["general", "us-general", "canada-general", "state-specific", "province-specific", "not-applicable"]
+    },
+    "jurisdictionNotes": { "type": "string" },
+    "professionalBoundary": { "type": "string", "minLength": 1 },
+    "author": { "type": "string", "minLength": 1 },
+    "reviewer": { "type": "string", "minLength": 1 },
+    "publishedAt": { "type": "string", "format": "date" },
+    "lastReviewed": { "type": "string", "format": "date" },
+    "nextReview": { "type": "string", "format": "date" },
+    "primaryQuery": { "type": "string", "minLength": 1 },
+    "secondaryQueries": { "type": "array", "items": { "type": "string" } },
+    "canonicalJob": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "artifactId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "claimManifest": { "type": "string", "minLength": 1 },
+    "answerUnits": {
+      "type": "array",
+      "contains": { "const": "AnswerBlock" },
+      "items": {
+        "type": "string",
+        "enum": ["AnswerBlock", "KansoTake", "DecisionSupport", "ProofBoundary", "SourceNotes", "NextStep", "EntitySummary"]
+      }
+    },
+    "internalLinks": { "type": "array", "items": { "type": "string", "pattern": "^/" } },
+    "externalSources": { "type": "array", "items": { "type": "string" } },
+    "schema": { "type": "array", "items": { "type": "string" } }
+  }
+}

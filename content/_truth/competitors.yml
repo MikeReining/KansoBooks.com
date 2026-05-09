@@ -1,0 +1,39 @@
+schemaVersion: 1
+status: canonical-seed
+owner: KansoBooks
+lastReviewed: 2026-05-09
+nextReview: 2026-06-09
+sources:
+  - docs/KansoBooksManifesto.md#pricing-posture
+  - docs/KansoBooksVision.md#core-insight
+competitors:
+  - id: quickbooks
+    name: QuickBooks
+    comparisonBoundary: Powerful cloud accounting software, but users still carry complexity and mistake risk.
+    source: docs/KansoBooksVision.md#core-insight
+    refresh: monthly
+    claimsRequiringCurrentSource:
+      - pricing
+      - plan names
+      - feature availability
+  - id: bench
+    name: Bench
+    comparisonBoundary: Peace of mind through human service, with higher service pricing.
+    source: docs/KansoBooksVision.md#core-insight
+    refresh: monthly
+    claimsRequiringCurrentSource:
+      - pricing
+      - service scope
+      - availability
+  - id: wave
+    name: Wave
+    comparisonBoundary: Partial accounting workflow, not proof-grade books-readiness positioning.
+    source: docs/KansoBooksManifesto.md#pricing-posture
+    refresh: monthly
+    claimsRequiringCurrentSource:
+      - pricing
+      - feature availability
+      - limitations
+rules:
+  - Competitor prices require a dated primary source captured in the page source list.
+  - Competitor comparisons may not imply KansoBooks has shipped features that are not present in product truth.

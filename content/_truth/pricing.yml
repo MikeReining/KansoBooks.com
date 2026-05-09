@@ -1,0 +1,24 @@
+schemaVersion: 1
+status: canonical-seed
+owner: KansoBooks
+lastReviewed: 2026-05-09
+nextReview: 2026-06-09
+sources:
+  - docs/KansoBooksManifesto.md#pricing-posture
+  - docs/KansoBooksWedge.md#strategic-posture
+pricingPosture:
+  id: pricing-posture
+  claim: KansoBooks intends to price the paid product at QuickBooks-or-lower levels while delivering books-ready output.
+  source: docs/KansoBooksManifesto.md#pricing-posture
+  refresh: monthly
+allowedClaims:
+  - "Bench-quality output at QuickBooks-or-lower prices."
+  - "The format is free. The engine is open source. The product is paid."
+forbiddenClaims:
+  - "Free accounting software."
+  - "Cheapest bookkeeping software."
+  - "Guaranteed lower than every competitor."
+publishedPrices: []
+notes:
+  - No public SKU price is canonical in this seed file.
+  - Any concrete KansoBooks price must be added here before publication.

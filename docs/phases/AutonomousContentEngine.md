@@ -6,6 +6,14 @@ Subordinate to `docs/KansoBooksManifesto.md`, `docs/KansoBooksVision.md`,
 `docs/KansoBooksWedge.md`, `docs/phases/FoundationSetup.md`, and
 `docs/phases/!Execution.md`.
 
+## Phase 1 Status
+
+**Status:** PASS / Contract scaffolding complete as of 2026-05-09.
+
+Phase 1 establishes product truth seeds, content schemas, canonical jobs,
+escalation policy, crawler policy, and content-engine implementation docs. It
+does not publish public pages, add routes, or decide training-crawler access.
+
 ## Goal
 
 Build an autonomous proof-grade publishing system for `KansoBooks.com` so
