@@ -242,7 +242,7 @@ const kansoDifferenceCards = [
     summary: "Finished books with proof behind the numbers.",
     points: [
       "Eve drafts, Kanso proves, you review",
-      "Reports with proof trail",
+      "Monthly reports with proof trail",
       "Tax and audit ready books",
     ],
     costLabel: "Kanso Core included",
@@ -2311,7 +2311,7 @@ function EveCard() {
       </div>
 
       <h2 className="mt-7 max-w-[240px] text-xl font-semibold leading-7 tracking-normal text-foreground">
-        Eve is working on your 2025 books
+        Eve is working on May books
       </h2>
 
       <div className="mt-6 border-t border-border pt-5">
@@ -2365,7 +2365,7 @@ function ReadyCard() {
     <div className="relative z-30 w-full rounded-lg border border-border bg-card p-7 shadow-[0_18px_45px_rgba(15,23,42,0.12)]">
       <div className="flex items-start justify-between gap-4">
         <p className="max-w-[180px] text-sm font-semibold uppercase leading-5 text-info">
-          Ready for your accountant
+          Monthly reports ready
         </p>
         <span className="flex size-10 items-center justify-center rounded-full bg-success text-primary-foreground">
           <Check className="size-6" aria-hidden="true" />
@@ -2374,18 +2374,16 @@ function ReadyCard() {
       <div className="mt-5 border-t border-border pt-5">
         <div className="space-y-5">
           <div className="flex items-center gap-4 text-sm text-foreground">
-            <CalendarDays className="size-5 text-info" aria-hidden="true" />
-            <span>Books up to date</span>
+            <BarChart3 className="size-5 text-info" aria-hidden="true" />
+            <span>Profit &amp; Loss updated</span>
           </div>
           <div className="flex items-center gap-4 text-sm text-foreground">
             <CheckCircle2 className="size-6 text-success" aria-hidden="true" />
-            <span>Everything reconciled</span>
+            <span>Balance Sheet reconciled</span>
           </div>
           <div className="flex items-center gap-4 text-sm text-foreground">
-            <span className="flex size-7 items-center justify-center rounded-full bg-info-soft text-sm font-medium text-info">
-              2
-            </span>
-            <span>2 items to review</span>
+            <CalendarDays className="size-5 text-info" aria-hidden="true" />
+            <span>Always tax &amp; audit ready</span>
           </div>
         </div>
       </div>
@@ -2493,20 +2491,19 @@ export default function Home() {
       <section className="border-b border-border bg-background">
         <div className="mx-auto grid max-w-[1500px] items-center gap-10 px-6 py-10 sm:px-10 lg:grid-cols-[0.7fr_1fr] lg:py-14 xl:gap-8">
           <div className="max-w-[560px]">
-            <h1 className="text-5xl font-semibold leading-[1.04] tracking-normal text-foreground sm:text-6xl xl:text-[4.65rem]">
-              Meet Eve,
-              <br />
-              your AI bookkeeper.
+            <h1 className="text-4xl font-semibold leading-[1.08] tracking-normal text-foreground sm:text-5xl lg:text-[3.35rem] xl:text-[3.75rem]">
+              Finally, books you can trust without doing the bookkeeping.
             </h1>
 
             <p className="mt-8 max-w-[560px] text-xl leading-8 text-muted-foreground">
-              Eve prepares your books from statements and receipts. Kanso checks
-              every number. You review the few things that need you.
+              Kanso keeps your books organized, checked, and current, so you can
+              stop second-guessing your numbers and get back to running your
+              business.
             </p>
 
             <p className="mt-7 max-w-[500px] text-lg leading-8 text-muted-foreground">
-              Send your accountant a finished package without QuickBooks rent or
-              manual bookkeeping.
+              No QuickBooks rent. No bookkeeping trap. No wondering if your
+              books are right.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
