@@ -1,0 +1,24 @@
+runId: 2026-05-09-accountant-ready-books-publish
+topicId: accountant-package-checklist
+from: audited
+to: published
+agent: kanso-publish
+timestamp: 2026-05-09T00:00:00-07:00
+publishAllowedBy: docs/content-runs/2026-05-09-accountant-ready-books/final-audit.yml
+contentPath: content/resources/accountant-ready-books.md
+publishedUrl: /resources/accountant-ready-books
+artifactPath: content/_artifacts/accountant-package-checklist.yml
+claimManifest: content/_claims/accountant-ready-books.yml
+checksPlanned:
+  - npm run content:validate
+  - npm run typecheck
+  - npm run lint
+  - npm run build
+checksPassed:
+  - npm run content:validate
+  - npm run typecheck
+  - npm run lint
+  - npm run build
+checksFailed: []
+nextAction: Task 2 reviewer validates and decides phase closeout.
+escalation: null

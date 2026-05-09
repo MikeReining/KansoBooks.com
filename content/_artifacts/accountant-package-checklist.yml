@@ -1,0 +1,60 @@
+schemaVersion: 1
+id: accountant-package-checklist
+title: Accountant Package Checklist
+artifactType: checklist
+jurisdiction: general
+risk: medium
+sourceNotes:
+  - docs/KansoBooksVision.md#trust-model
+  - docs/KansoBooksWedge.md#moment-of-value
+  - content/_truth/legal-boundaries.yml
+professionalBoundary: This checklist helps organize a bookkeeping handoff package. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+owner: KansoBooks Editorial System
+lastReviewed: 2026-05-09
+nextReview: 2026-08-09
+content:
+  purpose: Help a small-business owner assemble a cleaner package for accountant review by separating verified records, open questions, and evidence.
+  useWhen:
+    - You are getting a month, quarter, or year ready for accountant review.
+    - You want to know what is ready, what still needs explanation, and what evidence supports the books.
+    - You need a handoff checklist that does not pretend to be tax, legal, or audit advice.
+  doNotUseFor:
+    - Deciding tax treatment, filing positions, payroll, sales tax, legal, audit, or entity-specific questions.
+    - Claiming that AI-drafted bookkeeping is final without review, evidence, and approval.
+    - Replacing your accountant's judgment.
+  checklist:
+    - name: Period and scope
+      doneWhen: The package names the month, quarter, or year covered and the accounts included.
+      evidence: Statement list, account list, and any excluded accounts or date gaps.
+    - name: Statement coverage
+      doneWhen: Each included bank or card account has a source statement or export for the covered period.
+      evidence: Bank statements, credit card statements, CSV/OFX/QFX exports, or source files.
+    - name: Reconciliation status
+      doneWhen: Book balances have been checked against external statements, or any difference is named as an open item.
+      evidence: Reconciliation summary, statement ending balances, and unresolved differences.
+    - name: Transaction categories
+      doneWhen: Each transaction has a category, transfer treatment, owner note, or review flag.
+      evidence: Categorized transaction list and review notes for unclear items.
+    - name: Evidence trail
+      doneWhen: Material supporting files are attached or indexed, and missing evidence is called out instead of hidden.
+      evidence: Receipt folder, invoice folder, evidence index, and notes on missing or optional files.
+    - name: Unusual items
+      doneWhen: Large, one-time, personal, transfer, loan, owner, refund, and duplicate-looking items have notes.
+      evidence: Exception list with plain-language explanations and questions.
+    - name: Accountant questions
+      doneWhen: Questions are written as decisions for the accountant, not vague anxiety.
+      evidence: Handoff notes grouped by transaction, account, or period.
+    - name: Final package
+      doneWhen: Reports, source files, evidence index, reconciliation notes, and open questions are in one package.
+      evidence: Folder, zip, or local package that the owner can review before sending.
+  proofNeeded:
+    - Statement balances or source records for each included account.
+    - A reconciliation summary or explicit unresolved difference list.
+    - Categorized transaction list with review flags for uncertain items.
+    - Evidence index for receipts, invoices, statements, and notes.
+    - Accountant question list for matters requiring professional judgment.
+  accountantQuestions:
+    - Which open items need your judgment before filing or final reporting?
+    - Do any unusual transactions need different treatment than the owner's current note suggests?
+    - Are any missing documents important under the standard you want applied?
+    - Should any excluded account, processor, or date range be added before you rely on this package?

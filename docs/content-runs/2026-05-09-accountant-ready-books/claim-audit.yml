@@ -1,0 +1,36 @@
+claimAudit:
+  contentId: accountant-ready-books
+  status: pass
+  checkedAt: 2026-05-09T00:00:00-07:00
+  checkedBy: kanso-claim-audit
+  claimsChecked:
+    - id: claim-reader-job
+      source: docs/content-engine/Vision.md
+      result: supported
+    - id: claim-ai-proof-approval
+      source: docs/KansoBooksVision.md#trust-model
+      result: supported
+    - id: claim-accountant-package
+      source: content/_truth/product.yml
+      result: supported
+    - id: claim-local-files
+      source: content/_truth/product.yml
+      result: supported
+    - id: claim-professional-boundary
+      source: content/_truth/legal-boundaries.yml
+      result: supported
+  claimsFailed: []
+  requiredEdits: []
+  boundaryChecks:
+    noTaxAdvice: pass
+    noLegalAdvice: pass
+    noAuditAdvice: pass
+    noAccountantReplacement: pass
+    noAiAsFinancialTruth: pass
+    noCloudBooksImplication: pass
+    forbiddenPhrasesRemoved: pass
+  escalation:
+    needed: false
+    reason: ""
+    narrowDecisionNeeded: ""
+  handoffTo: kanso-final-audit

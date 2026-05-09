@@ -1,0 +1,83 @@
+packetId: accountant-ready-books-research
+briefId: accountant-ready-books-brief
+state: researched
+researcher: kanso-research
+dateChecked: 2026-05-09
+primarySources:
+  - title: Autonomous Content Engine Vision
+    url: docs/content-engine/Vision.md
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Reader job and editorial boundary.
+    reliability: primary
+  - title: KansoBooks Vision
+    url: docs/KansoBooksVision.md
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Trust model, AI boundary, evidence and approval language.
+    reliability: primary
+  - title: KansoBooks Wedge
+    url: docs/KansoBooksWedge.md
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Accountant handoff posture and moment of value.
+    reliability: primary
+  - title: Product Truth
+    url: content/_truth/product.yml
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Local-first, AI drafts/Kanso proves/user approves, accountant package language.
+    reliability: primary
+  - title: Legal Boundaries Truth
+    url: content/_truth/legal-boundaries.yml
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Professional boundary and prohibited advice classes.
+    reliability: primary
+secondarySources: []
+competitorGaps: []
+definitions:
+  - term: accountant-ready books
+    source: docs/content-engine/Vision.md
+    safeDefinition: Books prepared for accountant review with scope, evidence, reconciliation status, and open questions visible.
+  - term: evidence trail
+    source: docs/KansoBooksVision.md#trust-model
+    safeDefinition: Source records, explanations, and decisions that make bookkeeping claims traceable.
+numbersAndDates: []
+uncertainClaims: []
+riskBoundaries:
+  tax: Do not provide filing advice, tax treatment, deductibility guidance, or deadline claims.
+  legal: Do not provide legal advice or entity-specific conclusions.
+  audit: Do not claim audit readiness or audit outcomes.
+  accounting: Keep to general handoff workflow; route professional judgment to the accountant.
+sourceExcerpts:
+  - source: docs/content-engine/Vision.md
+    excerpt: Get the books ready. Know what is still uncertain. Send the accountant a package that explains itself.
+    useLimit: short excerpt only
+  - source: docs/KansoBooksVision.md
+    excerpt: AI prepares the work, Kanso proves it, and the user approves what becomes true.
+    useLimit: short excerpt only
+suggestedExamples:
+  - A checklist line is complete only when source evidence and open questions are visible.
+writerWarnings:
+  - Do not say tax-ready, audit-ready, guaranteed, fully automated, or accountant replacement.
+  - Do not add external statistics, prices, laws, standards, or deadlines.
+  - Do not imply books or accountant packages live in KansoBooks cloud.
+handoff:
+  to: kanso-article-draft
+  packetPath: docs/content-runs/2026-05-09-accountant-ready-books/research-packet.yml
+  briefId: accountant-ready-books-brief
+  approvedSources:
+    - docs/content-engine/Vision.md
+    - docs/KansoBooksVision.md
+    - docs/KansoBooksWedge.md
+    - content/_truth/product.yml
+    - content/_truth/legal-boundaries.yml
+  forbiddenClaims:
+    - tax-ready
+    - audit-ready
+    - AI is financial truth
+    - KansoBooks replaces accountants
+    - books live in KansoBooks cloud
+  uncertainClaims: []
+  professionalBoundary: Ask your accountant before relying on this for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.

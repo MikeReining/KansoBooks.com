@@ -1,0 +1,48 @@
+runId: 2026-05-09-accountant-ready-books-topic-score
+topicId: accountant-package-checklist
+state: scored
+scoredAt: 2026-05-09T00:00:00-07:00
+scoredBy: kanso-topic-scoring
+candidate:
+  artifact: accountant-package-checklist
+  resource: /resources/accountant-ready-books
+weightedScore:
+  icpFit: { score: 5, weight: 3, points: 15 }
+  painIntensity: { score: 5, weight: 3, points: 15 }
+  buyingIntent: { score: 4, weight: 3, points: 12 }
+  kansoDifferentiation: { score: 5, weight: 3, points: 15 }
+  artifactPotential: { score: 5, weight: 2, points: 10 }
+  aieoCitationPotential: { score: 4, weight: 2, points: 8 }
+  searchDemand: { score: 3, weight: 2, points: 6 }
+  internalLinkValue: { score: 5, weight: 1, points: 5 }
+  freshnessRequirementInverted: { score: 5, weight: 1, points: 5 }
+  riskLevelInverted: { score: 4, weight: 1, points: 4 }
+total: 95
+threshold: 55
+decision: brief
+pillar: accountant-ready-books
+tier: 1
+readerJob: Get the books ready, know what is still uncertain, and send the accountant a package that explains itself.
+operatingQuestion: Am I done?
+canonicalJob: prepare-books-for-accountant
+risk: medium
+artifactRequired: accountant-package-checklist
+vetoesCleared:
+  - icp_fit_above_minimum
+  - kanso_differentiation_above_minimum
+  - distinct_reader_job_present
+  - artifact_potential_present
+  - tax_legal_audit_risk_bounded
+  - no_existing_content_duplicate
+handoff:
+  to: kanso-content-brief
+  topicId: accountant-package-checklist
+  score: 95
+  pillar: accountant-ready-books
+  tier: 1
+  readerJob: Get the books ready, know what is still uncertain, and send the accountant a package that explains itself.
+  canonicalJob: prepare-books-for-accountant
+  risk: medium
+  artifactRequired: accountant-package-checklist
+  notes:
+    - First content run should publish the hub/resource and bind the artifact through artifactId.

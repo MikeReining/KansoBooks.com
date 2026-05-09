@@ -33,6 +33,20 @@ Phase 3 adds canonical Kanso content skills, shared templates, claim-audit and
 final-audit checklists, and the Hermes skill directory strategy. It does not
 publish public content or add content routes.
 
+## Phase 4 Status
+
+**Status:** PASS / First Codex-as-Hermes content run closed as of 2026-05-09.
+
+Task 1 ran the first Codex-as-Hermes content pipeline with one public page:
+`/resources/accountant-ready-books`. The run created a topic score, brief,
+research packet, draft record, checklist artifact, claim manifest, claim audit,
+final audit, and publish log under `docs/content-runs/2026-05-09-accountant-ready-books/`.
+The checklist remains an internal artifact at
+`content/_artifacts/accountant-package-checklist.yml`; no second public page
+was added for the same canonical job. Task 2 independently reviewed the run,
+verified the required gates, and closed the first run. Further Phase 4 repeats
+may continue from this calibrated baseline.
+
 ## Goal
 
 Build an autonomous proof-grade publishing system for `KansoBooks.com` so

@@ -1,0 +1,76 @@
+briefId: accountant-ready-books-brief
+topicId: accountant-package-checklist
+state: briefed
+titleCandidate: Accountant-Ready Books
+slugCandidate: accountant-ready-books
+pillar: accountant-ready-books
+tier: 1
+readerJob: Get the books ready, know what is still uncertain, and send the accountant a package that explains itself.
+canonicalJob: prepare-books-for-accountant
+searchIntent: Understand what must be checked before sending books to an accountant.
+aiAnswerIntent: Provide a concise, citable definition and checklist for accountant handoff readiness.
+primaryQuery: accountant-ready books
+secondaryQueries:
+  - books ready for accountant
+  - accountant package checklist
+  - tax-time handoff ready books
+kansoThesis: Categorized transactions are not finished books. A useful handoff package defines the period, preserves source evidence, names unresolved items, and separates AI-drafted work from validated, approved truth.
+operatingQuestions:
+  amIDone: The checklist defines what the package should contain before handoff.
+  isThisRight: Reconciliation status, categories, and exception notes show what was checked.
+  canIProveIt: The evidence trail and source package explain where the numbers came from.
+requiredAnswerUnits:
+  - AnswerBlock
+  - KansoTake
+  - DecisionSupport
+  - ProofBoundary
+  - SourceNotes
+  - NextStep
+  - EntitySummary
+requiredSections:
+  - Direct answer
+  - Kanso proof angle
+  - Handoff checklist
+  - Proof boundary
+  - Source notes
+  - Next step
+  - Entity summary
+selectedArtifactId: accountant-package-checklist
+artifactUse: Article metadata resolves the artifactId; article body summarizes the checklist.
+internalLinks: []
+sourcesToUse:
+  - docs/content-engine/Vision.md
+  - docs/KansoBooksVision.md
+  - docs/KansoBooksWedge.md
+  - content/_truth/product.yml
+  - content/_truth/legal-boundaries.yml
+sourcesToAvoid:
+  - Unsourced tax preparation checklists
+  - Competitor pricing pages
+  - Jurisdiction-specific filing guidance
+carefulClaims:
+  - Do not say tax-ready; use tax-time handoff ready.
+  - Do not say audit-ready.
+  - Do not imply KansoBooks replaces accountants.
+  - Do not imply AI is financial truth.
+  - Do not imply user books live in the cloud.
+jurisdiction: general
+risk: medium
+professionalBoundary: Ask your accountant before relying on this for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+conversionPath: Resource page to checklist artifact; future internal links can point to templates and sample package pages.
+publishPriority: first-run
+refreshCadence: quarterly
+handoff:
+  to: kanso-research-packet
+  briefPath: docs/content-runs/2026-05-09-accountant-ready-books/brief.yml
+  briefId: accountant-ready-books-brief
+  risk: medium
+  jurisdiction: general
+  sourcePlan:
+    - canonical Kanso docs for positioning and trust model
+    - truth files for product and professional boundaries
+  carefulClaims:
+    - tax-time handoff ready only
+    - accountant support, not replacement
+    - AI drafts, validation and approval decide truth
+  artifactId: accountant-package-checklist

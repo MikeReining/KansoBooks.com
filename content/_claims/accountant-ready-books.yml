@@ -1,0 +1,34 @@
+schemaVersion: 1
+pageId: accountant-ready-books
+risk: medium
+claims:
+  - id: claim-reader-job
+    text: KansoBooks content is built around getting books ready, naming uncertainty, and sending an accountant a package that explains itself.
+    type: positioning
+    source: docs/content-engine/Vision.md
+    refresh: stable
+    notes: Matches the content-engine reader job.
+  - id: claim-ai-proof-approval
+    text: AI can draft bookkeeping work, but KansoBooks' trust model requires validation and user approval before work becomes truth.
+    type: positioning
+    source: docs/KansoBooksVision.md#trust-model
+    refresh: stable
+    notes: Used to keep the AI boundary explicit.
+  - id: claim-accountant-package
+    text: KansoBooks is positioned around helping owners prepare a cleaner package for accountant review.
+    type: product
+    source: content/_truth/product.yml
+    refresh: on-release
+    notes: Product truth file lists package-for-accountant language as allowed.
+  - id: claim-local-files
+    text: KansoBooks is local-first and the user's books live in files they own.
+    type: product
+    source: content/_truth/product.yml
+    refresh: on-release
+    notes: Supports the ownership boundary without implying cloud storage.
+  - id: claim-professional-boundary
+    text: KansoBooks content must not provide tax filing, legal, audit, payroll, sales tax, or entity-specific advice.
+    type: positioning
+    source: content/_truth/legal-boundaries.yml
+    refresh: stable
+    notes: Used for the page boundary and checklist boundary.

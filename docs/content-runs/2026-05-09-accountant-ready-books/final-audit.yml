@@ -1,0 +1,36 @@
+finalAudit:
+  contentId: accountant-ready-books
+  status: publish
+  checkedAt: 2026-05-09T00:00:00-07:00
+  checkedBy: kanso-final-audit
+  contentPath: content/resources/accountant-ready-books.md
+  artifactPath: content/_artifacts/accountant-package-checklist.yml
+  claimManifestPath: content/_claims/accountant-ready-books.yml
+  checksPassed:
+    - content_schema_validated
+    - metadata_complete
+    - claim_manifest_present
+    - artifact_id_present
+    - sources_are_local_canonical_files
+    - no_internal_links_required_for_first_page
+    - claim_audit_pass
+    - no_unsupported_external_claims
+    - no_tax_legal_audit_payroll_sales_tax_filing_or_entity_specific_advice
+    - no_product_claims_beyond_truth_files_and_canonical_docs
+    - no_cloud_books_claim
+    - no_accountant_replacement_claim
+    - no_ai_as_financial_truth_claim
+    - answer_units_present
+    - useful_artifact_present
+    - npm_run_content_validate_passed
+    - npm_run_typecheck_passed
+    - npm_run_lint_passed
+    - npm_run_build_passed
+  checksFailed: []
+  publishAllowed: true
+  requiredFixes: []
+  escalation:
+    needed: false
+    reason: ""
+    narrowDecisionNeeded: ""
+  handoffTo: kanso-publish

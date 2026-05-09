@@ -1,0 +1,28 @@
+runId: 2026-05-09-accountant-ready-books-draft
+topicId: accountant-package-checklist
+from: researched
+to: drafted
+agent: kanso-article-draft
+timestamp: 2026-05-09T00:00:00-07:00
+contentPath: content/resources/accountant-ready-books.md
+artifactPath: content/_artifacts/accountant-package-checklist.yml
+claimManifest: content/_claims/accountant-ready-books.yml
+checksPassed:
+  - answer_block_present_within_opening
+  - kanso_take_present
+  - decision_support_checklist_present
+  - proof_boundary_present
+  - source_notes_present
+  - next_step_present
+  - entity_summary_present
+  - artifact_id_resolves_to_planned_artifact
+checksFailed: []
+knownRisks:
+  - Medium-risk general bookkeeping workflow; avoids tax, audit, legal, payroll, sales tax, filing, and entity-specific advice.
+handoff:
+  to: kanso-claim-audit
+  draftPath: content/resources/accountant-ready-books.md
+  claimManifestPath: content/_claims/accountant-ready-books.yml
+  briefId: accountant-ready-books-brief
+  packetId: accountant-ready-books-research
+  artifactId: accountant-package-checklist
