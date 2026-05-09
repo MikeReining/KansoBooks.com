@@ -1,0 +1,28 @@
+exception:
+  id: YYYY-MM-DD-slug-exception
+  status: open
+  createdAt: YYYY-MM-DDTHH:MM:SSZ
+  profile: null
+  contentItemOrSprintId: null
+  failedGate: null
+
+problem:
+  exactUnsupportedOrConflictingClaim: null
+  sourcePathsOrUrlsChecked: []
+  command: null
+  stderrSummary: null
+
+boundary:
+  escalationPolicy: docs/content-engine/EscalationPolicy.md
+  category: product-truth|trust-boundary|tax-legal-accounting|credentials|provider|ci|deployment|access-policy|path-boundary
+  founderApprovalGate: false
+
+decisionNeeded:
+  narrowDecision: null
+  recommendedSafeFallback: null
+
+localContext:
+  worktree: null
+  gitSha: null
+  changedPaths: []
+  credentialNamesOnly: []

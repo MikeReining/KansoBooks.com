@@ -1,0 +1,47 @@
+run:
+  id: YYYY-MM-DD-slug
+  status: draft|blocked|gates-passed|published|exception
+  startedAt: YYYY-MM-DDTHH:MM:SSZ
+  completedAt: null
+  worktree: /Users/hermes-kanso-content/kanso/KansoBooks.com-autopublish
+  git:
+    startSha: null
+    endSha: null
+    branch: null
+    statusBefore: null
+    statusAfter: null
+
+profiles:
+  orchestrator: kanso-orchestrator
+  research: kanso-research
+  editor: kanso-editor
+  auditorPublisher: kanso-auditor-publisher
+
+skillsUsed:
+  - id: kanso-topic-scoring
+    revision: git-sha-at-run-start
+
+content:
+  canonicalJob: null
+  contentId: null
+  contentPath: null
+  artifactPath: null
+  claimManifestPath: null
+
+gates:
+  contentValidate: pending|pass|fail
+  pathGuard: pending|pass|fail
+  typecheck: pending|pass|fail
+  lint: pending|pass|fail
+  build: pending|pass|fail
+  claimAudit: pending|pass|fail
+  finalAudit: pending|pass|fail
+
+publish:
+  founderApprovalGate: false
+  allowedBy: null
+  publishedAt: null
+  credentialProfile: least-privilege-content-automation
+
+exceptions:
+  - none

@@ -1,0 +1,54 @@
+version: 1
+status: local-secrets-required
+secrets: not-stored-in-repo
+
+environmentVariablesExpectedOnMacMini:
+  - HERMES_PROVIDER_ORCHESTRATION
+  - HERMES_PROVIDER_RESEARCH
+  - HERMES_PROVIDER_DRAFTING
+  - HERMES_PROVIDER_AUDIT
+  - HERMES_MODEL_ORCHESTRATION
+  - HERMES_MODEL_RESEARCH
+  - HERMES_MODEL_DRAFTING
+  - HERMES_MODEL_AUDIT
+
+routes:
+  orchestration:
+    providerEnv: HERMES_PROVIDER_ORCHESTRATION
+    modelEnv: HERMES_MODEL_ORCHESTRATION
+    requirements:
+      - low-cost-planning
+      - strong-instruction-following
+      - no-production-credentials
+
+  research:
+    providerEnv: HERMES_PROVIDER_RESEARCH
+    modelEnv: HERMES_MODEL_RESEARCH
+    requirements:
+      - web-capable-where-local-hermes-supports-it
+      - source-citation-discipline
+      - conservative-tax-legal-boundary
+
+  drafting:
+    providerEnv: HERMES_PROVIDER_DRAFTING
+    modelEnv: HERMES_MODEL_DRAFTING
+    requirements:
+      - strong-long-form-writing
+      - Kanso-voice-preservation
+      - no-cloud-books-implication
+
+  audit:
+    providerEnv: HERMES_PROVIDER_AUDIT
+    modelEnv: HERMES_MODEL_AUDIT
+    requirements:
+      - strict-claim-checking
+      - deterministic-gate-respect
+      - escalation-on-uncertainty
+
+localSecretStorage:
+  recommended: macOS Keychain or Hermes-supported local secret store
+  forbidden:
+    - repository files
+    - .env files committed to git
+    - docs/content-runs/**
+    - screenshots or run logs

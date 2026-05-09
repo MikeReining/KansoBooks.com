@@ -84,6 +84,24 @@ professional boundaries, and no founder approval gate. Future calibration can
 continue opportunistically, but Phase 4 no longer blocks the Local Hermes
 Runner work in Phase 5.
 
+## Phase 5 Status
+
+**Status:** PASS / Repo-side Local Hermes Runner setup closed as of 2026-05-09.
+
+Repo-side Local Hermes Runner setup now includes versioned profile definitions,
+least-privilege toolset intent, provider/model routing placeholders, dedicated
+worktree conventions, schedule templates, run-log and exception templates,
+exception alert boundaries, publish credential boundaries, and a credential-free
+dry-run command. The dry-run command writes reports outside the repo by default
+and supports
+`HERMES_REPORT_ROOT=docs/content-runs` for intentional scheduled run logs.
+
+True local blockers for unattended operation remain outside the repo: Mac Mini
+Hermes installation, provider credentials and budgets in a local secret store,
+scheduler installation, dedicated local OS user/worktree setup, branch
+protection/merge automation, and least-privilege GitHub automation credentials
+if publishing is enabled.
+
 ## Goal
 
 Build an autonomous proof-grade publishing system for `KansoBooks.com` so

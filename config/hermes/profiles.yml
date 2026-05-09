@@ -1,0 +1,131 @@
+version: 1
+status: phase-5-repo-side-template
+authority:
+  - docs/phases/!Execution.md
+  - docs/phases/AutonomousContentEngine.md
+  - docs/content-engine/HermesSkillStrategy.md
+  - docs/content-engine/EscalationPolicy.md
+
+defaults:
+  founderApprovalGate: false
+  credentialsPolicy: no-secrets-in-repo
+  dedicatedWorktreeRequired: true
+  skillTap:
+    id: kansobooks-content
+    source: repo
+    path: ./skills
+    revision: git-sha-at-run-start
+    shared:
+      - skills/_shared/kanso-content-templates.md
+      - skills/_shared/claim-audit-checklist.md
+      - skills/_shared/final-audit-checklist.md
+  localTruthSources:
+    - docs/KansoBooksManifesto.md
+    - docs/KansoBooksVision.md
+    - docs/KansoBooksWedge.md
+    - docs/content-engine/Vision.md
+    - docs/content-engine/EscalationPolicy.md
+    - content/_truth/
+    - content/_data/canonical-jobs.yml
+
+profiles:
+  - id: kanso-orchestrator
+    purpose: Select approved jobs, sequence profile handoffs, run refresh and metrics review.
+    modelRoute: orchestration
+    toolset: kanso-orchestrator-read-mostly
+    skills:
+      - kanso-topic-scoring
+      - kanso-refresh
+      - kanso-metrics-review
+    mayWrite:
+      - docs/content-runs/**
+    mustNotWrite:
+      - content/**
+      - src/**
+      - supabase/**
+      - .env*
+    escalationPolicy: docs/content-engine/EscalationPolicy.md
+
+  - id: kanso-research
+    purpose: Build source-backed research packets and claim audit inputs.
+    modelRoute: research
+    toolset: kanso-research-web-limited
+    skills:
+      - kanso-research-packet
+      - kanso-claim-audit
+    mayWrite:
+      - docs/content-runs/**
+    mustNotWrite:
+      - content/resources/**
+      - content/_artifacts/**
+      - src/**
+      - supabase/**
+      - .env*
+    sourceRules:
+      taxLegalPayrollAudit: primary-or-official-source-or-escalate
+      competitorPricing: source-url-and-date-checked-required
+      productClaims: canonical-truth-source-required
+
+  - id: kanso-editor
+    purpose: Draft and improve Kanso-native content and internal artifacts from approved briefs.
+    modelRoute: drafting
+    toolset: kanso-editor-content-write
+    skills:
+      - kanso-content-brief
+      - kanso-article-draft
+      - kanso-headline-metadata
+      - kanso-seo-aieo-pass
+      - kanso-tone-pass
+      - kanso-content-review
+    mayWrite:
+      - content/resources/**
+      - content/_artifacts/**
+      - content/_claims/**
+      - docs/content-runs/**
+      - public/og/**
+      - public/content/**
+    mustNotWrite:
+      - src/app/api/**
+      - src/lib/supabase/**
+      - src/lib/control-plane/**
+      - supabase/**
+      - .env*
+      - package.json
+      - package-lock.json
+      - .github/**
+    requiredBeforeHandoff:
+      - npm run content:validate
+      - npm run content:path-guard -- <changed-content-paths>
+
+  - id: kanso-auditor-publisher
+    purpose: Run deterministic audits, publish only when gates pass, and write final run logs.
+    modelRoute: audit
+    toolset: kanso-auditor-publisher-gated
+    skills:
+      - kanso-claim-audit
+      - kanso-final-audit
+      - kanso-publish
+    mayWrite:
+      - content/resources/**
+      - content/_artifacts/**
+      - content/_claims/**
+      - docs/content-runs/**
+      - public/og/**
+      - public/content/**
+    mustNotWrite:
+      - src/app/api/**
+      - src/lib/supabase/**
+      - src/lib/control-plane/**
+      - supabase/**
+      - .env*
+      - next.config.ts
+      - package.json
+      - package-lock.json
+      - .github/**
+    requiredGates:
+      - npm run content:validate
+      - npm run content:path-guard -- <changed-content-paths>
+      - npm run typecheck
+      - npm run lint
+      - npm run build
+    publishCredentialBoundary: docs/content-engine/LocalHermesRunner.md#publish-credential-boundaries

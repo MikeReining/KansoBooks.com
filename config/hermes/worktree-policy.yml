@@ -1,0 +1,46 @@
+version: 1
+status: phase-5-repo-side-template
+
+canonicalRepository:
+  name: KansoBooks.com
+  remote: git@github.com:<owner>/KansoBooks.com.git
+  defaultBranch: main
+
+localRunnerConvention:
+  osUser: hermes-kanso-content
+  rootDirectory: /Users/hermes-kanso-content/kanso
+  canonicalClone: /Users/hermes-kanso-content/kanso/KansoBooks.com
+  scheduledWorktree: /Users/hermes-kanso-content/kanso/KansoBooks.com-autopublish
+  branchPrefix: hermes/content/
+  runLogRoot: docs/content-runs
+
+requiredStartupChecks:
+  - confirm current directory is the scheduled worktree
+  - confirm git remote matches canonical repository
+  - record git rev-parse HEAD in run log
+  - record git status --short before edits
+  - run npm run hermes:dry-run before enabling credentials
+
+autonomousWriteAllowlist:
+  - content/**
+  - public/content/**
+  - public/og/**
+  - docs/content-runs/**
+  - src/content/**
+  - src/lib/content/**
+  - scripts/content/**
+
+scheduledAgentDenylist:
+  - src/app/api/**
+  - src/lib/supabase/**
+  - src/lib/control-plane/**
+  - supabase/**
+  - .env*
+  - next.config.ts
+  - package.json
+  - package-lock.json
+  - .github/**
+
+notes:
+  - Package files are listed in the denylist for scheduled agents even though Phase 5 may edit package.json by sprint instruction.
+  - Skills are readable by scheduled agents; canonical skill edits require a normal implementation and review sprint.

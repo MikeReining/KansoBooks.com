@@ -1,0 +1,103 @@
+version: 1
+status: phase-5-repo-side-template
+note: Toolsets are operational intent for the local Hermes install. They are not a security boundary by themselves.
+
+toolsets:
+  kanso-orchestrator-read-mostly:
+    shell:
+      allowed:
+        - git status --short
+        - git rev-parse HEAD
+        - git diff --name-only
+        - npm run content:validate
+        - npm run hermes:dry-run
+      denied:
+        - git push
+        - gh pr merge
+        - vercel
+        - supabase
+        - open .env*
+    filesystem:
+      read:
+        - .
+      write:
+        - docs/content-runs/**
+
+  kanso-research-web-limited:
+    shell:
+      allowed:
+        - git status --short
+        - git rev-parse HEAD
+        - npm run content:validate
+      denied:
+        - git push
+        - gh pr merge
+        - vercel
+        - supabase
+        - open .env*
+    browser:
+      allowed: true
+      restriction: Use sources required by claim class; do not scrape private or authenticated financial data.
+    filesystem:
+      read:
+        - docs/**
+        - content/_truth/**
+        - content/_data/**
+        - content/resources/**
+        - skills/**
+      write:
+        - docs/content-runs/**
+
+  kanso-editor-content-write:
+    shell:
+      allowed:
+        - git status --short
+        - git diff --name-only
+        - npm run content:validate
+        - npm run content:path-guard -- <changed-content-paths>
+      denied:
+        - git push
+        - gh pr merge
+        - vercel
+        - supabase
+        - open .env*
+    filesystem:
+      read:
+        - .
+      write:
+        - content/resources/**
+        - content/_artifacts/**
+        - content/_claims/**
+        - docs/content-runs/**
+        - public/og/**
+        - public/content/**
+
+  kanso-auditor-publisher-gated:
+    shell:
+      allowed:
+        - git status --short
+        - git diff --name-only
+        - npm run content:validate
+        - npm run content:path-guard -- <changed-content-paths>
+        - npm run typecheck
+        - npm run lint
+        - npm run build
+      conditional:
+        - git commit: only in dedicated content automation worktree after all gates pass
+        - git push: only to configured autopublish branch with least-privilege token
+      denied:
+        - gh pr merge --admin
+        - vercel env
+        - vercel deploy --prod
+        - supabase
+        - open .env*
+    filesystem:
+      read:
+        - .
+      write:
+        - content/resources/**
+        - content/_artifacts/**
+        - content/_claims/**
+        - docs/content-runs/**
+        - public/og/**
+        - public/content/**
