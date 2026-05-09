@@ -14,6 +14,17 @@ Phase 1 establishes product truth seeds, content schemas, canonical jobs,
 escalation policy, crawler policy, and content-engine implementation docs. It
 does not publish public pages, add routes, or decide training-crawler access.
 
+## Phase 2 Status
+
+**Status:** PASS / Content infrastructure closed as of 2026-05-09.
+
+Phase 2 adds the structured content loader, public content route shells,
+sitemap, RSS, `llms.txt`, JSON-LD helpers, internal-link helpers, content
+validation, claim/source checks, forbidden-claim linting, and an autopublish
+path guard. Reviewer closeout verified the gates pass, no finished public
+articles were published, crawler training policy remains deferred, and the
+product/trust boundaries remain intact.
+
 ## Goal
 
 Build an autonomous proof-grade publishing system for `KansoBooks.com` so
