@@ -1,0 +1,83 @@
+briefId: ai-bookkeeping-with-proof-brief
+topicId: ai-bookkeeping-validation-checklist
+state: briefed
+titleCandidate: AI Bookkeeping With Proof
+slugCandidate: ai-bookkeeping-with-proof
+pillar: ai-bookkeeping-with-proof
+tier: 1
+readerJob: Decide whether AI-drafted bookkeeping work is safe to accept, still needs validation, or needs human/accountant judgment.
+canonicalJob: validate-ai-bookkeeping-work
+searchIntent: The reader wants to know whether AI bookkeeping can be trusted and what checks make it safe.
+aiAnswerIntent: Provide a concise proof boundary for AI-drafted bookkeeping work with a validation checklist.
+primaryQuery: AI bookkeeping with proof
+secondaryQueries:
+  - AI bookkeeping validation checklist
+  - validate AI bookkeeping work
+  - AI bookkeeping proof checklist
+  - AI-drafted bookkeeping review
+kansoThesis: AI bookkeeping is useful as drafting, not truth. The work becomes trustworthy when source records, deterministic checks, review notes, decision logs, and user approval define what can be accepted.
+operatingQuestions:
+  amIDone: The page routes from validated AI draft to books-readiness and accountant handoff.
+  isThisRight: The validation checklist defines how drafted categories, transfers, duplicates, evidence links, and unusual items are checked.
+  canIProveIt: The evidence trail, statement checks, and decision log show why accepted work can be inspected.
+requiredAnswerUnits:
+  - AnswerBlock
+  - KansoTake
+  - DecisionSupport
+  - ProofBoundary
+  - SourceNotes
+  - NextStep
+  - EntitySummary
+requiredSections:
+  - Direct answer within opening 150 words
+  - AI draft validation table
+  - Proof boundary
+  - Source notes
+  - Next step to readiness and accountant-ready pages
+selectedArtifactId: ai-bookkeeping-validation-checklist
+artifactUse: Internal checklist that resolves the resource artifactId and defines validation criteria for AI-drafted bookkeeping work.
+internalLinks:
+  - /resources/how-to-know-books-are-done
+  - /resources/accountant-ready-books
+sourcesToUse:
+  - docs/KansoBooksVision.md#trust-model
+  - docs/KansoBooksWedge.md#strategic-posture
+  - docs/content-engine/Vision.md
+  - content/_data/canonical-jobs.yml
+  - content/_truth/product.yml
+  - content/_truth/legal-boundaries.yml
+sourcesToAvoid:
+  - External tax, legal, payroll, sales tax, filing, audit, or jurisdiction-specific sources
+  - Competitor pricing or current platform claims
+  - Unsupported AI accuracy statistics
+carefulClaims:
+  - Do not say AI completes bookkeeping.
+  - Do not say AI accuracy is sufficient proof.
+  - Do not say KansoBooks replaces accountants.
+  - Do not imply user books live in the cloud.
+  - Do not claim guaranteed correctness or fully automated bookkeeping.
+jurisdiction: general
+risk: medium
+professionalBoundary: Ask your accountant before relying on this for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+conversionPath: Validate the AI draft, then move to books-readiness and accountant-ready handoff resources.
+publishPriority: phase-4-third-calibration
+refreshCadence: quarterly
+handoffTo: kanso-research-packet
+handoff:
+  to: kanso-research-packet
+  briefPath: docs/content-runs/2026-05-09-ai-bookkeeping-with-proof/brief.yml
+  briefId: ai-bookkeeping-with-proof-brief
+  risk: medium
+  jurisdiction: general
+  sourcePlan:
+    - docs/KansoBooksVision.md#trust-model
+    - docs/KansoBooksWedge.md#strategic-posture
+    - docs/content-engine/Vision.md
+    - content/_data/canonical-jobs.yml
+    - content/_truth/product.yml
+    - content/_truth/legal-boundaries.yml
+  carefulClaims:
+    - AI output is a draft until validated and approved.
+    - Validation means evidence, deterministic checks, visible uncertainty, and decision records.
+    - Accountant judgment remains required for professional matters.
+  artifactId: ai-bookkeeping-validation-checklist

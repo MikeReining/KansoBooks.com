@@ -1,0 +1,44 @@
+draftRecord:
+  runId: 2026-05-09-ai-bookkeeping-with-proof-draft
+  briefId: ai-bookkeeping-with-proof-brief
+  packetId: ai-bookkeeping-with-proof-research
+  state: drafted
+  draftedAt: 2026-05-09T00:00:00-07:00
+  draftedBy: kanso-article-draft
+  contentId: ai-bookkeeping-with-proof
+  contentPath: content/resources/ai-bookkeeping-with-proof.md
+  artifactId: ai-bookkeeping-validation-checklist
+  artifactPath: content/_artifacts/ai-bookkeeping-validation-checklist.yml
+  claimManifestPath: content/_claims/ai-bookkeeping-with-proof.yml
+  answerUnitsPresent:
+    - AnswerBlock
+    - KansoTake
+    - DecisionSupport
+    - ProofBoundary
+    - SourceNotes
+    - NextStep
+    - EntitySummary
+  knownRisks:
+    - Medium-risk workflow page must avoid tax, legal, audit, payroll, sales-tax, filing, and entity-specific advice.
+    - Page must not imply AI confidence is financial truth.
+    - Page must not duplicate accountant handoff or books-readiness pages.
+  checksPassed:
+    - direct_answer_within_opening_150_words
+    - artifact_id_resolves_to_internal_artifact
+    - claim_manifest_created
+    - internal_links_to_existing_resources
+    - no_external_current_claims
+    - no_founder_approval_gate
+  checksFailed: []
+  handoff:
+    to: kanso-claim-audit
+    draftPath: content/resources/ai-bookkeeping-with-proof.md
+    claimManifestPath: content/_claims/ai-bookkeeping-with-proof.yml
+    briefId: ai-bookkeeping-with-proof-brief
+    packetId: ai-bookkeeping-with-proof-research
+    artifactId: ai-bookkeeping-validation-checklist
+    knownRisks:
+      - avoid_ai_as_truth
+      - avoid_accountant_replacement
+      - avoid_cloud_books_claim
+      - avoid_tax_legal_audit_advice

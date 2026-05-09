@@ -1,0 +1,49 @@
+finalAudit:
+  contentId: ai-bookkeeping-with-proof
+  status: publish
+  checkedAt: 2026-05-09T00:00:00-07:00
+  checkedBy: kanso-final-audit
+  contentPath: content/resources/ai-bookkeeping-with-proof.md
+  artifactPath: content/_artifacts/ai-bookkeeping-validation-checklist.yml
+  claimManifestPath: content/_claims/ai-bookkeeping-with-proof.yml
+  claimAuditPath: docs/content-runs/2026-05-09-ai-bookkeeping-with-proof/claim-audit.yml
+  checksPassed:
+    - content_schema_validated
+    - metadata_schema_complete
+    - claim_manifest_present
+    - artifact_id_resolves
+    - internal_links_resolve
+    - sources_resolve
+    - claim_audit_pass
+    - no_unsupported_external_claims
+    - no_invented_dates_prices_laws_standards_or_deadlines
+    - no_product_claims_beyond_truth_files_and_canonical_docs
+    - no_cloud_books_claim
+    - no_accountant_replacement_claim
+    - no_ai_as_financial_truth_claim
+    - no_tax_legal_audit_payroll_sales_tax_filing_or_entity_specific_advice
+    - required_answer_units_present
+    - entity_summary_present
+    - useful_for_small_business_owner_or_accountant
+    - distinct_from_accountant_ready_books_page
+    - distinct_from_how_to_know_books_are_done_page
+  checksFailed: []
+  publishAllowed: true
+  requiredFixes: []
+  escalation:
+    needed: false
+    reason: ""
+    narrowDecisionNeeded: ""
+  handoffTo: kanso-publish
+  handoff:
+    to: kanso-publish
+    contentPath: content/resources/ai-bookkeeping-with-proof.md
+    claimManifestPath: content/_claims/ai-bookkeeping-with-proof.yml
+    finalAuditPath: docs/content-runs/2026-05-09-ai-bookkeeping-with-proof/final-audit.yml
+    publishAllowed: true
+    checksPassed:
+      - content_schema_validated
+      - claim_audit_pass
+      - artifact_id_resolves
+      - internal_links_resolve
+      - forbidden_claims_absent

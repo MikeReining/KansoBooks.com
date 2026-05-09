@@ -1,0 +1,51 @@
+runId: 2026-05-09-ai-bookkeeping-with-proof-topic-score
+topicId: ai-bookkeeping-validation-checklist
+state: scored
+scoredAt: 2026-05-09T00:00:00-07:00
+scoredBy: kanso-topic-scoring
+candidate:
+  artifact: ai-bookkeeping-validation-checklist
+  resource: /resources/ai-bookkeeping-with-proof
+weightedScore:
+  icpFit: { score: 5, weight: 3, points: 15 }
+  painIntensity: { score: 5, weight: 3, points: 15 }
+  buyingIntent: { score: 4, weight: 3, points: 12 }
+  kansoDifferentiation: { score: 5, weight: 3, points: 15 }
+  artifactPotential: { score: 5, weight: 2, points: 10 }
+  aieoCitationPotential: { score: 5, weight: 2, points: 10 }
+  searchDemand: { score: 3, weight: 2, points: 6 }
+  internalLinkValue: { score: 5, weight: 1, points: 5 }
+  freshnessRequirementInverted: { score: 4, weight: 1, points: 4 }
+  riskLevelInverted: { score: 4, weight: 1, points: 4 }
+total: 96
+threshold: 55
+decision: brief
+pillar: ai-bookkeeping-with-proof
+tier: 1
+readerJob: Understand what AI can draft, what deterministic checks must prove, and what still needs human or accountant judgment.
+operatingQuestion: Is this right?
+canonicalJob: validate-ai-bookkeeping-work
+risk: medium
+artifactRequired: ai-bookkeeping-validation-checklist
+vetoesCleared:
+  - icp_fit_above_minimum
+  - kanso_differentiation_above_minimum
+  - distinct_reader_job_present
+  - artifact_potential_present
+  - tax_legal_audit_risk_bounded
+  - no_existing_content_duplicate
+  - avoids_accountant_ready_books_cannibalization
+  - avoids_books_readiness_cannibalization
+handoff:
+  to: kanso-content-brief
+  topicId: ai-bookkeeping-validation-checklist
+  score: 96
+  pillar: ai-bookkeeping-with-proof
+  tier: 1
+  readerJob: Understand what AI can draft, what deterministic checks must prove, and what still needs human or accountant judgment.
+  canonicalJob: validate-ai-bookkeeping-work
+  risk: medium
+  artifactRequired: ai-bookkeeping-validation-checklist
+  notes:
+    - Third calibration run should test the AI trust boundary rather than accountant handoff or generic books readiness.
+    - Public page should own validation of AI-drafted work, with internal links to readiness and accountant handoff pages as downstream steps.

@@ -1,0 +1,68 @@
+schemaVersion: 1
+id: ai-bookkeeping-validation-checklist
+title: AI Bookkeeping Validation Checklist
+artifactType: checklist
+jurisdiction: general
+risk: medium
+sourceNotes:
+  - docs/KansoBooksVision.md#trust-model
+  - docs/KansoBooksWedge.md#strategic-posture
+  - content/_data/canonical-jobs.yml
+  - content/_truth/product.yml
+  - content/_truth/legal-boundaries.yml
+professionalBoundary: This checklist helps review AI-drafted bookkeeping work. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+owner: KansoBooks Editorial System
+lastReviewed: 2026-05-09
+nextReview: 2026-08-09
+content:
+  purpose: Help a small-business owner separate useful AI-drafted bookkeeping work from work that still needs evidence, deterministic checks, user approval, or accountant judgment.
+  useWhen:
+    - AI has drafted categories, transfer matches, explanations, evidence links, or cleanup notes.
+    - You want to know whether the draft can move into reviewed books.
+    - You need a validation checklist that treats AI output as a proposal, not financial truth.
+  doNotUseFor:
+    - Deciding filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific questions.
+    - Treating AI confidence as proof.
+    - Replacing accountant review or user approval.
+  checklist:
+    - name: Source files present
+      doneWhen: The draft points back to the statements, exports, receipts, invoices, or notes used to prepare it.
+      evidence: Source-file list, evidence index, and any missing-source notes.
+    - name: Scope is named
+      doneWhen: The draft names the period, accounts, and files it covers, plus anything excluded.
+      evidence: Period scope note, account list, and excluded-file list.
+    - name: Statement totals checked
+      doneWhen: Book balances or transaction totals have been checked against statement records, or differences are listed as open items.
+      evidence: Reconciliation summary, statement ending balances, and unresolved difference list.
+    - name: Categories have reasons
+      doneWhen: Category suggestions include a reason that can be reviewed without trusting the prompt alone.
+      evidence: Category rationale, source transaction, matching rule, prior decision, or user note.
+    - name: Transfers are paired
+      doneWhen: Transfers are linked to matching opposite-side transactions or flagged when no match is found.
+      evidence: Transfer match list, unmatched transfers, and confidence factors.
+    - name: Duplicates are handled
+      doneWhen: Duplicate-looking transactions are either linked, removed from the draft, or held for review.
+      evidence: Duplicate review list and decision notes.
+    - name: Unusual items are surfaced
+      doneWhen: Large, one-time, owner, personal-looking, loan, refund, fee, and unclear items are visible as review items.
+      evidence: Exception list with plain-language explanations and questions.
+    - name: Human decisions are recorded
+      doneWhen: Accepted, rejected, changed, and deferred AI suggestions are logged.
+      evidence: Decision log with who decided, what changed, and why.
+    - name: Open questions remain visible
+      doneWhen: The draft does not hide uncertainty inside generic categories or clean-looking totals.
+      evidence: Open question list grouped by transaction, account, or period.
+    - name: Accountant boundary is clear
+      doneWhen: Professional judgment questions are listed for the accountant instead of resolved by AI language.
+      evidence: Accountant question list and professional-boundary note.
+  proofNeeded:
+    - Source records for the period and accounts in scope.
+    - Reconciliation or statement-total checks.
+    - Review notes for low-confidence categories, transfers, duplicates, and unusual items.
+    - Decision log showing user-approved changes.
+    - Accountant question list for matters requiring professional judgment.
+  accountantQuestions:
+    - Which AI-drafted items still need your judgment before the owner relies on the books?
+    - Are any categories, transfers, owner items, loans, refunds, or duplicates marked for a different treatment?
+    - Is any missing evidence important under the standard you want applied?
+    - Should any excluded account, processor, or date range be added before handoff?

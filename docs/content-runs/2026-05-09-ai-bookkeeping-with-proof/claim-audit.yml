@@ -1,0 +1,52 @@
+claimAudit:
+  contentId: ai-bookkeeping-with-proof
+  status: pass
+  checkedAt: 2026-05-09T00:00:00-07:00
+  checkedBy: kanso-claim-audit
+  contentPath: content/resources/ai-bookkeeping-with-proof.md
+  artifactPath: content/_artifacts/ai-bookkeeping-validation-checklist.yml
+  claimManifestPath: content/_claims/ai-bookkeeping-with-proof.yml
+  sourcesChecked:
+    - docs/KansoBooksVision.md#trust-model
+    - docs/KansoBooksWedge.md#strategic-posture
+    - docs/content-engine/Vision.md
+    - content/_data/canonical-jobs.yml
+    - content/_truth/product.yml
+    - content/_truth/legal-boundaries.yml
+  claimsChecked:
+    - claim-ai-validation-job
+    - claim-ai-proof-approval
+    - claim-product-local-first
+    - claim-product-ai-drafts-kanso-proves
+    - claim-accountant-package
+    - claim-professional-boundary
+  checksPassed:
+    - claim_manifest_schema_complete
+    - page_id_matches_content_id
+    - every_claim_has_resolving_source
+    - no_current_law_price_standard_deadline_or_platform_claims
+    - no_tax_legal_audit_payroll_sales_tax_filing_or_entity_specific_advice
+    - no_accountant_replacement_claim
+    - no_ai_as_financial_truth_claim
+    - no_cloud_books_claim
+    - page_does_not_duplicate_accountant_ready_books_job
+    - page_does_not_duplicate_books_readiness_job
+  claimsFailed: []
+  requiredEdits: []
+  escalation:
+    needed: false
+    reason: ""
+    narrowDecisionNeeded: ""
+  handoff:
+    to: kanso-final-audit
+    claimAuditPath: docs/content-runs/2026-05-09-ai-bookkeeping-with-proof/claim-audit.yml
+    draftPath: content/resources/ai-bookkeeping-with-proof.md
+    claimManifestPath: content/_claims/ai-bookkeeping-with-proof.yml
+    status: pass
+    claimsChecked:
+      - claim-ai-validation-job
+      - claim-ai-proof-approval
+      - claim-product-local-first
+      - claim-product-ai-drafts-kanso-proves
+      - claim-accountant-package
+      - claim-professional-boundary

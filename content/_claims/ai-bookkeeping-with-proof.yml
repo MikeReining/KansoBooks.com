@@ -1,0 +1,46 @@
+schemaVersion: 1
+pageId: ai-bookkeeping-with-proof
+risk: medium
+claims:
+  - id: claim-ai-validation-job
+    text: The canonical AI bookkeeping validation job is to understand what AI can draft, what deterministic checks must prove, and what still needs human or accountant judgment.
+    type: positioning
+    source: content/_data/canonical-jobs.yml
+    sourceCheckedAt: 2026-05-09
+    refresh: stable
+    notes: Uses the existing validate-ai-bookkeeping-work canonical job.
+  - id: claim-ai-proof-approval
+    text: AI can prepare bookkeeping work, but KansoBooks' trust model requires validation and user approval before work becomes truth.
+    type: positioning
+    source: docs/KansoBooksVision.md#trust-model
+    sourceCheckedAt: 2026-05-09
+    refresh: stable
+    notes: Supports AI-draft, validation, and approval boundary.
+  - id: claim-product-local-first
+    text: KansoBooks is local-first and the user's books live in files they own.
+    type: product
+    source: content/_truth/product.yml
+    sourceCheckedAt: 2026-05-09
+    refresh: on-release
+    notes: Supports ownership language without implying cloud storage of books.
+  - id: claim-product-ai-drafts-kanso-proves
+    text: KansoBooks is positioned around AI preparing work, Kanso validating it, and the user approving what becomes true.
+    type: product
+    source: content/_truth/product.yml
+    sourceCheckedAt: 2026-05-09
+    refresh: on-release
+    notes: Matches approved product truth language.
+  - id: claim-accountant-package
+    text: KansoBooks is positioned around helping owners prepare a cleaner package for accountant review.
+    type: product
+    source: content/_truth/product.yml
+    sourceCheckedAt: 2026-05-09
+    refresh: on-release
+    notes: Keeps accountant review as a boundary, not a replacement claim.
+  - id: claim-professional-boundary
+    text: KansoBooks content may explain books-readiness workflows, evidence trails, and accountant handoff, but must not provide tax, legal, payroll, sales tax, audit, filing, or entity-specific advice.
+    type: positioning
+    source: content/_truth/legal-boundaries.yml
+    sourceCheckedAt: 2026-05-09
+    refresh: stable
+    notes: Defines the professional boundary for this medium-risk page.

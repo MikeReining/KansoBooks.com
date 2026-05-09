@@ -35,7 +35,7 @@ publish public content or add content routes.
 
 ## Phase 4 Status
 
-**Status:** PASS / First Codex-as-Hermes content run closed as of 2026-05-09.
+**Status:** PASS / Codex-as-Hermes calibration closed as of 2026-05-09.
 
 Task 1 ran the first Codex-as-Hermes content pipeline with one public page:
 `/resources/accountant-ready-books`. The run created a topic score, brief,
@@ -60,6 +60,29 @@ publish log under
 independently reviewed the run, verified the required gates, and closed the
 second calibration run. Further Phase 4 repeats may continue from this
 baseline until the output is consistently Kanso-native.
+
+**Third Run Status:** PASS / Third Codex-as-Hermes calibration run closed as
+of 2026-05-09.
+
+Task 1 ran a third Codex-as-Hermes calibration pass for the distinct canonical
+job `validate-ai-bookkeeping-work`. The run created one public resource:
+`/resources/ai-bookkeeping-with-proof`, plus the internal artifact
+`content/_artifacts/ai-bookkeeping-validation-checklist.yml`, claim manifest,
+topic score, brief, research packet, draft record, claim audit, final audit,
+and publish log under
+`docs/content-runs/2026-05-09-ai-bookkeeping-with-proof/`. The run focuses on
+the AI trust boundary: AI-drafted bookkeeping is useful only when validated
+against source records, visible uncertainty, decision logs, and user approval.
+Task 2 independently reviewed the run, verified the required gates, and closed
+the third calibration run.
+
+**Phase 4 Calibration Status:** Complete / ready to proceed to Phase 5.
+
+Across three distinct runs, the content pipeline produced Kanso-native pages
+with resolving artifacts, claim manifests, run records, proof boundaries,
+professional boundaries, and no founder approval gate. Future calibration can
+continue opportunistically, but Phase 4 no longer blocks the Local Hermes
+Runner work in Phase 5.
 
 ## Goal
 

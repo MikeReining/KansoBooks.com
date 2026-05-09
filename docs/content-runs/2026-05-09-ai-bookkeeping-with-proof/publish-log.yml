@@ -1,0 +1,45 @@
+publishLog:
+  runId: 2026-05-09-ai-bookkeeping-with-proof-publish
+  topicId: ai-bookkeeping-validation-checklist
+  from: final-audit
+  to: published
+  agent: kanso-publish
+  timestamp: 2026-05-09T00:00:00-07:00
+  contentId: ai-bookkeeping-with-proof
+  url: /resources/ai-bookkeeping-with-proof
+  contentPath: content/resources/ai-bookkeeping-with-proof.md
+  artifactPath: content/_artifacts/ai-bookkeeping-validation-checklist.yml
+  claimManifest: content/_claims/ai-bookkeeping-with-proof.yml
+  runArtifacts:
+    - docs/content-runs/2026-05-09-ai-bookkeeping-with-proof/topic-score.yml
+    - docs/content-runs/2026-05-09-ai-bookkeeping-with-proof/brief.yml
+    - docs/content-runs/2026-05-09-ai-bookkeeping-with-proof/research-packet.yml
+    - docs/content-runs/2026-05-09-ai-bookkeeping-with-proof/draft-record.yml
+    - docs/content-runs/2026-05-09-ai-bookkeeping-with-proof/claim-audit.yml
+    - docs/content-runs/2026-05-09-ai-bookkeeping-with-proof/final-audit.yml
+  checksPassed:
+    - final_audit_publish_allowed
+    - state_set_to_published_after_audit
+    - content_resource_created
+    - internal_artifact_created
+    - claim_manifest_created
+    - run_logs_created
+    - npm_run_content_validate_passed
+    - npm_run_typecheck_passed
+    - npm_run_lint_passed
+    - npm_run_build_passed
+  checksFailed: []
+  commandsRun:
+    - command: npm run content:validate
+      result: passed
+    - command: npm run typecheck
+      result: passed
+    - command: npm run lint
+      result: passed
+    - command: npm run build
+      result: passed
+  indexingTasks:
+    - Covered by generated sitemap after build.
+    - Covered by resources index loader after content validation.
+  nextAction: Task 2 reviewer validates gates and decides closeout status.
+  escalation: null
