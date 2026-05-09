@@ -1,0 +1,44 @@
+draftRecord:
+  draftId: how-to-know-books-are-done-draft
+  state: drafted
+  draftedAt: 2026-05-09T00:00:00-07:00
+  draftedBy: kanso-article-draft
+  briefPath: docs/content-runs/2026-05-09-how-to-know-books-are-done/brief.yml
+  researchPacketPath: docs/content-runs/2026-05-09-how-to-know-books-are-done/research-packet.yml
+  contentPath: content/resources/how-to-know-books-are-done.md
+  artifactPath: content/_artifacts/books-readiness-checklist.yml
+  claimManifestPath: content/_claims/how-to-know-books-are-done.yml
+  metadata:
+    id: how-to-know-books-are-done
+    state: published
+    canonicalPath: /resources/how-to-know-books-are-done
+    canonicalJob: understand-books-readiness
+    artifactId: books-readiness-checklist
+    risk: medium
+  answerUnitsPresent:
+    - AnswerBlock
+    - KansoTake
+    - DecisionSupport
+    - ProofBoundary
+    - SourceNotes
+    - NextStep
+    - EntitySummary
+  knownRisks:
+    - Medium-risk general bookkeeping workflow must not drift into tax, legal, audit, payroll, sales tax, filing, or entity-specific advice.
+    - Page must remain distinct from /resources/accountant-ready-books by answering readiness before package assembly.
+  draftChecks:
+    - first_answer_within_opening_150_words
+    - readiness_decision_table_present
+    - proof_boundary_present
+    - artifact_id_resolves_to_internal_checklist
+    - claim_manifest_created
+    - internal_link_to_accountant_ready_books_present
+  handoff:
+    to: kanso-claim-audit
+    draftPath: content/resources/how-to-know-books-are-done.md
+    claimManifestPath: content/_claims/how-to-know-books-are-done.yml
+    briefId: how-to-know-books-are-done-brief
+    packetId: how-to-know-books-are-done-research
+    artifactId: books-readiness-checklist
+    knownRisks:
+      - Avoid accountant replacement, AI truth, cloud-books, and tax/legal/audit advice claims.

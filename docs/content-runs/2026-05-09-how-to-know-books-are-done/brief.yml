@@ -1,0 +1,79 @@
+briefId: how-to-know-books-are-done-brief
+topicId: books-readiness-checklist
+state: briefed
+titleCandidate: How to Know Your Books Are Done
+slugCandidate: how-to-know-books-are-done
+pillar: small-business-bookkeeping-basics
+tier: 1
+readerJob: Know whether categorized transactions have become finished books, and see what still needs review before accountant handoff.
+canonicalJob: understand-books-readiness
+searchIntent: The reader wants a practical checklist for deciding whether bookkeeping work is finished.
+aiAnswerIntent: Provide a compact definition of books readiness with proof requirements and boundaries.
+primaryQuery: how to know books are done
+secondaryQueries:
+  - are my books done
+  - bookkeeping readiness checklist
+  - finished books checklist
+kansoThesis: Categorized transactions are not finished books. Finished books have a named period, source records, reconciliation status, reviewed transaction states, evidence, and explicit open questions.
+operatingQuestions:
+  amIDone: The checklist defines the conditions for moving from bookkeeping work to accountant handoff.
+  isThisRight: Reconciliation status, transaction states, and unusual-item notes show what was checked.
+  canIProveIt: The evidence trail and source-file list show why the numbers can be inspected.
+requiredAnswerUnits:
+  - AnswerBlock
+  - KansoTake
+  - DecisionSupport
+  - ProofBoundary
+  - SourceNotes
+  - NextStep
+  - EntitySummary
+requiredSections:
+  - Direct answer within opening 150 words
+  - Readiness decision table
+  - Proof boundary
+  - Source notes
+  - Next step to accountant-ready package
+selectedArtifactId: books-readiness-checklist
+artifactUse: Internal checklist that resolves the resource artifactId and defines readiness criteria.
+internalLinks:
+  - /resources/accountant-ready-books
+sourcesToUse:
+  - docs/content-engine/Vision.md
+  - docs/KansoBooksVision.md#trust-model
+  - docs/KansoBooksWedge.md#moment-of-value
+  - content/_data/canonical-jobs.yml
+  - content/_truth/product.yml
+  - content/_truth/legal-boundaries.yml
+sourcesToAvoid:
+  - External tax, legal, payroll, sales tax, filing, audit, or jurisdiction-specific sources
+  - Competitor pricing or current platform claims
+carefulClaims:
+  - Do not say the books are ready for filing.
+  - Do not say KansoBooks replaces an accountant.
+  - Do not say AI has completed the books.
+  - Do not imply user books live in the cloud.
+jurisdiction: general
+risk: medium
+professionalBoundary: Ask your accountant before relying on this for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+conversionPath: Move from readiness check to the accountant-ready books resource and package checklist.
+publishPriority: phase-4-repeat-calibration
+refreshCadence: quarterly
+handoffTo: kanso-research-packet
+handoff:
+  to: kanso-research-packet
+  briefPath: docs/content-runs/2026-05-09-how-to-know-books-are-done/brief.yml
+  briefId: how-to-know-books-are-done-brief
+  risk: medium
+  jurisdiction: general
+  sourcePlan:
+    - docs/content-engine/Vision.md
+    - docs/KansoBooksVision.md#trust-model
+    - docs/KansoBooksWedge.md#moment-of-value
+    - content/_data/canonical-jobs.yml
+    - content/_truth/product.yml
+    - content/_truth/legal-boundaries.yml
+  carefulClaims:
+    - Done means checked and bounded, not filing-ready or professionally approved.
+    - AI-drafted work requires validation and approval.
+    - Accountant handoff is a next step, not a replacement for professional judgment.
+  artifactId: books-readiness-checklist

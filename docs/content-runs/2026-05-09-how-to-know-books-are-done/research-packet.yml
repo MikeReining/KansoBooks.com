@@ -1,0 +1,95 @@
+packetId: how-to-know-books-are-done-research
+briefId: how-to-know-books-are-done-brief
+state: researched
+researcher: kanso-research-packet
+dateChecked: 2026-05-09
+primarySources:
+  - title: Autonomous Content Engine Vision
+    url: docs/content-engine/Vision.md
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Content reader job and proof-oriented editorial boundary.
+    reliability: primary
+  - title: KansoBooks Vision
+    url: docs/KansoBooksVision.md#trust-model
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: AI prepares, Kanso proves, user approves; traceability, determinism, safe failure, and approval.
+    reliability: primary
+  - title: KansoBooks Wedge
+    url: docs/KansoBooksWedge.md#moment-of-value
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Books-ready confidence and accountant handoff moment.
+    reliability: primary
+  - title: Canonical Jobs
+    url: content/_data/canonical-jobs.yml
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Existing understand-books-readiness job and duplicate policy.
+    reliability: primary
+  - title: Product Truth
+    url: content/_truth/product.yml
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Local-first, AI-drafts boundary, and accountant package positioning.
+    reliability: primary
+  - title: Legal Boundaries Truth
+    url: content/_truth/legal-boundaries.yml
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Professional boundary and prohibited advice areas.
+    reliability: primary
+secondarySources: []
+competitorGaps: []
+definitions:
+  - term: books readiness
+    source: content/_data/canonical-jobs.yml
+    safeDefinition: A period is ready when categorized transactions are supported by reconciliation status, evidence, review items, and accountant handoff outputs.
+  - term: evidence trail
+    source: docs/KansoBooksVision.md#trust-model
+    safeDefinition: Source evidence, notes, and decisions that make a visible financial claim traceable and inspectable.
+  - term: AI-drafted bookkeeping
+    source: content/_truth/product.yml
+    safeDefinition: Bookkeeping work prepared by AI before Kanso validation and user approval.
+numbersAndDates: []
+uncertainClaims: []
+riskBoundaries:
+  tax: Do not provide filing, deductibility, treatment, deadline, or jurisdiction-specific guidance.
+  legal: Do not provide legal advice or entity-specific conclusions.
+  audit: Do not promise audit outcomes or use audit as the readiness standard.
+  accounting: Keep to general books-readiness workflow; route judgment calls to accountant review.
+sourceExcerpts:
+  - source: docs/content-engine/Vision.md
+    excerpt: "Get the books ready. Know what is still uncertain. Send the accountant a package that explains itself."
+    useLimit: short excerpt only
+  - source: docs/KansoBooksVision.md
+    excerpt: "AI prepares the work, Kanso proves it, and the user approves what becomes true."
+    useLimit: short excerpt only
+suggestedExamples:
+  - A transaction can be categorized but still not ready if the statement balance has not been checked.
+  - An unresolved difference can still be handoff-ready if it is explicitly named as an open item.
+writerWarnings:
+  - Avoid tax-time claims beyond handoff readiness.
+  - Do not duplicate the accountant package page; this page owns the earlier question, "am I done?"
+  - Prefer "books with an evidence trail" and "tax-time handoff ready" if tax-time language is needed.
+  - Do not imply cloud storage or automatic AI truth.
+handoffTo: kanso-article-draft
+handoff:
+  to: kanso-article-draft
+  packetPath: docs/content-runs/2026-05-09-how-to-know-books-are-done/research-packet.yml
+  briefId: how-to-know-books-are-done-brief
+  approvedSources:
+    - docs/content-engine/Vision.md
+    - docs/KansoBooksVision.md#trust-model
+    - docs/KansoBooksWedge.md#moment-of-value
+    - content/_data/canonical-jobs.yml
+    - content/_truth/product.yml
+    - content/_truth/legal-boundaries.yml
+  forbiddenClaims:
+    - KansoBooks replaces accountants.
+    - AI completes the books as financial truth.
+    - The page provides tax, legal, audit, payroll, sales tax, filing, or entity-specific advice.
+    - User books live in a KansoBooks cloud database.
+  uncertainClaims: []
+  professionalBoundary: Ask your accountant before relying on this for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.

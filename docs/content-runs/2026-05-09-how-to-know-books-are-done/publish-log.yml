@@ -1,0 +1,32 @@
+publishLog:
+  runId: 2026-05-09-how-to-know-books-are-done-publish
+  topicId: books-readiness-checklist
+  from: final-audit
+  to: published
+  agent: kanso-publish
+  timestamp: 2026-05-09T00:00:00-07:00
+  contentId: how-to-know-books-are-done
+  url: /resources/how-to-know-books-are-done
+  contentPath: content/resources/how-to-know-books-are-done.md
+  artifactPath: content/_artifacts/books-readiness-checklist.yml
+  claimManifest: content/_claims/how-to-know-books-are-done.yml
+  runArtifacts:
+    - docs/content-runs/2026-05-09-how-to-know-books-are-done/topic-score.yml
+    - docs/content-runs/2026-05-09-how-to-know-books-are-done/brief.yml
+    - docs/content-runs/2026-05-09-how-to-know-books-are-done/research-packet.yml
+    - docs/content-runs/2026-05-09-how-to-know-books-are-done/draft-record.yml
+    - docs/content-runs/2026-05-09-how-to-know-books-are-done/claim-audit.yml
+    - docs/content-runs/2026-05-09-how-to-know-books-are-done/final-audit.yml
+  checksPassed:
+    - final_audit_publish_allowed
+    - state_set_to_published_after_audit
+    - content_resource_created
+    - internal_artifact_created
+    - claim_manifest_created
+    - run_logs_created
+  checksFailed: []
+  indexingTasks:
+    - Covered by generated sitemap after build.
+    - Covered by resources index loader after content validation.
+  nextAction: Task 2 reviewer validates gates and decides closeout status.
+  escalation: null

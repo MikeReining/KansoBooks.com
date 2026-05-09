@@ -1,0 +1,51 @@
+claimAudit:
+  contentId: how-to-know-books-are-done
+  status: pass
+  checkedAt: 2026-05-09T00:00:00-07:00
+  checkedBy: kanso-claim-audit
+  contentPath: content/resources/how-to-know-books-are-done.md
+  artifactPath: content/_artifacts/books-readiness-checklist.yml
+  claimManifestPath: content/_claims/how-to-know-books-are-done.yml
+  sourcesChecked:
+    - docs/content-engine/Vision.md
+    - docs/KansoBooksVision.md#trust-model
+    - docs/KansoBooksWedge.md#moment-of-value
+    - content/_data/canonical-jobs.yml
+    - content/_truth/product.yml
+    - content/_truth/legal-boundaries.yml
+  claimsChecked:
+    - claim-reader-job
+    - claim-books-readiness-job
+    - claim-ai-proof-approval
+    - claim-local-files
+    - claim-accountant-package
+    - claim-professional-boundary
+  checksPassed:
+    - claim_manifest_schema_complete
+    - page_id_matches_content_id
+    - every_claim_has_resolving_source
+    - no_current_law_price_standard_deadline_or_platform_claims
+    - no_tax_legal_audit_payroll_sales_tax_filing_or_entity_specific_advice
+    - no_accountant_replacement_claim
+    - no_ai_as_financial_truth_claim
+    - no_cloud_books_claim
+    - page_does_not_duplicate_accountant_ready_books_job
+  claimsFailed: []
+  requiredEdits: []
+  escalation:
+    needed: false
+    reason: ""
+    narrowDecisionNeeded: ""
+  handoff:
+    to: kanso-final-audit
+    claimAuditPath: docs/content-runs/2026-05-09-how-to-know-books-are-done/claim-audit.yml
+    draftPath: content/resources/how-to-know-books-are-done.md
+    claimManifestPath: content/_claims/how-to-know-books-are-done.yml
+    status: pass
+    claimsChecked:
+      - claim-reader-job
+      - claim-books-readiness-job
+      - claim-ai-proof-approval
+      - claim-local-files
+      - claim-accountant-package
+      - claim-professional-boundary

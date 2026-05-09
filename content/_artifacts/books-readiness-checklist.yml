@@ -1,0 +1,66 @@
+schemaVersion: 1
+id: books-readiness-checklist
+title: Books Readiness Checklist
+artifactType: checklist
+jurisdiction: general
+risk: medium
+sourceNotes:
+  - docs/content-engine/Vision.md
+  - docs/KansoBooksVision.md#trust-model
+  - docs/KansoBooksWedge.md#moment-of-value
+  - content/_truth/legal-boundaries.yml
+professionalBoundary: This checklist helps decide whether bookkeeping work is ready for review. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+owner: KansoBooks Editorial System
+lastReviewed: 2026-05-09
+nextReview: 2026-08-09
+content:
+  purpose: Help a small-business owner decide whether a month, quarter, or year of books is done enough to hand off for review.
+  useWhen:
+    - You have imported or categorized transactions and want to know whether the work is actually finished.
+    - You are preparing a period for accountant review and need to separate checked work from open questions.
+    - You want a readiness check that treats evidence, reconciliation, and review notes as part of the result.
+  doNotUseFor:
+    - Deciding tax treatment, filing positions, payroll, sales tax, legal, audit, or entity-specific questions.
+    - Treating AI-drafted categories as final financial truth without review, evidence, and approval.
+    - Replacing an accountant's judgment on questions that need professional review.
+  checklist:
+    - name: Period is named
+      readyWhen: The month, quarter, or year is clear, and every included account belongs to that period.
+      evidence: Period label, account list, and any date or account exclusions.
+    - name: Source files are present
+      readyWhen: Each included bank, card, or relevant source account has a statement or source export for the period.
+      evidence: Statement folder, export folder, source file list, and missing-source notes.
+    - name: Statement totals match or differences are named
+      readyWhen: Book balances have been checked against external statements, or unresolved differences are visible.
+      evidence: Reconciliation summary, statement ending balances, and difference notes.
+    - name: Every transaction has a state
+      readyWhen: Each transaction is categorized, marked as a transfer, explained by an owner note, or left as an explicit review item.
+      evidence: Transaction list, category list, transfer notes, and review queue.
+    - name: Unusual items are explained
+      readyWhen: Large, one-time, owner, loan, refund, duplicate-looking, and personal-looking transactions have plain-language notes.
+      evidence: Exception list, owner notes, and accountant questions where judgment is needed.
+    - name: Evidence trail is inspectable
+      readyWhen: Statements, receipts, invoices, and notes are attached or indexed, and missing evidence is named instead of hidden.
+      evidence: Evidence index, source folders, receipt or invoice references, and missing-evidence notes.
+    - name: AI-drafted work has been reviewed
+      readyWhen: AI suggestions have been accepted, changed, rejected, or left as review items before they affect finished books.
+      evidence: Decision log, review notes, and accepted changes.
+    - name: Open questions are small and explicit
+      readyWhen: Remaining uncertainty is listed as questions, not buried inside categories or totals.
+      evidence: Open-question list grouped by transaction, account, or period.
+    - name: Handoff package is coherent
+      readyWhen: Reports, source files, reconciliation notes, evidence index, and open questions point to the same period and account scope.
+      evidence: Local package, folder, or index that can be checked before sending.
+  proofNeeded:
+    - Named period and included account list.
+    - Source statements or exports for included accounts.
+    - Reconciliation summary or unresolved difference list.
+    - Transaction list with category, transfer, note, or review state.
+    - Evidence index and missing-evidence notes.
+    - Review record for AI-drafted or owner-drafted decisions.
+    - Open-question list for matters needing professional judgment.
+  accountantQuestions:
+    - Which remaining questions need your judgment before the owner relies on these books?
+    - Are any unusual transactions missing the context you need to review them?
+    - Does the evidence trail make the period easy to inspect?
+    - Should any excluded account, source file, or date range be added before handoff?

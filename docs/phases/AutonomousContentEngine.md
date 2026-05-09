@@ -47,6 +47,20 @@ was added for the same canonical job. Task 2 independently reviewed the run,
 verified the required gates, and closed the first run. Further Phase 4 repeats
 may continue from this calibrated baseline.
 
+**Repeat Status:** PASS / Second Codex-as-Hermes calibration run closed as of
+2026-05-09.
+
+Task 1 ran a second content pipeline pass for the distinct canonical job
+`understand-books-readiness`. The run created one public resource:
+`/resources/how-to-know-books-are-done`, plus the internal artifact
+`content/_artifacts/books-readiness-checklist.yml`, claim manifest, topic
+score, brief, research packet, draft record, claim audit, final audit, and
+publish log under
+`docs/content-runs/2026-05-09-how-to-know-books-are-done/`. Task 2
+independently reviewed the run, verified the required gates, and closed the
+second calibration run. Further Phase 4 repeats may continue from this
+baseline until the output is consistently Kanso-native.
+
 ## Goal
 
 Build an autonomous proof-grade publishing system for `KansoBooks.com` so
