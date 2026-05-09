@@ -4,6 +4,10 @@ This directory is the versioned repo-side setup for Phase 5. It defines Kanso
 Hermes profiles, toolset intent, model routing placeholders, worktree
 conventions, and schedule templates without storing credentials.
 
+Start the Mac Mini setup from:
+
+- `docs/content-engine/HermesSetupGuide.md`
+
 Ready in repo:
 
 - `profiles.yml`: four Hermes profiles and their skill/tool boundaries.

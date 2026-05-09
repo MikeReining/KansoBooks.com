@@ -20,6 +20,12 @@ Runner configuration lives in:
 config/hermes/
 ```
 
+The step-by-step Mac Mini setup guide is:
+
+```text
+docs/content-engine/HermesSetupGuide.md
+```
+
 Run templates live in:
 
 ```text
