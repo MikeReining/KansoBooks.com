@@ -5,8 +5,8 @@ set -o pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT" || exit 1
 
-RUN_ID="hermes-dry-run-$(date -u +%Y%m%dT%H%M%SZ)"
-REPORT_ROOT="${HERMES_REPORT_ROOT:-${TMPDIR:-/tmp}/kansobooks-hermes-runs}"
+RUN_ID="codex-dry-run-$(date -u +%Y%m%dT%H%M%SZ)"
+REPORT_ROOT="${CODEX_REPORT_ROOT:-${TMPDIR:-/tmp}/kansobooks-codex-runs}"
 REPORT_DIR="$REPORT_ROOT/$RUN_ID"
 REPORT="$REPORT_DIR/dry-run-report.yml"
 mkdir -p "$REPORT_DIR"
@@ -89,8 +89,8 @@ STATUS_AFTER="$(git status --short 2>/dev/null | sed 's/"/\\"/g' || true)"
 
 rm -f "$REPORT_DIR/steps.tmp"
 
-echo "Hermes dry-run report: $REPORT"
-echo "Set HERMES_REPORT_ROOT=docs/content-runs to keep a report in the repo."
+echo "Codex dry-run report: $REPORT"
+echo "Set CODEX_REPORT_ROOT=docs/content-runs to keep a report in the repo."
 
 if [[ "$STATUS" != "pass" ]]; then
   exit 1

@@ -4,11 +4,11 @@ timezone: America/Vancouver
 runner: local-mac-mini
 
 jobs:
-  - id: hermes-dry-run
+  - id: codex-dry-run
     cadence: daily
     suggestedCron: "15 6 * * *"
     profile: kanso-auditor-publisher
-    command: HERMES_REPORT_ROOT=docs/content-runs npm run hermes:dry-run
+    command: CODEX_REPORT_ROOT=docs/content-runs npm run codex:dry-run
     publishAllowed: false
     writes:
       - docs/content-runs/**
@@ -54,6 +54,6 @@ jobs:
       - no ad account, billing, payment, or customer financial data access
 
 scheduleInstallNotes:
-  - Convert suggestedCron entries to launchd plists, crontab, or the scheduler Hermes supports locally.
-  - Start with hermes-dry-run only until the Mac Mini worktree, local secrets, and permissions are verified.
+  - Convert suggestedCron entries to launchd plists, crontab, or the scheduler Codex supports locally.
+  - Start with codex-dry-run only until the Mac Mini worktree, local secrets, and permissions are verified.
   - Do not configure direct Vercel, Supabase, Lemon Squeezy, DNS, or GitHub admin credentials for these jobs.

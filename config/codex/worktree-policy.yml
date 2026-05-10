@@ -7,11 +7,11 @@ canonicalRepository:
   defaultBranch: main
 
 localRunnerConvention:
-  osUser: hermes-kanso-content
-  rootDirectory: /Users/hermes-kanso-content/kanso
-  canonicalClone: /Users/hermes-kanso-content/kanso/KansoBooks.com
-  scheduledWorktree: /Users/hermes-kanso-content/kanso/KansoBooks.com-autopublish
-  branchPrefix: hermes/content/
+  osUser: codex-kanso-content
+  rootDirectory: /Users/codex-kanso-content/kanso
+  canonicalClone: /Users/codex-kanso-content/kanso/KansoBooks.com
+  scheduledWorktree: /Users/codex-kanso-content/kanso/KansoBooks.com-autopublish
+  branchPrefix: codex/content/
   runLogRoot: docs/content-runs
 
 requiredStartupChecks:
@@ -19,7 +19,7 @@ requiredStartupChecks:
   - confirm git remote matches canonical repository
   - record git rev-parse HEAD in run log
   - record git status --short before edits
-  - run npm run hermes:dry-run before enabling credentials
+  - run npm run codex:dry-run before enabling credentials
 
 autonomousWriteAllowlist:
   - content/**

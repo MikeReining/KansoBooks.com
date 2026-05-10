@@ -1,4 +1,38 @@
+import type { Metadata } from "next";
+
 import type { ContentItem } from "./types";
+
+export function contentPageMetadata(item: ContentItem): Metadata {
+  const image = item.metadata.heroImage;
+
+  return {
+    title: item.metadata.seoTitle,
+    description: item.metadata.description,
+    alternates: { canonical: item.metadata.canonicalPath },
+    openGraph: {
+      title: item.metadata.seoTitle,
+      description: item.metadata.description,
+      type: "article",
+      url: item.metadata.canonicalPath,
+      images: image
+        ? [
+            {
+              url: image.src,
+              width: image.width ?? 1600,
+              height: image.height ?? 900,
+              alt: image.alt,
+            },
+          ]
+        : undefined,
+    },
+    twitter: {
+      card: image ? "summary_large_image" : "summary",
+      title: item.metadata.seoTitle,
+      description: item.metadata.description,
+      images: image ? [image.src] : undefined,
+    },
+  };
+}
 
 export function articleJsonLd(item: ContentItem) {
   return {
@@ -14,6 +48,7 @@ export function articleJsonLd(item: ContentItem) {
       "@type": "Organization",
       name: "KansoBooks",
     },
+    image: item.metadata.heroImage?.src,
     datePublished: item.metadata.publishedAt,
     dateModified: item.metadata.lastReviewed,
     mainEntityOfPage: item.metadata.canonicalPath,

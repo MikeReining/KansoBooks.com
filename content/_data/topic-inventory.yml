@@ -1,0 +1,202 @@
+schemaVersion: 1
+status: active
+sourceOfTruth: true
+lastReviewed: 2026-05-10
+nextReview: 2026-06-10
+topics:
+  - id: how-to-know-books-are-done
+    status: published
+    priority: 0
+    title: How to Know Your Books Are Done
+    canonicalPath: /resources/how-to-know-books-are-done
+    canonicalJob: understand-books-readiness
+    pillar: small-business-bookkeeping-basics
+    primaryQuery: how to know books are done
+    readerFear: Are my books actually done?
+    searchIntent: Learn whether bookkeeping work is ready to hand off.
+    distinctAngle: Readiness checklist before accountant handoff.
+    targetAction: Run the books-readiness checklist.
+    artifactId: books-readiness-checklist
+    duplicateRisk: 0
+    internalLinks:
+      - /resources/accountant-ready-books
+  - id: accountant-ready-books
+    status: published
+    priority: 0
+    title: Accountant-Ready Books
+    canonicalPath: /resources/accountant-ready-books
+    canonicalJob: prepare-books-for-accountant
+    pillar: accountant-ready-books
+    primaryQuery: accountant-ready books
+    readerFear: Will my accountant have what they need?
+    searchIntent: Learn what belongs in an accountant handoff package.
+    distinctAngle: Package contents and handoff standard.
+    targetAction: Build the accountant package.
+    artifactId: accountant-package-checklist
+    duplicateRisk: 0
+    internalLinks:
+      - /resources/how-to-know-books-are-done
+  - id: ai-bookkeeping-with-proof
+    status: published
+    priority: 0
+    title: AI Bookkeeping With Proof
+    canonicalPath: /resources/ai-bookkeeping-with-proof
+    canonicalJob: validate-ai-bookkeeping-work
+    pillar: ai-bookkeeping-with-proof
+    primaryQuery: AI bookkeeping with proof
+    readerFear: Can I trust AI with my books?
+    searchIntent: Understand what AI can draft and what must be checked.
+    distinctAngle: AI drafts, validation proves, user approves.
+    targetAction: Validate AI-drafted bookkeeping before approval.
+    artifactId: ai-bookkeeping-validation-checklist
+    duplicateRisk: 0
+    internalLinks:
+      - /resources/how-to-know-books-are-done
+  - id: local-first-bookkeeping-vs-cloud-accounting
+    status: published
+    priority: 0
+    title: Local-First Bookkeeping vs Cloud Accounting
+    canonicalPath: /comparisons/local-first-bookkeeping-vs-cloud-accounting
+    canonicalJob: choose-bookkeeping-system
+    pillar: alternatives-and-buying-decisions
+    primaryQuery: local-first bookkeeping vs cloud accounting
+    readerFear: Which setup gives me more confidence?
+    searchIntent: Compare system choices by confidence, cost, readiness, and handoff.
+    distinctAngle: System choice by correctness, time, cost, tax-time readiness, and handoff.
+    targetAction: Run the bookkeeping system choice matrix.
+    artifactId: bookkeeping-system-choice-matrix
+    duplicateRisk: 0
+    internalLinks:
+      - /resources/how-to-know-books-are-done
+      - /resources/accountant-ready-books
+  - id: bookkeeping-evidence-index-template
+    status: drafted
+    priority: 20
+    title: Bookkeeping Evidence Index Template
+    canonicalPath: /templates/bookkeeping-evidence-index-template
+    canonicalJob: use-handoff-template
+    pillar: templates-tools-artifacts
+    primaryQuery: bookkeeping evidence index template
+    readerFear: How do I organize proof for my accountant?
+    searchIntent: Find a template for evidence and source-file organization.
+    distinctAngle: Evidence index template, not a full accountant package guide.
+    targetAction: Fill out the evidence index.
+    artifactId: bookkeeping-evidence-index-template
+    duplicateRisk: 3
+    requiredBeforePublish:
+      - Make artifact visible or downloadable.
+      - Add template presentation.
+  - id: monthly-bookkeeping-checklist-small-business
+    status: candidate
+    priority: 1
+    title: Monthly Bookkeeping Checklist For Small Business
+    canonicalPath: /resources/monthly-bookkeeping-checklist-small-business
+    canonicalJob: understand-books-readiness
+    pillar: small-business-bookkeeping-basics
+    primaryQuery: monthly bookkeeping checklist for small business
+    readerFear: How do I keep up every month?
+    searchIntent: Find a repeatable monthly bookkeeping routine.
+    distinctAngle: Monthly operating checklist, not year-end handoff.
+    targetAction: Run a monthly close checklist.
+    artifactId: monthly-close-checklist
+    readerPain: 5
+    searchSpecificity: 5
+    kansoDifferentiation: 4
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 5
+  - id: what-to-send-accountant-for-taxes
+    status: candidate
+    priority: 2
+    title: What To Send Your Accountant For Taxes
+    canonicalPath: /resources/what-to-send-accountant-for-taxes
+    canonicalJob: prepare-books-for-accountant
+    pillar: accountant-ready-books
+    primaryQuery: what to send accountant for taxes small business
+    readerFear: Will tax time expose something I missed?
+    searchIntent: Learn what to package for accountant review before tax time.
+    distinctAngle: General handoff package, not tax advice.
+    targetAction: Assemble a tax-time handoff list.
+    artifactId: tax-time-handoff-list
+    readerPain: 5
+    searchSpecificity: 5
+    kansoDifferentiation: 4
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 4
+  - id: how-to-check-if-bookkeeping-is-correct
+    status: candidate
+    priority: 3
+    title: How To Check If Bookkeeping Is Correct
+    canonicalPath: /resources/how-to-check-if-bookkeeping-is-correct
+    canonicalJob: understand-books-readiness
+    pillar: small-business-bookkeeping-basics
+    primaryQuery: how to check if bookkeeping is correct
+    readerFear: Are my numbers right?
+    searchIntent: Learn owner-safe checks for bookkeeping correctness.
+    distinctAngle: Correctness checks, not general readiness.
+    targetAction: Run a correctness checklist.
+    artifactId: correctness-checklist
+    readerPain: 5
+    searchSpecificity: 5
+    kansoDifferentiation: 5
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 4
+  - id: ai-bookkeeping-mistakes-to-review
+    status: candidate
+    priority: 4
+    title: AI Bookkeeping Mistakes To Review
+    canonicalPath: /resources/ai-bookkeeping-mistakes-to-review
+    canonicalJob: validate-ai-bookkeeping-work
+    pillar: ai-bookkeeping-with-proof
+    primaryQuery: AI bookkeeping mistakes to review
+    readerFear: Can AI quietly get my books wrong?
+    searchIntent: Learn which AI bookkeeping outputs need review.
+    distinctAngle: Concrete AI review risks and safe checks.
+    targetAction: Review AI-drafted bookkeeping mistakes.
+    artifactId: ai-review-risk-checklist
+    readerPain: 4
+    searchSpecificity: 5
+    kansoDifferentiation: 5
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 4
+  - id: bookkeeping-cleanup-before-tax-season
+    status: candidate
+    priority: 5
+    title: Bookkeeping Cleanup Before Tax Season
+    canonicalPath: /resources/bookkeeping-cleanup-before-tax-season
+    canonicalJob: prepare-books-for-accountant
+    pillar: accountant-ready-books
+    primaryQuery: bookkeeping cleanup before tax season
+    readerFear: Can I get this done before tax time?
+    searchIntent: Triage messy books before accountant handoff.
+    distinctAngle: Cleanup order and triage, not tax advice.
+    targetAction: Run a cleanup triage table.
+    artifactId: cleanup-triage-table
+    readerPain: 5
+    searchSpecificity: 5
+    kansoDifferentiation: 4
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 4
+  - id: quickbooks-alternative-accountant-ready-books
+    status: candidate
+    priority: 6
+    title: QuickBooks Alternative For Accountant-Ready Books
+    canonicalPath: /comparisons/quickbooks-alternative-accountant-ready-books
+    canonicalJob: choose-bookkeeping-system
+    pillar: alternatives-and-buying-decisions
+    primaryQuery: QuickBooks alternative for accountant-ready books
+    readerFear: Is there a simpler way than QuickBooks?
+    searchIntent: Compare alternatives by handoff outcome.
+    distinctAngle: Outcome and handoff comparison, not full feature parity.
+    targetAction: Use a decision table.
+    artifactId: quickbooks-alternative-decision-table
+    readerPain: 5
+    searchSpecificity: 4
+    kansoDifferentiation: 5
+    artifactPotential: 4
+    duplicateRisk: 2
+    publishEase: 3

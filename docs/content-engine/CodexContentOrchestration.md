@@ -65,6 +65,8 @@ content draft.
 Before writing, Codex must identify:
 
 - content item or refresh target
+- topic inventory status in `content/_data/topic-inventory.yml`
+- primary long-tail query and duplicate risk
 - canonical job
 - reader job
 - primary operating question: "Am I done?", "Is this right?", or "Can I prove it?"
@@ -77,6 +79,20 @@ Before writing, Codex must identify:
 If those are unclear, Codex should infer conservatively from the canonical jobs
 and truth files. Stop only when the uncertainty changes product, trust,
 security, legal, accounting, or access policy.
+
+For new topics, run `docs/content-engine/IdeaGeneration.md` before drafting:
+
+- generate or select candidates from reader fears and long-tail query patterns
+- reject duplicates before creating content
+- add the selected idea to `content/_data/topic-inventory.yml`
+- write `topic-score.yml` with reader pain, search specificity, Kanso
+  differentiation, artifact potential, duplicate risk, and publish ease
+
+When the user says `Next article`, `next post`, or `next content`, run
+`docs/content-engine/NextArticleWorkflow.md` first. That workflow always drafts
+the next qualified article and stops before publication. The 24-hour cadence
+only controls whether the finished draft is eligible to publish after founder
+review.
 
 ## Required Outputs
 
@@ -122,6 +138,7 @@ The page is not good enough when it is:
 - mostly definitions
 - generic bookkeeping filler
 - safe but bland
+- correct markdown with bland presentation
 - a thin checklist with no proof boundary
 - a search page that does not help the reader make a decision
 - a Kanso page that could appear on any accounting blog
@@ -136,6 +153,17 @@ The target voice is:
 - calm
 - skeptical of AI confidence
 - respectful of accountant judgment
+
+Apply `docs/content-engine/CopyGuide.md` before final audit:
+
+- write like a capable owner, not an internal strategist
+- name the user's fear, object, decision, or next action
+- translate product terms into visible artifacts: statements, folders, exports,
+  questions, reports, and accountant packages
+- use the KansoBooks vision where it helps the reader, without repeating the
+  whole manifesto in every article
+- remove abstract phrases such as "system shape" or "operating priority" unless
+  they are immediately translated into plain user language
 
 ## Three-Pass Quality Loop
 
@@ -182,8 +210,77 @@ Check:
 - would an accountant understand the handoff?
 - would an owner know what to do in the next 10 minutes?
 - are claims still source-backed and bounded?
+- does the page sound like something a worried owner would understand and
+  repeat?
 
 Write `quality-report-v3.yml` with final recommendation.
+
+## Presentation Packaging Pass
+
+After Pass 3 and before final audit, Codex must verify that the reusable
+content presentation layer can package the page without bespoke styling.
+
+Apply presentation by structure, not by hand-editing page chrome:
+
+- keep the article in `content/<section>/<slug>.md`
+- rely on the shared renderer and `ContentArticlePage` shell
+- use conventional headings such as `The 10-Minute Exit Test`, `What You Can
+  Prove`, `Source Notes`, `Next Step`, and `Entity Summary`
+- use markdown tables for decision support, proof tests, and comparisons
+- use `internalLinks`, `artifactId`, `risk`, `jurisdiction`, and
+  `professionalBoundary` metadata to populate sidebar and footer modules
+
+Make an image decision using `docs/content-engine/ContentImageStyleGuide.md`:
+
+- generate or select an image only when it clarifies the article job
+- record `image-prompt.md` and `image-audit.yml` for generated or approved
+  assets
+- record `image-audit.yml` with `status: "no-image"` when the designed
+  non-image layout is stronger
+- reject images that imply cloud storage, show private data, invent dashboards,
+  or look like generic accounting stock
+
+Never add placeholder links:
+
+- every CTA, sidebar link, footer link, and inline link must resolve to a live,
+  useful destination
+- do not link to empty section hubs, unpublished templates, unpublished
+  artifacts, future pages, or TODO routes
+- if the intended artifact is not published yet, use the waitlist or another
+  live next step instead
+- draft previews may display placement for future modules, but the clickable
+  link itself must still point somewhere useful
+
+Record presentation review in the run directory:
+
+```text
+presentation-audit.yml
+```
+
+Minimum presentation audit fields:
+
+```yaml
+status: "pass | blocked"
+previewUrls:
+  draft: "/drafts/<section>/<slug>"
+  published: "/<section>/<slug>"
+checks:
+  desktopScreenshot: "pass | blocked | not-run"
+  mobileScreenshot: "pass | blocked | not-run"
+  tableOverflow: "pass | blocked"
+  sidebarOverlap: "pass | blocked"
+  ctaPresence: "pass | blocked"
+  draftNoindex: "pass | blocked | not-applicable"
+  linkRendering: "pass | blocked"
+  noPlaceholderLinks: "pass | blocked"
+  specialSections: "pass | blocked | not-applicable"
+  imageDecision: "approved | rejected | no-image"
+notes: []
+```
+
+An item is not `ready-for-publish-authorization` unless presentation status is
+`pass`. If screenshots cannot be produced locally, mark them `not-run` with a
+reason and do not call the page presentation-ready.
 
 ## Task Separation Inside Codex
 
@@ -212,6 +309,9 @@ The final audit must record whether the content is:
 - `blocked` for draft-only mode
 - `ready-for-publish-authorization`
 - `escalated`
+
+The final audit must also confirm `presentation-audit.yml` exists and passes
+when the run creates, refreshes, or prepares a publishable article.
 
 Draft-only runs must keep new content out of production publication by leaving
 state as `drafted`, `blocked`, or another non-`published` state.

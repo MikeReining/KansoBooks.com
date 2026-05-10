@@ -7,6 +7,9 @@ claimAudit:
     - id: claim-local-first
       source: content/_truth/product.yml
       result: supported
+    - id: claim-owned-books-thesis
+      source: docs/KansoBooksManifesto.md#the-inversion
+      result: supported
     - id: claim-ai-proof-approval
       source: docs/KansoBooksVision.md#trust-model
       result: supported

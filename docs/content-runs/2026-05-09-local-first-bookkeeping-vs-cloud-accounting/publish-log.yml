@@ -1,14 +1,38 @@
 publishLog:
   contentId: local-first-bookkeeping-vs-cloud-accounting
   runId: 2026-05-09-local-first-bookkeeping-vs-cloud-accounting
-  attemptedAt: 2026-05-09T17:10:00-07:00
-  action: blocked
-  publishAttempted: false
-  publishAllowed: false
-  reason: Draft-only Codex orchestration run.
+  attemptedAt: 2026-05-10T00:00:00-07:00
+  action: published
+  publishAttempted: true
+  publishAllowed: true
+  reason: User explicitly authorized publication after review.
+  from: final-audit
+  to: published
+  agent: kanso-publish
+  url: /comparisons/local-first-bookkeeping-vs-cloud-accounting
+  contentPath: content/comparisons/local-first-bookkeeping-vs-cloud-accounting.md
+  artifactPath: content/_artifacts/bookkeeping-system-choice-matrix.yml
+  claimManifest: content/_claims/local-first-bookkeeping-vs-cloud-accounting.yml
+  runArtifacts:
+    - docs/content-runs/2026-05-09-local-first-bookkeeping-vs-cloud-accounting/topic-score.yml
+    - docs/content-runs/2026-05-09-local-first-bookkeeping-vs-cloud-accounting/brief.yml
+    - docs/content-runs/2026-05-09-local-first-bookkeeping-vs-cloud-accounting/research-packet.yml
+    - docs/content-runs/2026-05-09-local-first-bookkeeping-vs-cloud-accounting/draft-record.yml
+    - docs/content-runs/2026-05-09-local-first-bookkeeping-vs-cloud-accounting/claim-audit.yml
+    - docs/content-runs/2026-05-09-local-first-bookkeeping-vs-cloud-accounting/final-audit.yml
+    - docs/content-runs/2026-05-09-local-first-bookkeeping-vs-cloud-accounting/image-audit.yml
   notes:
     - No commit performed.
     - No push performed.
     - No PR created.
     - No deploy performed.
-    - No publish operation executed.
+    - State changed to published in content frontmatter.
+    - Generated sitemap and comparison index include this article after build.
+  checksPassed:
+    - user_publish_authorization
+    - final_audit_publish_allowed
+    - state_set_to_published_after_audit
+    - content_validation_passed
+    - internal_links_resolve
+    - no_placeholder_links
+  checksFailed: []

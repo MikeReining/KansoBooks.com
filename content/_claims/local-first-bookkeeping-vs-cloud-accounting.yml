@@ -8,6 +8,12 @@ claims:
     source: content/_truth/product.yml
     refresh: on-release
     notes: Supports local-first ownership language.
+  - id: claim-owned-books-thesis
+    text: KansoBooks argues that business books should be owned, portable, inspectable, and not trapped inside a vendor-controlled system.
+    type: positioning
+    source: docs/KansoBooksManifesto.md#the-inversion
+    refresh: stable
+    notes: Supports the comparison's ownership and vendor-dependency framing.
   - id: claim-ai-proof-approval
     text: AI can draft bookkeeping work, but validation and user approval determine what becomes trusted record truth.
     type: positioning

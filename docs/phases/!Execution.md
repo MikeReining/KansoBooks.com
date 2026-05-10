@@ -142,21 +142,21 @@ Autonomous publishing must preserve:
 - no content outside the wedge unless it supports buying intent
 - no publishing without automated audit
 
-## Hermes Safety Model
+## Codex Automation Safety Model
 
 Skills are workflow instructions, not a security boundary.
 
-Hermes agents should execute only what their skills say, but the system must
+Codex agents should execute only what their skills say, but the system must
 still assume an agent with file, terminal, browser, or git tools can make a bad
 edit, run the wrong command, leak a secret, or push unintended changes.
 
 Therefore, autonomous content publishing must eventually use defense in depth:
 
-- separate Hermes profiles for strategist, researcher, writer, reviewer,
+- separate Codex automation roles for strategist, researcher, writer, reviewer,
   auditor, publisher, maintainer, and metrics roles
-- smallest practical toolsets per profile
-- no `all` toolset for scheduled publishing profiles
-- separate Mac Mini OS user or working directory for Hermes
+- smallest practical toolsets per role
+- no `all` toolset for scheduled publishing roles
+- separate OS user or working directory for Codex automations
 - dedicated clone or worktree for content automation
 - restricted credentials
 - branch protection
@@ -168,8 +168,8 @@ Therefore, autonomous content publishing must eventually use defense in depth:
 Recommended future autopublish model:
 
 1. Canonical website and content-engine code live in this repo.
-2. Hermes works in a dedicated content automation clone/worktree.
-3. Hermes may edit only approved content paths during autopublish.
+2. Codex works in a dedicated content automation clone/worktree.
+3. Codex may edit only approved content paths during autopublish.
 4. CI rejects autopublish changes outside the allowlist.
 5. CI runs content validation, typecheck, lint, and build.
 6. Passing autopublish changes merge/deploy automatically.
@@ -207,7 +207,7 @@ package-lock.json
 .github/**
 ```
 
-Skills may be improved by Hermes, but canonical skill changes should land
+Skills may be improved by Codex, but canonical skill changes should land
 through a normal implementation/review sprint, not silent autopublish.
 
 ## Human Stop Conditions
@@ -223,7 +223,7 @@ Stop for:
 - tax/legal/accounting advice uncertainty
 - credentials, billing, or provider failure
 - branch protection, CI, or deployment failure that cannot be mechanically fixed
-- Hermes access-policy changes
+- Codex automation access-policy changes
 - deleting or rewriting large parts of the public website
 - allowing autonomous agents broader write access than the current target doc
   authorizes
@@ -334,7 +334,7 @@ Task 1 must not:
 - declare PASS
 - archive target docs
 - make sprint closeout commits unless the target doc explicitly merges lanes
-- broaden Hermes access or credentials outside sprint scope
+- broaden Codex automation access or credentials outside sprint scope
 - edit unrelated website areas
 - change product truth to make content easier
 
@@ -528,10 +528,15 @@ Archived: YYYY-MM-DD
 Status: Historical / Non-authoritative
 Superseded by: <live/root paths>
 Do not implement from this file.
+Do not rely on this file for current execution.
+Code, tests, schemas, and active canonical docs are the source of truth.
 ```
 
-4. Move the file to `docs/phases/archived/` if that directory exists or create
-   it as part of closeout.
+4. Move the file to `docs/archive/`, preserving enough path context in the
+   filename when useful, such as `phases-AutonomousContentEngine.md`.
+5. If the archived doc points to obsolete implementation, old agent setup, or
+   stale process, keep only historical context there. Do not leave active
+   instructions that a future agent might mistake for current work.
 
 Do not archive:
 
@@ -540,6 +545,7 @@ Do not archive:
 - an active strategy doc that still governs future implementation
 
 If a future `docs/phases/README.md` exists, update it during archive closeout.
+If `docs/archive/README.md` exists, preserve its warning contract.
 
 ## Content Autopublish Closeout
 

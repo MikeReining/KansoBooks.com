@@ -35,6 +35,15 @@ export type AnswerUnit =
   | "NextStep"
   | "EntitySummary";
 
+export type ContentImage = {
+  src: string;
+  alt: string;
+  presentation?: "standard" | "banner";
+  width?: number;
+  height?: number;
+  audit: string;
+};
+
 export type ContentMetadata = {
   id: string;
   title: string;
@@ -64,6 +73,8 @@ export type ContentMetadata = {
   answerUnits: AnswerUnit[];
   internalLinks?: string[];
   externalSources?: string[];
+  heroImage?: ContentImage;
+  ogImage?: string;
   schema?: string[];
 };
 

@@ -1,6 +1,6 @@
 version: 1
 status: phase-5-repo-side-template
-note: Toolsets are operational intent for the local Hermes install. They are not a security boundary by themselves.
+note: Toolsets are operational intent for the local Codex install. They are not a security boundary by themselves.
 
 toolsets:
   kanso-orchestrator-read-mostly:
@@ -10,7 +10,7 @@ toolsets:
         - git rev-parse HEAD
         - git diff --name-only
         - npm run content:validate
-        - npm run hermes:dry-run
+        - npm run codex:dry-run
       denied:
         - git push
         - gh pr merge

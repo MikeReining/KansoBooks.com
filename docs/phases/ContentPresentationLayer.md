@@ -182,6 +182,8 @@ Acceptance criteria:
 **Goal:** Define when content gets images, what they look like, and how agents
 create or reject them.
 
+**Style authority:** `docs/content-engine/ContentImageStyleGuide.md`.
+
 Images should be used when they improve comprehension, trust, or shareability.
 They should not be used because every blog post "needs an image."
 
@@ -207,14 +209,8 @@ Preferred style:
 Base prompt template:
 
 ```text
-Create a premium editorial image for KansoBooks, a local-first bookkeeping
-product. Subject: [article-specific subject]. Show [concrete objects or UI
-concept], with no readable private financial data and no cloud storage imagery.
-Mood: calm, precise, trustworthy, operator-focused. Palette: white, graphite,
-muted Kanso blue, subtle green/amber proof accents. Composition: clean,
-spacious, publication-quality, useful rather than decorative. Avoid generic
-stock photography, cartoon style, glowing AI effects, fake dashboards, and
-busy financial charts.
+Use the prompt grammar, subject recipes, and rejection checklist in
+docs/content-engine/ContentImageStyleGuide.md.
 ```
 
 Provider posture:
@@ -240,6 +236,7 @@ Acceptance criteria:
 - First article has either a polished generated hero/section image or an
   intentional no-image design.
 - Prompt and image audit are recorded in the run directory.
+- Prompt follows `docs/content-engine/ContentImageStyleGuide.md`.
 - Generated images contain no sensitive data, fake claims, unreadable UI, or
   misleading cloud implication.
 
@@ -305,6 +302,9 @@ Implement:
 
 Rules:
 
+- Do not publish or preview clickable placeholder links.
+- Do not link to empty section hubs, unpublished artifacts, unpublished
+  templates, future pages, or TODO routes.
 - Do not force links to thin or unrelated pages.
 - Do not create circular filler links.
 - Prefer links that move the reader to the next operational step.
@@ -313,6 +313,8 @@ Rules:
 Acceptance criteria:
 
 - Existing articles link only where useful.
+- CTAs and navigation show only live useful destinations; unpublished artifacts
+  fall back to a live waitlist or related page.
 - The article footer can show related content once enough pages exist.
 - Future content runs record missing interlinking opportunities.
 
@@ -342,14 +344,14 @@ Required local preview URLs:
 
 Acceptance criteria:
 
-- Codex or Hermes cannot mark an article presentation-ready without browser
+- Codex cannot mark an article presentation-ready without browser
   preview verification.
 - Quality reports include both writing quality and presentation quality.
 - Bland-but-correct pages are explicitly blocked from "great article" status.
 
 ## Phase 7 - Automation Integration
 
-**Goal:** Teach Codex/Hermes to package articles automatically.
+**Goal:** Teach Codex to package articles automatically.
 
 Update orchestration docs and future agent prompts so every content run includes:
 
@@ -370,6 +372,15 @@ Autonomous publishing should require:
 - publish authorization mode is active
 
 ## First Implementation Sprint
+
+**Status:** PASS / Article shell and orchestration gate implemented.
+
+Task 1 built the shared content article shell, draft preview banner, sidebar,
+footer, designed table treatment, and convention-based modules for the
+10-minute test and proof boundary sections. Task 2 verified no content
+publishing state changed, draft previews remain noindex, and the local gates
+passed. Image generation, richer section-specific modules, and screenshot
+automation remain future phases.
 
 Task 1 / AUTO:
 

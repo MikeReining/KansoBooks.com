@@ -1,0 +1,44 @@
+schemaVersion: 1
+status: active
+timezone: America/Vancouver
+cadence:
+  target: one-article-per-day
+  minimumHoursBetweenPublishedArticles: 24
+  sourceOfTruth: publishedAt frontmatter on published content items
+triggerPhrases:
+  - next article
+  - next post
+  - next content
+onTrigger:
+  action: run-next-article-workflow
+  output: draft-ready-for-review
+  draftEvenIfLastPublishIsTooRecent: true
+  publishAutomatically: false
+  publishRequiresExplicitUserApproval: true
+ifTooSoon:
+  action: draft-next-article-and-report-next-eligible-publish-time
+  publishingBeforeEligibleTimeRequiresFounderOverride: true
+ifQueueEmpty:
+  action: run-idea-generation-first
+  minimumCandidatesToAdd: 10
+selection:
+  source: content/_data/topic-inventory.yml
+  statusOrder:
+    - candidate
+    - needs-research
+  sort:
+    - priority
+    - duplicateRiskAscending
+    - readerPainDescending
+    - publishEaseDescending
+requiredChecks:
+  - check_last_published_at
+  - report_publish_eligibility
+  - check_topic_inventory
+  - reject_duplicate_or_overlapping_topic
+  - create_or_update_run_directory
+  - produce_draft_preview
+  - run_content_validate
+  - run_typecheck
+  - run_lint
+  - run_build_when_page_or_rendering_changes

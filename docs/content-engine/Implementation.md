@@ -31,7 +31,7 @@ docs/content-engine/
 
 Publication is automatic only when all deterministic validators pass. The first
 public content runs must still use the same state machine, claim manifests, and
-run logs that Hermes will later use unattended.
+run logs that Codex will later use unattended.
 
 ## Current Non-Goals
 

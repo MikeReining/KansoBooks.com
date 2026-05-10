@@ -8,8 +8,8 @@
     "build": "next build",
     "content:validate": "tsx scripts/content/validate.ts",
     "content:path-guard": "tsx scripts/content/validate.ts --path-guard",
-    "hermes:dry-run": "bash scripts/hermes/dry-run.sh",
-    "hermes:content-draft": "bash scripts/hermes/content-draft-run.sh",
+    "codex:dry-run": "bash scripts/codex/dry-run.sh",
+    "codex:content-draft": "bash scripts/codex/content-draft-run.sh",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"

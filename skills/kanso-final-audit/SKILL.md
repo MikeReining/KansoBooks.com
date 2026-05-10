@@ -12,7 +12,9 @@ escalate.
 - Metadata.
 - Claim manifest.
 - Claim audit output.
+- Presentation audit output when the run prepares an article page.
 - Research packet and run logs.
+- `docs/content-engine/CopyGuide.md`.
 - `skills/_shared/final-audit-checklist.md`.
 
 ## Outputs
@@ -28,6 +30,9 @@ escalate.
 - Claim audit is not pass.
 - Sources or internal links do not resolve.
 - Required answer units missing.
+- Presentation audit is missing or blocked for an article page.
+- Copy does not pass the user-language and emotional-job checks in
+  `docs/content-engine/CopyGuide.md`.
 - Forbidden product, AI, cloud, tax, legal, audit, or accountant claims remain.
 - The page is not useful enough to maintain.
 
@@ -61,6 +66,11 @@ Fails because founder review is not the safety net.
 
 - Use the shared final-audit checklist.
 - Run focused validation where available.
+- Confirm the content presentation layer renders the required preview URL.
+- Confirm CTA, proof boundary, table handling, sidebar, and draft noindex checks
+  are recorded for draft previews.
+- Confirm the opening, Kanso take, proof boundary, and next step are written in
+  plain owner language.
 - Confirm no content is published in a draft-only sprint.
 - Record run log transition.
 
@@ -75,4 +85,3 @@ handoff:
   publishAllowed: true
   checksPassed: []
 ```
-

@@ -5,26 +5,26 @@ set -o pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT" || exit 1
 
-HERMES_BIN="${HERMES_BIN:-$HOME/.local/bin/hermes}"
-HERMES_PROVIDER="${HERMES_PROVIDER:-openai-codex}"
-HERMES_MODEL="${HERMES_MODEL:-gpt-5.5}"
-HERMES_RUN_DATE="${HERMES_RUN_DATE:-$(date +%F)}"
-HERMES_TOPIC="${HERMES_TOPIC:-}"
-HERMES_READER_JOB="${HERMES_READER_JOB:-}"
-HERMES_CANONICAL_JOB="${HERMES_CANONICAL_JOB:-}"
-HERMES_CONTENT_TYPE="${HERMES_CONTENT_TYPE:-resource}"
-HERMES_CONTENT_SECTION="${HERMES_CONTENT_SECTION:-resources}"
-HERMES_SLUG="${HERMES_SLUG:-}"
-HERMES_RISK="${HERMES_RISK:-medium}"
-HERMES_JURISDICTION="${HERMES_JURISDICTION:-general}"
-HERMES_DRAFT_ONLY="${HERMES_DRAFT_ONLY:-1}"
-HERMES_ALLOW_DIRTY_START="${HERMES_ALLOW_DIRTY_START:-0}"
+CODEX_BIN="${CODEX_BIN:-codex}"
+CODEX_PROVIDER="${CODEX_PROVIDER:-openai-codex}"
+CODEX_MODEL="${CODEX_MODEL:-gpt-5.5}"
+CODEX_RUN_DATE="${CODEX_RUN_DATE:-$(date +%F)}"
+CODEX_TOPIC="${CODEX_TOPIC:-}"
+CODEX_READER_JOB="${CODEX_READER_JOB:-}"
+CODEX_CANONICAL_JOB="${CODEX_CANONICAL_JOB:-}"
+CODEX_CONTENT_TYPE="${CODEX_CONTENT_TYPE:-resource}"
+CODEX_CONTENT_SECTION="${CODEX_CONTENT_SECTION:-resources}"
+CODEX_SLUG="${CODEX_SLUG:-}"
+CODEX_RISK="${CODEX_RISK:-medium}"
+CODEX_JURISDICTION="${CODEX_JURISDICTION:-general}"
+CODEX_DRAFT_ONLY="${CODEX_DRAFT_ONLY:-1}"
+CODEX_ALLOW_DIRTY_START="${CODEX_ALLOW_DIRTY_START:-0}"
 
-RUN_ID="${HERMES_RUN_DATE}-${HERMES_SLUG}"
+RUN_ID="${CODEX_RUN_DATE}-${CODEX_SLUG}"
 RUN_DIR="docs/content-runs/$RUN_ID"
 EXCEPTION_REPORT="$RUN_DIR/exception-report.yml"
-BASELINE_STATUS_FILE="$(mktemp "${TMPDIR:-/tmp}/kanso-hermes-baseline.XXXXXX")"
-AFTER_STATUS_FILE="$(mktemp "${TMPDIR:-/tmp}/kanso-hermes-after.XXXXXX")"
+BASELINE_STATUS_FILE="$(mktemp "${TMPDIR:-/tmp}/kanso-codex-baseline.XXXXXX")"
+AFTER_STATUS_FILE="$(mktemp "${TMPDIR:-/tmp}/kanso-codex-after.XXXXXX")"
 
 cleanup() {
   rm -f "$BASELINE_STATUS_FILE" "$AFTER_STATUS_FILE"
@@ -71,14 +71,14 @@ write_exception() {
     echo "  changedPaths:"
     git status --porcelain=v1 --untracked-files=all | sed 's/^.../    - /'
     echo "  credentialNamesOnly:"
-    echo "    - $HERMES_PROVIDER"
+    echo "    - $CODEX_PROVIDER"
   } > "$EXCEPTION_REPORT"
   echo "Wrote exception report: $EXCEPTION_REPORT" >&2
 }
 
 changed_paths() {
   git status --porcelain=v1 --untracked-files=all | sort > "$AFTER_STATUS_FILE"
-  if [[ "$HERMES_ALLOW_DIRTY_START" == "1" ]]; then
+  if [[ "$CODEX_ALLOW_DIRTY_START" == "1" ]]; then
     comm -13 "$BASELINE_STATUS_FILE" "$AFTER_STATUS_FILE" |
       sed 's/^...//' |
       sed '/^$/d'
@@ -108,19 +108,19 @@ allowed_paths_only() {
   fi
 }
 
-required_env HERMES_TOPIC "$HERMES_TOPIC"
-required_env HERMES_READER_JOB "$HERMES_READER_JOB"
-required_env HERMES_CANONICAL_JOB "$HERMES_CANONICAL_JOB"
-required_env HERMES_SLUG "$HERMES_SLUG"
+required_env CODEX_TOPIC "$CODEX_TOPIC"
+required_env CODEX_READER_JOB "$CODEX_READER_JOB"
+required_env CODEX_CANONICAL_JOB "$CODEX_CANONICAL_JOB"
+required_env CODEX_SLUG "$CODEX_SLUG"
 
-if [[ ! -x "$HERMES_BIN" ]]; then
-  echo "Hermes binary not found or not executable: $HERMES_BIN" >&2
+if ! command -v "$CODEX_BIN" >/dev/null 2>&1; then
+  echo "Codex binary not found: $CODEX_BIN" >&2
   exit 2
 fi
 
-if [[ "$HERMES_ALLOW_DIRTY_START" != "1" && -n "$(git status --porcelain=v1 --untracked-files=all)" ]]; then
-  echo "Refusing to start autonomous Hermes run from a dirty worktree." >&2
-  echo "Use a dedicated clean worktree, or set HERMES_ALLOW_DIRTY_START=1 for a supervised test." >&2
+if [[ "$CODEX_ALLOW_DIRTY_START" != "1" && -n "$(git status --porcelain=v1 --untracked-files=all)" ]]; then
+  echo "Refusing to start autonomous Codex run from a dirty worktree." >&2
+  echo "Use a dedicated clean worktree, or set CODEX_ALLOW_DIRTY_START=1 for a supervised test." >&2
   git status --short --branch >&2
   exit 3
 fi
@@ -129,9 +129,9 @@ git status --porcelain=v1 --untracked-files=all | sort > "$BASELINE_STATUS_FILE"
 
 mkdir -p "$RUN_DIR"
 
-PROMPT_FILE="$(mktemp "${TMPDIR:-/tmp}/kanso-hermes-content-prompt.XXXXXX")"
+PROMPT_FILE="$(mktemp "${TMPDIR:-/tmp}/kanso-codex-content-prompt.XXXXXX")"
 cat > "$PROMPT_FILE" <<PROMPT
-You are Hermes running an unattended KansoBooks content-engine draft run.
+You are Codex running an unattended KansoBooks content-engine draft run.
 
 This is one autonomous job. Do the full content loop yourself: topic scoring,
 brief, research packet, draft, metadata/headline, SEO/AIEO pass, tone pass,
@@ -142,15 +142,15 @@ Hard boundaries:
 - Write only these path groups: content/**, docs/content-runs/**, public/content/**, public/og/**.
 - Do not edit src/**, package.json, package-lock.json, .env*, .github/**, supabase/**, config/**, or skills/**.
 - Do not commit, push, create a PR, deploy, publish, or mark content as published.
-- Keep state drafted when HERMES_DRAFT_ONLY=$HERMES_DRAFT_ONLY.
+- Keep state drafted when CODEX_DRAFT_ONLY=$CODEX_DRAFT_ONLY.
 - If a gate fails or a claim is unsupported, stop and write $EXCEPTION_REPORT.
 
 Use these repo-local authorities:
-- docs/content-engine/HermesSetupGuide.md
-- docs/content-engine/LocalHermesRunner.md
+- docs/content-engine/CodexSetupGuide.md
+- docs/content-engine/LocalCodexRunner.md
 - docs/content-engine/EscalationPolicy.md
-- config/hermes/profiles.yml
-- config/hermes/toolsets.yml
+- config/codex/profiles.yml
+- config/codex/toolsets.yml
 - skills/
 - skills/_shared/
 - content/_truth/
@@ -159,14 +159,14 @@ Use these repo-local authorities:
 Run details:
 - runId: $RUN_ID
 - runDir: $RUN_DIR
-- topic: $HERMES_TOPIC
-- readerJob: $HERMES_READER_JOB
-- canonicalJob: $HERMES_CANONICAL_JOB
-- contentType: $HERMES_CONTENT_TYPE
-- contentSection: $HERMES_CONTENT_SECTION
-- slugOrId: $HERMES_SLUG
-- risk: $HERMES_RISK
-- jurisdiction: $HERMES_JURISDICTION
+- topic: $CODEX_TOPIC
+- readerJob: $CODEX_READER_JOB
+- canonicalJob: $CODEX_CANONICAL_JOB
+- contentType: $CODEX_CONTENT_TYPE
+- contentSection: $CODEX_CONTENT_SECTION
+- slugOrId: $CODEX_SLUG
+- risk: $CODEX_RISK
+- jurisdiction: $CODEX_JURISDICTION
 
 Expected minimum outputs:
 - $RUN_DIR/topic-score.yml
@@ -176,9 +176,9 @@ Expected minimum outputs:
 - $RUN_DIR/claim-audit.yml
 - $RUN_DIR/final-audit.yml
 - $RUN_DIR/publish-log.yml
-- content/$HERMES_CONTENT_SECTION/$HERMES_SLUG.md, with frontmatter type: $HERMES_CONTENT_TYPE.
-- content/_claims/$HERMES_SLUG.yml
-- content/_artifacts/$HERMES_SLUG.yml when an artifact is useful or required.
+- content/$CODEX_CONTENT_SECTION/$CODEX_SLUG.md, with frontmatter type: $CODEX_CONTENT_TYPE.
+- content/_claims/$CODEX_SLUG.yml
+- content/_artifacts/$CODEX_SLUG.yml when an artifact is useful or required.
 
 Required content constraints:
 - Required answer units for tier 1 or tier 2 pages must be present in metadata
@@ -202,13 +202,13 @@ Final response must include changed files, gate results, final status, and
 confirmation that no publish/commit/push/PR/deploy happened.
 PROMPT
 
-echo "Starting autonomous Hermes draft run: $RUN_ID"
-echo "Model route: $HERMES_PROVIDER / $HERMES_MODEL"
+echo "Starting autonomous Codex draft run: $RUN_ID"
+echo "Model route: $CODEX_PROVIDER / $CODEX_MODEL"
 
-HERMES_OUTPUT="$RUN_DIR/hermes-output.log"
-if ! "$HERMES_BIN" -z "$(cat "$PROMPT_FILE")" --provider "$HERMES_PROVIDER" --model "$HERMES_MODEL" > "$HERMES_OUTPUT" 2>&1; then
-  output="$(tail -80 "$HERMES_OUTPUT" 2>/dev/null || true)"
-  write_exception "hermes-agent-run" "$output"
+CODEX_OUTPUT="$RUN_DIR/codex-output.log"
+if ! "$CODEX_BIN" exec -m "$CODEX_MODEL" --cd "$ROOT" - < "$PROMPT_FILE" > "$CODEX_OUTPUT" 2>&1; then
+  output="$(tail -80 "$CODEX_OUTPUT" 2>/dev/null || true)"
+  write_exception "codex-agent-run" "$output"
   rm -f "$PROMPT_FILE"
   exit 1
 fi
@@ -221,36 +221,36 @@ fi
 
 mapfile -t CHANGED_PATHS < <(changed_paths)
 if [[ "${#CHANGED_PATHS[@]}" -eq 0 ]]; then
-  write_exception "no-output" "Hermes completed without changing any files."
+  write_exception "no-output" "Codex completed without changing any files."
   exit 1
 fi
 
 if ! npm run content:validate; then
-  write_exception "content:validate" "npm run content:validate failed after Hermes run."
+  write_exception "content:validate" "npm run content:validate failed after Codex run."
   exit 1
 fi
 
 if ! npm run content:path-guard -- "${CHANGED_PATHS[@]}"; then
-  write_exception "content:path-guard" "npm run content:path-guard failed after Hermes run."
+  write_exception "content:path-guard" "npm run content:path-guard failed after Codex run."
   exit 1
 fi
 
 if ! npm run typecheck; then
-  write_exception "typecheck" "npm run typecheck failed after Hermes run."
+  write_exception "typecheck" "npm run typecheck failed after Codex run."
   exit 1
 fi
 
 if ! npm run lint; then
-  write_exception "lint" "npm run lint failed after Hermes run."
+  write_exception "lint" "npm run lint failed after Codex run."
   exit 1
 fi
 
 if ! npm run build; then
-  write_exception "build" "npm run build failed after Hermes run."
+  write_exception "build" "npm run build failed after Codex run."
   exit 1
 fi
 
-echo "Autonomous Hermes draft run completed: $RUN_ID"
-echo "Hermes output: $HERMES_OUTPUT"
+echo "Autonomous Codex draft run completed: $RUN_ID"
+echo "Codex output: $CODEX_OUTPUT"
 echo "Changed paths:"
 printf '  %s\n' "${CHANGED_PATHS[@]}"

@@ -1,12 +1,12 @@
-# Local Hermes Runner
+# Local Codex Runner
 
 **Status:** Phase 5 repo-side setup. Local installation and credentials remain
 human-provided Mac Mini work.
 
 ## Scope
 
-Phase 5 prepares the repository for a local Hermes runner. It does not install
-Hermes on the Mac Mini, create provider accounts, configure production
+Phase 5 prepares the repository for a local Codex runner. It does not install
+Codex on the Mac Mini, create provider accounts, configure production
 credentials, or grant direct deploy authority.
 
 Founder approval is not a publishing gate. Automated gates, claim audits,
@@ -17,13 +17,13 @@ path guards, and exception reports are the gate.
 Runner configuration lives in:
 
 ```text
-config/hermes/
+config/codex/
 ```
 
 The step-by-step Mac Mini setup guide is:
 
 ```text
-docs/content-engine/HermesSetupGuide.md
+docs/content-engine/CodexSetupGuide.md
 ```
 
 Run templates live in:
@@ -35,20 +35,20 @@ docs/content-runs/_templates/
 The credential-free dry run is:
 
 ```text
-npm run hermes:dry-run
+npm run codex:dry-run
 ```
 
 By default, dry-run reports are written outside the repo under
-`${TMPDIR:-/tmp}/kansobooks-hermes-runs` to avoid local check noise. Scheduled
-Hermes jobs may opt into versioned reports with:
+`${TMPDIR:-/tmp}/kansobooks-codex-runs` to avoid local check noise. Scheduled
+Codex jobs may opt into versioned reports with:
 
 ```text
-HERMES_REPORT_ROOT=docs/content-runs npm run hermes:dry-run
+CODEX_REPORT_ROOT=docs/content-runs npm run codex:dry-run
 ```
 
 ## Profiles
 
-`config/hermes/profiles.yml` defines four local Hermes profiles:
+`config/codex/profiles.yml` defines four local Codex profiles:
 
 | Profile | Role |
 |---|---|
@@ -58,7 +58,7 @@ HERMES_REPORT_ROOT=docs/content-runs npm run hermes:dry-run
 | `kanso-auditor-publisher` | Runs claim/final audits and publish gates. |
 
 The profiles map to the skill strategy in
-`docs/content-engine/HermesSkillStrategy.md`.
+`docs/content-engine/CodexSkillStrategy.md`.
 
 ## Worktree Convention
 
@@ -66,8 +66,8 @@ The local runner should use a dedicated OS user or equivalent filesystem
 boundary:
 
 ```text
-/Users/hermes-kanso-content/kanso/KansoBooks.com
-/Users/hermes-kanso-content/kanso/KansoBooks.com-autopublish
+/Users/codex-kanso-content/kanso/KansoBooks.com
+/Users/codex-kanso-content/kanso/KansoBooks.com-autopublish
 ```
 
 Scheduled content jobs run from the dedicated worktree, not the founder's
@@ -102,11 +102,11 @@ package-lock.json
 ```
 
 Phase 5 edits `package.json` only to expose a local dry-run command. Scheduled
-Hermes profiles do not inherit permission to edit package files.
+Codex profiles do not inherit permission to edit package files.
 
 ## Provider Routing
 
-`config/hermes/provider-routing.example.yml` names model/provider environment
+`config/codex/provider-routing.example.yml` names model/provider environment
 variables. Values must be supplied locally and must not be committed.
 
 The routes are placeholders for:
@@ -118,7 +118,7 @@ The routes are placeholders for:
 
 ## Exception Alerts
 
-`config/hermes/exception-alerts.example.yml` defines credential-free local alert
+`config/codex/exception-alerts.example.yml` defines credential-free local alert
 boundaries. Failed runs should write an exception report and local scheduler
 output first. Optional GitHub comments or issues require a human-provided
 least-privilege content automation token and must not carry customer financial
@@ -164,7 +164,7 @@ It does not call model providers and does not require credentials.
 
 Actual unattended operation still requires:
 
-- Mac Mini Hermes installation path
+- Mac Mini Codex installation path
 - scheduler choice and installed job definitions
 - local secret store configuration
 - provider credentials and budgets

@@ -18,6 +18,14 @@ type ClaimTruth = {
   forbiddenPhrases?: string[];
 };
 
+type ImageAudit = {
+  status?: string;
+  imageType?: string;
+  assetPath?: string;
+  promptPath?: string;
+  checks?: Record<string, boolean>;
+};
+
 const requiredAnswerUnits = [
   "AnswerBlock",
   "KansoTake",
@@ -39,6 +47,14 @@ const allowedAutopublishPrefixes = [
 
 function existsRelative(relativePath: string): boolean {
   return fs.existsSync(path.join(rootDirectory, relativePath));
+}
+
+function publicAssetExists(src: string): boolean {
+  return src.startsWith("/") && existsRelative(path.join("public", src));
+}
+
+function assetFileName(src: string): string {
+  return path.basename(src);
 }
 
 function localSourceExists(source: string): boolean {
@@ -74,6 +90,13 @@ function validateMetadata(item: ContentItem, jobs: Set<string>): ValidationIssue
     issues.push({
       file: item.filePath,
       message: "canonicalPath must start with /",
+    });
+  }
+
+  if (metadata.state === "published" && !metadata.publishedAt) {
+    issues.push({
+      file: item.filePath,
+      message: "Published content must set publishedAt",
     });
   }
 
@@ -122,6 +145,113 @@ function validateMetadata(item: ContentItem, jobs: Set<string>): ValidationIssue
         message: `Artifact ID does not resolve: ${metadata.artifactId}`,
       });
     }
+  }
+
+  if (metadata.heroImage) {
+    if (!metadata.heroImage.src) {
+      issues.push({
+        file: item.filePath,
+        message: "heroImage.src is required when heroImage is set",
+      });
+    } else if (!publicAssetExists(metadata.heroImage.src)) {
+      issues.push({
+        file: item.filePath,
+        message: `heroImage asset does not resolve: ${metadata.heroImage.src}`,
+      });
+    }
+
+    if (!metadata.heroImage.alt?.trim()) {
+      issues.push({
+        file: item.filePath,
+        message: "heroImage.alt is required when heroImage is set",
+      });
+    } else if (metadata.heroImage.alt.trim().length < 50) {
+      issues.push({
+        file: item.filePath,
+        message: "heroImage.alt must be descriptive for SEO and accessibility",
+      });
+    }
+
+    if (!assetFileName(metadata.heroImage.src).includes(metadata.slug)) {
+      issues.push({
+        file: item.filePath,
+        message: "heroImage filename must include the content slug",
+      });
+    }
+
+    if (
+      metadata.heroImage.presentation &&
+      !["standard", "banner"].includes(metadata.heroImage.presentation)
+    ) {
+      issues.push({
+        file: item.filePath,
+        message: "heroImage.presentation must be standard or banner",
+      });
+    }
+
+    if (!metadata.heroImage.audit || !existsRelative(metadata.heroImage.audit)) {
+      issues.push({
+        file: item.filePath,
+        message: `heroImage audit does not resolve: ${metadata.heroImage.audit}`,
+      });
+    } else {
+      const audit = readYamlFile<ImageAudit>(metadata.heroImage.audit);
+      const expectedAssetPath = path.join("public", metadata.heroImage.src);
+
+      if (audit.status !== "approved") {
+        issues.push({
+          file: metadata.heroImage.audit,
+          message: "heroImage audit status must be approved",
+        });
+      }
+
+      if (audit.imageType !== "hero") {
+        issues.push({
+          file: metadata.heroImage.audit,
+          message: "heroImage audit imageType must be hero",
+        });
+      }
+
+      if (audit.assetPath !== expectedAssetPath) {
+        issues.push({
+          file: metadata.heroImage.audit,
+          message: `heroImage audit assetPath must be ${expectedAssetPath}`,
+        });
+      }
+
+      if (!audit.promptPath || !existsRelative(audit.promptPath)) {
+        issues.push({
+          file: metadata.heroImage.audit,
+          message: `heroImage promptPath does not resolve: ${audit.promptPath}`,
+        });
+      }
+
+      for (const check of [
+        "improvesComprehension",
+        "notDecorativeFiller",
+        "noPrivateData",
+        "noRealBrands",
+        "noCloudImplication",
+        "noFakeDashboard",
+        "cropSafe",
+        "seoFilename",
+        "altText",
+      ]) {
+        if (audit.checks?.[check] !== true) {
+          issues.push({
+            file: metadata.heroImage.audit,
+            message: `heroImage audit check must pass: ${check}`,
+          });
+        }
+      }
+    }
+  }
+
+  if (metadata.ogImage && !publicAssetExists(metadata.ogImage)) {
+    issues.push({
+      file: item.filePath,
+      message: `ogImage asset does not resolve: ${metadata.ogImage}`,
+    });
   }
 
   return issues;
@@ -190,6 +320,60 @@ function validateInternalLinks(item: ContentItem): ValidationIssue[] {
   );
 }
 
+function hrefResolves(href: string, knownPaths: Set<string>): boolean {
+  if (href.startsWith("#")) {
+    return true;
+  }
+
+  if (href.startsWith("http")) {
+    try {
+      new URL(href);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  return knownPaths.has(href);
+}
+
+function validateMarkdownLinks(item: ContentItem): ValidationIssue[] {
+  const knownPaths = getKnownInternalPaths();
+  const issues: ValidationIssue[] = [];
+  const markdownLinkPattern = /\[[^\]]+\]\(([^)]+)\)/g;
+
+  for (const match of item.body.matchAll(markdownLinkPattern)) {
+    const href = match[1]?.trim();
+    if (href && !hrefResolves(href, knownPaths)) {
+      issues.push({
+        file: item.filePath,
+        message: `Markdown link does not resolve: ${href}`,
+      });
+    }
+  }
+
+  return issues;
+}
+
+function validatePresentationLinks(): ValidationIssue[] {
+  const knownPaths = getKnownInternalPaths();
+  const requiredContentChromeLinks = [
+    "/",
+    "/manifesto",
+    "/resources/how-to-know-books-are-done",
+    "/resources/accountant-ready-books",
+  ];
+
+  return requiredContentChromeLinks.flatMap((href) =>
+    knownPaths.has(href)
+      ? []
+      : [{
+          file: "src/lib/content/components.tsx",
+          message: `Presentation link does not resolve: ${href}`,
+        }],
+  );
+}
+
 function validateForbiddenPhrases(item: ContentItem, phrases: string[]): ValidationIssue[] {
   const text = `${item.metadata.title}\n${item.metadata.description}\n${item.body}`.toLowerCase();
 
@@ -238,6 +422,8 @@ export function validateContent(): ValidationIssue[] {
     ...items.flatMap(validateClaims),
     ...items.flatMap(validateSources),
     ...items.flatMap(validateInternalLinks),
+    ...items.flatMap(validateMarkdownLinks),
+    ...validatePresentationLinks(),
     ...items.flatMap((item) => validateForbiddenPhrases(item, phrases)),
     ...validateDuplicateJobs(items),
   ];

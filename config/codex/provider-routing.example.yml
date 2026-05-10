@@ -3,50 +3,50 @@ status: local-secrets-required
 secrets: not-stored-in-repo
 
 environmentVariablesExpectedOnMacMini:
-  - HERMES_PROVIDER_ORCHESTRATION
-  - HERMES_PROVIDER_RESEARCH
-  - HERMES_PROVIDER_DRAFTING
-  - HERMES_PROVIDER_AUDIT
-  - HERMES_MODEL_ORCHESTRATION
-  - HERMES_MODEL_RESEARCH
-  - HERMES_MODEL_DRAFTING
-  - HERMES_MODEL_AUDIT
+  - CODEX_PROVIDER_ORCHESTRATION
+  - CODEX_PROVIDER_RESEARCH
+  - CODEX_PROVIDER_DRAFTING
+  - CODEX_PROVIDER_AUDIT
+  - CODEX_MODEL_ORCHESTRATION
+  - CODEX_MODEL_RESEARCH
+  - CODEX_MODEL_DRAFTING
+  - CODEX_MODEL_AUDIT
 
 routes:
   orchestration:
-    providerEnv: HERMES_PROVIDER_ORCHESTRATION
-    modelEnv: HERMES_MODEL_ORCHESTRATION
+    providerEnv: CODEX_PROVIDER_ORCHESTRATION
+    modelEnv: CODEX_MODEL_ORCHESTRATION
     requirements:
       - low-cost-planning
       - strong-instruction-following
       - no-production-credentials
 
   research:
-    providerEnv: HERMES_PROVIDER_RESEARCH
-    modelEnv: HERMES_MODEL_RESEARCH
+    providerEnv: CODEX_PROVIDER_RESEARCH
+    modelEnv: CODEX_MODEL_RESEARCH
     requirements:
-      - web-capable-where-local-hermes-supports-it
+      - web-capable-where-local-codex-supports-it
       - source-citation-discipline
       - conservative-tax-legal-boundary
 
   drafting:
-    providerEnv: HERMES_PROVIDER_DRAFTING
-    modelEnv: HERMES_MODEL_DRAFTING
+    providerEnv: CODEX_PROVIDER_DRAFTING
+    modelEnv: CODEX_MODEL_DRAFTING
     requirements:
       - strong-long-form-writing
       - Kanso-voice-preservation
       - no-cloud-books-implication
 
   audit:
-    providerEnv: HERMES_PROVIDER_AUDIT
-    modelEnv: HERMES_MODEL_AUDIT
+    providerEnv: CODEX_PROVIDER_AUDIT
+    modelEnv: CODEX_MODEL_AUDIT
     requirements:
       - strict-claim-checking
       - deterministic-gate-respect
       - escalation-on-uncertainty
 
 localSecretStorage:
-  recommended: macOS Keychain or Hermes-supported local secret store
+  recommended: macOS Keychain or Codex-supported local secret store
   forbidden:
     - repository files
     - .env files committed to git

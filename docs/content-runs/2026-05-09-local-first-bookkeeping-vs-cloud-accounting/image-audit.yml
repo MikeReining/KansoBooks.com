@@ -1,0 +1,26 @@
+status: approved
+imageType: hero
+presentation: banner
+assetPath: public/content/images/local-first-bookkeeping-vs-cloud-accounting/local-first-bookkeeping-vs-cloud-accounting-accountant-handoff-banner.png
+ogPath: ""
+styleGuide: docs/content-engine/ContentImageStyleGuide.md
+promptPath: docs/content-runs/2026-05-09-local-first-bookkeeping-vs-cloud-accounting/image-prompt.md
+provider: ChatGPT image generation
+sourceImage: /Users/mike/.codex/generated_images/019e0f44-b463-7cc0-a644-acfdfcd014d8/ig_07016e101f2cce9c0169ffdd430f8481949783de38551f3f26.png
+checks:
+  improvesComprehension: true
+  notDecorativeFiller: true
+  noPrivateData: true
+  noReadableFinancialData: true
+  noRealBrands: true
+  noCloudImplication: true
+  noFakeDashboard: true
+  cropSafe: true
+  seoFilename: true
+  altText: true
+notes:
+  - The accepted image uses a local folder, abstract exported files, evidence checklist, and accountant handoff packet to support the local-first ownership comparison.
+  - The first generated image was rejected because it contained too much readable pseudo-document text and implied accounting categories.
+  - The accepted image contains no cloud, server, hosted dashboard, private data, real bank name, real vendor name, fake customer name, totals, payroll language, or tax form language.
+  - The asset uses an SEO-readable filename and a descriptive alt tag.
+  - The image is presented as a narrow banner so article text remains visible above the fold.

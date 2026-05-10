@@ -3,7 +3,7 @@ status: install-template-only
 secrets: not-stored-in-repo
 
 purpose: >
-  Route blocked Hermes runs to a human-visible local alert without making
+  Route blocked Codex runs to a human-visible local alert without making
   founder approval a publishing gate.
 
 defaultBehavior:
@@ -13,7 +13,7 @@ defaultBehavior:
   founderApprovalGate: false
 
 allowedLocalAlertChannels:
-  - macOS notification from the dedicated Hermes OS user
+  - macOS notification from the dedicated Codex OS user
   - local mail configured on the Mac Mini
   - append-only local log watched by the scheduler
 

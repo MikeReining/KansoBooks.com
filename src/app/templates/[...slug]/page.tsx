@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { ContentArticlePage } from "@/lib/content/components";
-import { getContentBySlug, getContentForSection } from "@/lib/content";
+import {
+  contentPageMetadata,
+  getContentBySlug,
+  getContentForSection,
+} from "@/lib/content";
 
 type Params = {
   slug: string[];
@@ -20,13 +24,7 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const item = getContentBySlug("templates", (await params).slug);
-  return item
-    ? {
-        title: item.metadata.seoTitle,
-        description: item.metadata.description,
-        alternates: { canonical: item.metadata.canonicalPath },
-      }
-    : {};
+  return item ? contentPageMetadata(item) : {};
 }
 
 export default async function TemplatePage({

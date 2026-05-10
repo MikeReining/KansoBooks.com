@@ -1,22 +1,51 @@
 finalAudit:
   contentId: local-first-bookkeeping-vs-cloud-accounting
-  status: blocked
-  checkedAt: 2026-05-09T17:10:00-07:00
-  checkedBy: codex-content-orchestration
+  status: publish
+  checkedAt: 2026-05-10T00:00:00-07:00
+  checkedBy: kanso-final-audit
   contentPath: content/comparisons/local-first-bookkeeping-vs-cloud-accounting.md
   artifactPath: content/_artifacts/bookkeeping-system-choice-matrix.yml
   claimManifestPath: content/_claims/local-first-bookkeeping-vs-cloud-accounting.yml
   checksPassed:
+    - content_schema_validated
     - metadata_complete
     - claim_manifest_present
+    - artifact_id_present
+    - artifact_id_resolves
     - claim_audit_pass
+    - image_audit_approved
+    - presentation_layer_applied
+    - draft_preview_noindex_verified
+    - published_route_allowed_after_user_authorization
     - answer_units_present
     - entity_summary_present
     - decision_support_present
-    - draft_only_state
-  checksFailed:
-    - publish_intentionally_blocked_for_draft_only_orchestration_run
-  publishAllowed: false
-  requiredFixes:
-    - Run publish-authorized final audit before changing state to published.
-  handoffTo: blocked-draft
+    - copy_guide_revisions_applied
+    - internal_links_resolve
+    - markdown_links_resolve
+    - no_placeholder_links
+    - no_vendor_specific_public_comparison_claims
+    - no_tax_legal_audit_payroll_sales_tax_filing_or_entity_specific_advice
+    - no_accountant_replacement_claim
+    - no_ai_as_financial_truth_claim
+    - no_cloud_books_claim
+  checksFailed: []
+  publishAllowed: true
+  requiredFixes: []
+  escalation:
+    needed: false
+    reason: ""
+    narrowDecisionNeeded: ""
+  handoffTo: kanso-publish
+  handoff:
+    to: kanso-publish
+    contentPath: content/comparisons/local-first-bookkeeping-vs-cloud-accounting.md
+    claimManifestPath: content/_claims/local-first-bookkeeping-vs-cloud-accounting.yml
+    finalAuditPath: docs/content-runs/2026-05-09-local-first-bookkeeping-vs-cloud-accounting/final-audit.yml
+    publishAllowed: true
+    checksPassed:
+      - content_schema_validated
+      - claim_audit_pass
+      - presentation_layer_applied
+      - internal_links_resolve
+      - forbidden_claims_absent

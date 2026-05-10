@@ -1,6 +1,6 @@
 # Autonomous Content Engine
 
-**Status:** Strategic design / Ready for implementation planning
+**Status:** Strategic design / Codex-operated implementation path
 **Authority:** Website organic growth and autonomous publishing plan.
 Subordinate to `docs/KansoBooksManifesto.md`, `docs/KansoBooksVision.md`,
 `docs/KansoBooksWedge.md`, `docs/phases/FoundationSetup.md`, and
@@ -30,14 +30,14 @@ product/trust boundaries remain intact.
 **Status:** PASS / Skill system closed as of 2026-05-09.
 
 Phase 3 adds canonical Kanso content skills, shared templates, claim-audit and
-final-audit checklists, and the Hermes skill directory strategy. It does not
-publish public content or add content routes.
+final-audit checklists, and the repo-local skill directory strategy. It does
+not publish public content or add content routes.
 
 ## Phase 4 Status
 
-**Status:** PASS / Codex-as-Hermes calibration closed as of 2026-05-09.
+**Status:** PASS / Manual Codex calibration closed as of 2026-05-09.
 
-Task 1 ran the first Codex-as-Hermes content pipeline with one public page:
+Task 1 ran the first manual Codex content pipeline with one public page:
 `/resources/accountant-ready-books`. The run created a topic score, brief,
 research packet, draft record, checklist artifact, claim manifest, claim audit,
 final audit, and publish log under `docs/content-runs/2026-05-09-accountant-ready-books/`.
@@ -47,7 +47,7 @@ was added for the same canonical job. Task 2 independently reviewed the run,
 verified the required gates, and closed the first run. Further Phase 4 repeats
 may continue from this calibrated baseline.
 
-**Repeat Status:** PASS / Second Codex-as-Hermes calibration run closed as of
+**Repeat Status:** PASS / Second manual Codex calibration run closed as of
 2026-05-09.
 
 Task 1 ran a second content pipeline pass for the distinct canonical job
@@ -61,10 +61,10 @@ independently reviewed the run, verified the required gates, and closed the
 second calibration run. Further Phase 4 repeats may continue from this
 baseline until the output is consistently Kanso-native.
 
-**Third Run Status:** PASS / Third Codex-as-Hermes calibration run closed as
+**Third Run Status:** PASS / Third manual Codex calibration run closed as
 of 2026-05-09.
 
-Task 1 ran a third Codex-as-Hermes calibration pass for the distinct canonical
+Task 1 ran a third manual Codex calibration pass for the distinct canonical
 job `validate-ai-bookkeeping-work`. The run created one public resource:
 `/resources/ai-bookkeeping-with-proof`, plus the internal artifact
 `content/_artifacts/ai-bookkeeping-validation-checklist.yml`, claim manifest,
@@ -81,24 +81,24 @@ the third calibration run.
 Across three distinct runs, the content pipeline produced Kanso-native pages
 with resolving artifacts, claim manifests, run records, proof boundaries,
 professional boundaries, and no founder approval gate. Future calibration can
-continue opportunistically, but Phase 4 no longer blocks the Local Hermes
-Runner work in Phase 5.
+continue opportunistically, but Phase 4 no longer blocks the Codex automation
+work in Phase 5.
 
 ## Phase 5 Status
 
-**Status:** PASS / Repo-side Local Hermes Runner setup closed as of 2026-05-09.
+**Status:** PASS / Repo-side Codex automation setup closed as of 2026-05-09.
 
-Repo-side Local Hermes Runner setup now includes versioned profile definitions,
+Repo-side Codex automation setup now includes versioned role definitions,
 least-privilege toolset intent, provider/model routing placeholders, dedicated
 worktree conventions, schedule templates, run-log and exception templates,
 exception alert boundaries, publish credential boundaries, and a credential-free
 dry-run command. The dry-run command writes reports outside the repo by default
 and supports
-`HERMES_REPORT_ROOT=docs/content-runs` for intentional scheduled run logs.
+`CODEX_REPORT_ROOT=docs/content-runs` for intentional scheduled run logs.
 
-True local blockers for unattended operation remain outside the repo: Mac Mini
-Hermes installation, provider credentials and budgets in a local secret store,
-scheduler installation, dedicated local OS user/worktree setup, branch
+True local blockers for unattended operation remain outside the repo: Codex
+automation availability, provider credentials and budgets in a local secret
+store, scheduler installation, dedicated local OS user/worktree setup, branch
 protection/merge automation, and least-privilege GitHub automation credentials
 if publishing is enabled.
 
@@ -116,7 +116,7 @@ Know what is still uncertain.
 Send the accountant a package that explains itself.
 ```
 
-The engine is successful when Hermes can plan, research, write, review,
+The engine is successful when Codex can plan, research, write, review,
 optimize, publish, monitor, and refresh content on a schedule, escalating only
 when a run is blocked or a claim cannot be made safely.
 
@@ -135,7 +135,7 @@ Founder time is spent building and tuning the machine:
 - escalation rules
 - first-run calibration
 
-Once those are encoded, Hermes owns execution.
+Once those are encoded, Codex owns execution.
 
 The founder should not be required to:
 
@@ -157,21 +157,21 @@ The founder may be interrupted only for:
   exhaustion
 - access-policy changes for autonomous agents
 
-## Hermes Posture
+## Codex Posture
 
-Hermes is the target executor.
+Codex is the target executor.
 
-This doc does not treat Hermes or agents as unproven. Thousands of people use
-agentic systems successfully. The work here is to make KansoBooks' specific
-content machine calibrated, observable, and bounded before it runs unattended.
+This doc does not treat Codex or agents as magic. The work here is to make
+KansoBooks' specific content machine calibrated, observable, and bounded before
+it runs unattended.
 
 Implementation path:
 
-1. Codex acts as Hermes inside this repo for the first pipeline passes.
+1. Codex runs the first pipeline passes manually inside this repo.
 2. We create the first articles and artifacts here using the same workflow
-   Hermes will later run.
+   Codex automations will later run.
 3. We patch the skills, validators, and gates based on real outputs.
-4. Hermes is installed on the Mac Mini and runs the same pipeline.
+4. Codex automations are configured to run the same pipeline on schedule.
 5. Burn-in publishes at low cadence while the machine records failures and
    improves.
 6. Full autopublish starts once gates are stable.
@@ -597,22 +597,21 @@ New artifacts can be created by the engine only through an artifact sprint:
 Founder review is not a permanent artifact gate, but during the initial build
 the founder may tune artifact standards as system design input.
 
-## Hermes Architecture
+## Codex Architecture
 
-Start with four Hermes profiles and many skills.
+Start with four Codex operating roles and many skills.
 
-Profiles are operational identities. Skills are the specialist passes. Starting
-with fewer profiles reduces coordination failure while preserving the full
-workflow.
+Roles are operational lanes. Skills are the specialist passes. Starting with
+fewer roles reduces coordination failure while preserving the full workflow.
 
-| Profile | Owns | Tools |
+| Role | Owns | Tools |
 |---|---|---|
 | `kanso-orchestrator` | topic queue, state machine, delegation, run logs | repo read, scheduler, limited git |
 | `kanso-research` | source discovery, source packets, competitor checks | web/search/read only |
 | `kanso-editor` | brief, draft, SEO/AIEO, tone, revisions | repo read, draft write path only |
 | `kanso-auditor-publisher` | final audit, build, commit, publish, indexing logs | narrow repo write plus publish lane |
 
-Future split profiles:
+Future split roles:
 
 - `kanso-strategist`
 - `kanso-writer`
@@ -1248,11 +1247,11 @@ The system publishes only when proof exists.
 
 ## Release Modes
 
-### Mode 0: Codex Prototype
+### Mode 0: Manual Codex Prototype
 
-Use before Hermes is configured.
+Use before Codex automations are configured.
 
-- Codex acts as the Hermes pipeline
+- Codex runs the full pipeline manually
 - first briefs, artifacts, and articles are created here
 - skills are drafted from real runs
 - validators are designed from failures
@@ -1290,13 +1289,13 @@ normal operating model.
 
 Skills are workflow instructions, not a security boundary.
 
-Hermes agents should follow skills, but permissions and CI must contain blast
+Codex agents should follow skills, but permissions and CI must contain blast
 radius.
 
 Recommended operating model:
 
 1. canonical code and content live in this repo
-2. Hermes runs on the Mac Mini in a dedicated clone or worktree
+2. Codex automations run in a dedicated clone or worktree
 3. scheduled content agents can write only approved paths
 4. CI rejects autopublish changes outside the allowlist
 5. CI runs content validation, typecheck, lint, and build
@@ -1622,9 +1621,9 @@ The system must never publish faster than it can maintain quality.
 - add artifact templates
 - add claim-audit checklist
 - add final-audit checklist
-- wire Hermes external skill directory or repo tap strategy
+- wire Codex skill directory or repo tap strategy
 
-### Phase 4: Codex-As-Hermes First Runs
+### Phase 4: Manual Codex First Runs
 
 - run the first topic through the full pipeline in this repo
 - create first artifact
@@ -1633,11 +1632,11 @@ The system must never publish faster than it can maintain quality.
 - patch skills and schemas
 - repeat until the output feels Kanso-native
 
-### Phase 5: Local Hermes Runner
+### Phase 5: Codex Automations
 
-- configure Hermes profiles on the Mac Mini
+- configure Codex automation roles
 - configure model/provider routing
-- configure toolsets per profile
+- configure toolsets per role
 - configure dedicated clone/worktree
 - configure scheduled jobs
 - configure run logs
@@ -1673,9 +1672,9 @@ This phase is done when:
 - artifact library exists
 - content schemas validate at build time
 - deterministic validators enforce the gates
-- Hermes has separate skills for every major pass
-- Hermes can generate briefs from topic candidates
-- Hermes can research, draft, optimize, audit, and publish without founder
+- Codex has separate skills for every major pass
+- Codex can generate briefs from topic candidates
+- Codex can research, draft, optimize, audit, and publish without founder
   approval
 - successful runs publish automatically
 - failed runs escalate with precise reasons

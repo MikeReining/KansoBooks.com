@@ -32,5 +32,5 @@ export default async function DraftPreviewPage({
     notFound();
   }
 
-  return <ContentArticlePage item={item} />;
+  return <ContentArticlePage item={item} draftPreview />;
 }
