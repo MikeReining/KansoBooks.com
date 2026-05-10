@@ -1,0 +1,11 @@
+pass: 3
+contentId: accountant-ready-books
+verdict: ready-for-publish-authorization
+scores:
+  writing: 9
+  usefulness: 9
+  specificity: 9
+  safety: 9
+  distinctiveness: 9
+bestLine: Do not send your accountant a scavenger hunt. Send a packet.
+remainingQuestion: Consider turning the packet table into a visible downloadable artifact in a later content-system pass.

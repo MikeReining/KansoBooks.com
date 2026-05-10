@@ -1,0 +1,48 @@
+runId: 2026-05-09-bookkeeping-evidence-index-template-topic-score
+topicId: bookkeeping-evidence-index-template
+state: scored
+scoredAt: 2026-05-09T00:00:00-07:00
+scoredBy: kanso-topic-scoring
+candidate:
+  artifact: bookkeeping-evidence-index-template
+  resource: /templates/bookkeeping-evidence-index-template
+weightedScore:
+  icpFit: { score: 5, weight: 3, points: 15 }
+  painIntensity: { score: 4, weight: 3, points: 12 }
+  buyingIntent: { score: 4, weight: 3, points: 12 }
+  kansoDifferentiation: { score: 5, weight: 3, points: 15 }
+  artifactPotential: { score: 5, weight: 2, points: 10 }
+  aieoCitationPotential: { score: 4, weight: 2, points: 8 }
+  searchDemand: { score: 3, weight: 2, points: 6 }
+  internalLinkValue: { score: 4, weight: 1, points: 4 }
+  freshnessRequirementInverted: { score: 5, weight: 1, points: 5 }
+  riskLevelInverted: { score: 4, weight: 1, points: 4 }
+total: 91
+threshold: 55
+decision: brief
+pillar: templates-tools-artifacts
+tier: 1
+readerJob: Use a template to name source files, review notes, unresolved items, and accountant questions in a bookkeeping handoff package.
+operatingQuestion: Can I prove it?
+canonicalJob: use-handoff-template
+risk: medium
+artifactRequired: bookkeeping-evidence-index-template
+vetoesCleared:
+  - icp_fit_above_minimum
+  - kanso_differentiation_above_minimum
+  - distinct_reader_job_present
+  - artifact_potential_present
+  - tax_legal_audit_risk_bounded
+  - no_existing_content_duplicate
+handoff:
+  to: kanso-content-brief
+  topicId: bookkeeping-evidence-index-template
+  score: 91
+  pillar: templates-tools-artifacts
+  tier: 1
+  readerJob: Use a template to name source files, review notes, unresolved items, and accountant questions in a bookkeeping handoff package.
+  canonicalJob: use-handoff-template
+  risk: medium
+  artifactRequired: bookkeeping-evidence-index-template
+  notes:
+    - Draft-only E2E test run; publish must remain blocked.

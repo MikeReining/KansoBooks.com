@@ -1,0 +1,5 @@
+contentId: accountant-ready-books
+status: blocked
+reason: Draft-only orchestration run. No publish, deploy, commit, push, PR, or state change requested.
+publishAllowed: false
+qualityVerdict: improved

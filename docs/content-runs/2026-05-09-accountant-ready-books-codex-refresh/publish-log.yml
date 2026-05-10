@@ -1,0 +1,5 @@
+contentId: accountant-ready-books
+publishAction: none
+stateBefore: published
+stateAfter: published
+note: Existing published file was refreshed locally only. No deployment or publication action was taken.

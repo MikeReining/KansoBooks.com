@@ -98,11 +98,28 @@ export function getContentByPath(canonicalPath: string): ContentItem | null {
   );
 }
 
+export function getContentByPathAnyState(
+  canonicalPath: string,
+): ContentItem | null {
+  return (
+    getAllContentItems().find(
+      (item) => item.metadata.canonicalPath === canonicalPath,
+    ) ?? null
+  );
+}
+
 export function getContentBySlug(
   section: keyof typeof contentSectionToType,
   slugParts: string[],
 ): ContentItem | null {
   return getContentByPath(`/${section}/${slugParts.join("/")}`);
+}
+
+export function getContentBySlugAnyState(
+  section: keyof typeof contentSectionToType,
+  slugParts: string[],
+): ContentItem | null {
+  return getContentByPathAnyState(`/${section}/${slugParts.join("/")}`);
 }
 
 export function getKnownInternalPaths(): Set<string> {

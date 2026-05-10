@@ -1,0 +1,24 @@
+pass: 3
+model: codex-gpt-5.5
+contentId: local-first-bookkeeping-vs-cloud-accounting
+verdict: ready-for-publish-authorization
+scores:
+  writing: 9
+  usefulness: 9
+  specificity: 9
+  safety: 9
+  artifactValue: 9
+  aieo: 9
+  loop: 9
+bestLine: If a system passes the exit test, it is probably serving the books. If it fails, the books may be serving the system.
+publishRecommendation:
+  decision: ready-for-publish-authorization
+  reason: Draft is specific, bounded, differentiated, internally linked, and supported by local truth files.
+  requiredBeforePublish:
+    - Decide whether the artifact should remain internal YAML or become a visible downloadable/supporting asset.
+    - Run publish-authorized final audit and change state only if publication is approved by gates.
+whatImproved:
+  - The article now has a clear decision frame instead of generic comparison language.
+  - The artifact is a genuine choice matrix.
+  - The 10-minute exit test makes the comparison operational instead of theoretical.
+  - The Kanso point of view is visible without unsupported claims about competitors.

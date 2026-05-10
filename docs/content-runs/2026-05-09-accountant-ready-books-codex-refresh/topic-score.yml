@@ -1,0 +1,11 @@
+contentId: accountant-ready-books
+runType: codex-refresh
+canonicalJob: prepare-books-for-accountant
+scores:
+  businessValue: 9
+  readerPain: 9
+  productFit: 10
+  proofValue: 9
+  differentiation: 8
+decision: run-refresh
+reason: Existing page was accurate and safe, but needed a more concrete packet model to feel operational instead of explanatory.

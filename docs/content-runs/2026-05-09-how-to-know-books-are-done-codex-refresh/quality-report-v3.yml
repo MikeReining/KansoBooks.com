@@ -1,0 +1,11 @@
+pass: 3
+contentId: how-to-know-books-are-done
+verdict: ready-for-publish-authorization
+scores:
+  writing: 9
+  usefulness: 10
+  specificity: 9
+  safety: 9
+  distinctiveness: 9
+bestLine: Finished books are not books with no questions. They are books where the questions are named well enough to hand off.
+remainingQuestion: Consider linking this test directly from product onboarding once routes and UI are ready.

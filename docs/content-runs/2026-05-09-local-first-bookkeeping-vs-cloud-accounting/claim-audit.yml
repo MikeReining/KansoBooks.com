@@ -1,0 +1,29 @@
+claimAudit:
+  contentId: local-first-bookkeeping-vs-cloud-accounting
+  status: pass
+  checkedAt: 2026-05-09T17:10:00-07:00
+  checkedBy: codex-content-orchestration
+  claimsChecked:
+    - id: claim-local-first
+      source: content/_truth/product.yml
+      result: supported
+    - id: claim-ai-proof-approval
+      source: docs/KansoBooksVision.md#trust-model
+      result: supported
+    - id: claim-accountant-package
+      source: content/_truth/product.yml
+      result: supported
+    - id: claim-canonical-job
+      source: content/_data/canonical-jobs.yml
+      result: supported
+    - id: claim-professional-boundary
+      source: content/_truth/legal-boundaries.yml
+      result: supported
+  claimsFailed: []
+  boundaryChecks:
+    noVendorSpecificClaims: pass
+    noTaxLegalAuditAdvice: pass
+    noAccountantReplacement: pass
+    noAiAsFinancialTruth: pass
+    noCloudBooksImplication: pass
+  handoffTo: codex-final-audit

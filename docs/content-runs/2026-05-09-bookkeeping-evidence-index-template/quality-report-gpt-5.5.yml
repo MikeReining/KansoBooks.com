@@ -1,0 +1,56 @@
+model: gpt-5.5
+provider: openai-codex
+reasoningEffort: medium
+reviewedAt: 2026-05-09T16:45:00-07:00
+contentId: bookkeeping-evidence-index-template
+verdict: improved-after-editor-pass
+summary: >
+  The first E2E draft proved the Hermes content loop can create a safe,
+  valid draft with run artifacts, but the initial writing was more like a
+  short article with an example than a strong standalone template. The
+  gpt-5.5 medium review identified the same issue and improved the page by
+  adding copy-ready template structure, status values, and filename guidance.
+scores:
+  writing: 8
+  usefulness: 9
+  specificity: 8
+  safety: 9
+  artifactValue: 9
+  aieo: 8
+  loop: 8
+issuesFound:
+  - Initial draft was safe and clear but slightly generic.
+  - Template promise was underfilled before the blank copy-ready table was added.
+  - Filename guidance was missing even though source-file naming was part of the page promise.
+  - Repeated "handoff package" language made the draft feel less polished.
+editsMade:
+  - Added a copy-ready blank evidence index table.
+  - Added recommended owner/status values.
+  - Added simple source filename convention examples.
+  - Reduced repeated handoff-package phrasing.
+  - Kept drafted state and professional boundaries intact.
+remainingRisks:
+  - The content is still draft-only and should not publish until a publish-authorized final audit runs.
+  - The artifact YAML could later be expanded to include the blank table fields as structured data.
+  - The Hermes one-shot editor occasionally returned no output on a larger prompt, so smaller staged prompts are more reliable.
+publishRecommendation:
+  decision: do-not-publish-yet
+  reason: Draft-only E2E test intentionally blocks publication.
+  nextStep: Run a publish-authorized final audit only after the owner accepts the content strategy and artifact shape.
+modelAssessment:
+  gpt55Medium: Better suited for content quality, voice, usefulness, and editorial judgment.
+  gpt53Codex: Better suited for code and repository mechanics than final content writing.
+  recommendation: Use gpt-5.5 medium for Kanso editor, tone, content review, and final editorial assessment; keep codex-specialized models for code changes and tooling fixes.
+loopAssessment:
+  isWorking: true
+  whatWorked:
+    - Hermes authenticated through openai-codex OAuth.
+    - Hermes created all expected draft-only content and run artifacts.
+    - Deterministic gates passed after generation.
+    - Draft state prevented publication in the build.
+    - A gpt-5.5 review pass improved the content in a targeted way.
+  whatNeedsImprovement:
+    - The first all-in-one prompt took several minutes with no streaming visibility.
+    - One audit artifact initially had claim IDs that did not exactly match the claim manifest.
+    - A broad gpt-5.5 edit-and-report prompt exited with no output and no file changes.
+    - Smaller staged prompts produced better reliability and observability.

@@ -1,0 +1,11 @@
+contentId: accountant-ready-books
+readerJob: prepare books for accountant review without pretending the page gives tax advice
+operatingQuestion: Can I hand this package to my accountant without making them guess?
+risk: medium
+jurisdiction: general
+requiredMove: Add a concrete handoff packet that turns readiness into a visible package.
+mustAvoid:
+  - tax advice
+  - filing-position claims
+  - accountant replacement language
+  - AI-as-truth language

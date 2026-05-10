@@ -1,0 +1,10 @@
+pass: 1
+contentId: accountant-ready-books
+scores:
+  writing: 7
+  usefulness: 8
+  specificity: 7
+  safety: 9
+weaknesses:
+  - Accurate but too much like a checklist.
+  - Needed a stronger artifact-like section.

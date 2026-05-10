@@ -1,0 +1,10 @@
+contentId: ai-bookkeeping-with-proof
+readerJob: validate AI-drafted bookkeeping without trusting AI confidence
+operatingQuestion: What proof must exist before an AI suggestion becomes accepted work?
+risk: medium
+jurisdiction: general
+requiredMove: Add a memorable receipt model for each accepted AI suggestion.
+mustAvoid:
+  - AI-as-financial-truth
+  - claims that AI replaces accountant judgment
+  - tax/legal/audit/payroll/sales-tax/filing/entity-specific advice

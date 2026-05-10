@@ -1,0 +1,10 @@
+contentId: how-to-know-books-are-done
+status: pass
+claimsAdded:
+  - A one-account sample can reveal whether a period is only categorized or actually ready.
+support:
+  - content/_data/canonical-jobs.yml
+  - content/_truth/product.yml
+  - docs/KansoBooksVision.md#trust-model
+boundaryCheck: pass
+notes: The test is general workflow guidance and keeps professional decisions outside the page.

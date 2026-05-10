@@ -63,6 +63,21 @@ Use the books readiness checklist when you are looking at a month, quarter, or y
 
 The simple test is: could another careful reviewer see what was checked, what still needs judgment, and what evidence supports the numbers? If yes, the books may be ready to package. If not, the next task is to make the uncertainty visible.
 
+## The Done-Enough Test
+
+Finished books are not books with no questions. They are books where the questions are named well enough to hand off.
+
+Run this quick test:
+
+1. Pick one account in the period.
+2. Open the statement or export behind it.
+3. Check whether the ending balance ties to the books, or whether the difference is named.
+4. Pick three unusual transactions.
+5. Confirm each one has a category, evidence, note, or review state.
+6. Open the accountant question list and make sure the remaining uncertainty is written as decisions, not mysteries.
+
+If you cannot do that in a few minutes for one account, the full period is probably not done. It may be categorized, but it is not ready.
+
 ## What You Can Prove
 
 A readiness check can prove that a specific period was assembled from named records, that statement totals were checked or differences were disclosed, that transactions were reviewed into clear states, and that evidence was preserved in files the owner controls.

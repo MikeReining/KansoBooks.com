@@ -1,0 +1,7 @@
+contentId: ai-bookkeeping-with-proof
+sources:
+  - content/_truth/product.yml
+  - content/_truth/legal-boundaries.yml
+  - content/_data/canonical-jobs.yml
+  - docs/KansoBooksVision.md#trust-model
+sourceConclusion: KansoBooks can require traceability, deterministic checks, reversibility, evidence, and approval before AI work becomes trusted bookkeeping output.

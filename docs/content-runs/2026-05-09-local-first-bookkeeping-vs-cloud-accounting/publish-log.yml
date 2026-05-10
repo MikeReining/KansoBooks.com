@@ -1,0 +1,14 @@
+publishLog:
+  contentId: local-first-bookkeeping-vs-cloud-accounting
+  runId: 2026-05-09-local-first-bookkeeping-vs-cloud-accounting
+  attemptedAt: 2026-05-09T17:10:00-07:00
+  action: blocked
+  publishAttempted: false
+  publishAllowed: false
+  reason: Draft-only Codex orchestration run.
+  notes:
+    - No commit performed.
+    - No push performed.
+    - No PR created.
+    - No deploy performed.
+    - No publish operation executed.

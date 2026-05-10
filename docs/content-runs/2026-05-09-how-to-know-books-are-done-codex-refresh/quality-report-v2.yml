@@ -1,0 +1,10 @@
+pass: 2
+contentId: how-to-know-books-are-done
+scores:
+  writing: 9
+  usefulness: 9
+  specificity: 9
+  safety: 9
+changes:
+  - Added a six-step done-enough test.
+  - Clarified the difference between categorized and ready.

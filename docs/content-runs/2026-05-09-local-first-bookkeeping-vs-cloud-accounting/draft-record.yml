@@ -1,0 +1,21 @@
+runId: 2026-05-09-local-first-bookkeeping-vs-cloud-accounting-draft
+topicId: local-first-bookkeeping-vs-cloud-accounting
+from: researched
+to: drafted
+agent: codex-content-orchestration
+timestamp: 2026-05-09T17:10:00-07:00
+contentPath: content/comparisons/local-first-bookkeeping-vs-cloud-accounting.md
+artifactPath: content/_artifacts/bookkeeping-system-choice-matrix.yml
+claimManifest: content/_claims/local-first-bookkeeping-vs-cloud-accounting.yml
+checksPassed:
+  - answer_block_present
+  - decision_table_present
+  - proof_boundary_present
+  - source_notes_present
+  - next_step_present
+  - entity_summary_present
+  - draft_only_state
+knownRisks:
+  - Medium-risk system-choice guidance; no vendor-specific or tax/legal claims.
+handoff:
+  to: codex-claim-audit

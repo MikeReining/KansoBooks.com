@@ -1,0 +1,10 @@
+pass: 2
+contentId: accountant-ready-books
+scores:
+  writing: 8
+  usefulness: 9
+  specificity: 9
+  safety: 9
+changes:
+  - Added a packet model with concrete review outputs.
+  - Reframed handoff as reducing accountant guesswork.

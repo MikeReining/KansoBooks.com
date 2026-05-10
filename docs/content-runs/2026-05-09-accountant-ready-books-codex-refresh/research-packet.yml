@@ -1,0 +1,7 @@
+contentId: accountant-ready-books
+sources:
+  - content/_truth/product.yml
+  - content/_truth/legal-boundaries.yml
+  - content/_data/canonical-jobs.yml
+  - docs/KansoBooksVision.md#trust-model
+sourceConclusion: KansoBooks can claim local-first ownership, AI-prepared bookkeeping, validation, evidence, and user approval. It cannot claim professional tax/legal/audit/payroll/sales-tax outcomes.

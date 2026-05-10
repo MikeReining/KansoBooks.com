@@ -1,0 +1,7 @@
+contentId: ai-bookkeeping-with-proof
+editedFile: content/resources/ai-bookkeeping-with-proof.md
+changes:
+  - Added "The AI Receipt Test" section.
+  - Reframed validation around reviewable receipts instead of confidence.
+stateChange: none
+publishAction: none

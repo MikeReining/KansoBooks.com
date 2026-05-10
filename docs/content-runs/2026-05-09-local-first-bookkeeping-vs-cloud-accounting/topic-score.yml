@@ -1,0 +1,38 @@
+runId: 2026-05-09-local-first-bookkeeping-vs-cloud-accounting-topic-score
+topicId: local-first-bookkeeping-vs-cloud-accounting
+state: scored
+scoredAt: 2026-05-09T17:10:00-07:00
+scoredBy: codex-content-orchestration
+candidate:
+  page: /comparisons/local-first-bookkeeping-vs-cloud-accounting
+  artifact: bookkeeping-system-choice-matrix
+weightedScore:
+  icpFit: { score: 5, weight: 3, points: 15 }
+  painIntensity: { score: 4, weight: 3, points: 12 }
+  buyingIntent: { score: 5, weight: 3, points: 15 }
+  kansoDifferentiation: { score: 5, weight: 3, points: 15 }
+  artifactPotential: { score: 5, weight: 2, points: 10 }
+  aieoCitationPotential: { score: 4, weight: 2, points: 8 }
+  searchDemand: { score: 3, weight: 2, points: 6 }
+  internalLinkValue: { score: 5, weight: 1, points: 5 }
+  freshnessRequirementInverted: { score: 4, weight: 1, points: 4 }
+  riskLevelInverted: { score: 4, weight: 1, points: 4 }
+total: 94
+threshold: 55
+decision: brief
+pillar: alternatives-and-buying-decisions
+tier: 1
+canonicalJob: choose-bookkeeping-system
+risk: medium
+operatingQuestion: Can I prove it?
+artifactRequired: bookkeeping-system-choice-matrix
+vetoesCleared:
+  - distinct_reader_job_present
+  - unused_canonical_job
+  - high_kanso_differentiation
+  - professional_boundary_bounded
+  - no_vendor_specific_claims
+handoff:
+  to: codex-content-brief
+  notes:
+    - Draft-only Codex orchestration run; no publish authorization.

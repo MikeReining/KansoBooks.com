@@ -1,0 +1,9 @@
+pass: 1
+contentId: ai-bookkeeping-with-proof
+scores:
+  writing: 8
+  usefulness: 8
+  specificity: 8
+  safety: 10
+weaknesses:
+  - Strong boundary language, but needed a sticky operational phrase.

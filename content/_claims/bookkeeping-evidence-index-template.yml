@@ -1,0 +1,34 @@
+schemaVersion: 1
+pageId: bookkeeping-evidence-index-template
+risk: medium
+claims:
+  - id: claim-reader-job
+    text: KansoBooks content is designed to help owners get books ready, name uncertainty, and hand accountants a package that explains itself.
+    type: positioning
+    source: docs/content-engine/Vision.md
+    refresh: stable
+    notes: Reader-job and operating-question framing.
+  - id: claim-ai-proof-approval
+    text: AI may draft bookkeeping work, but validation and user approval determine what becomes trusted record truth.
+    type: positioning
+    source: docs/KansoBooksVision.md#trust-model
+    refresh: stable
+    notes: Keeps AI-as-financial-truth boundary explicit.
+  - id: claim-accountant-support-posture
+    text: KansoBooks is positioned to support accountant handoff workflows, not replace accountant judgment.
+    type: product
+    source: content/_truth/product.yml
+    refresh: on-release
+    notes: Product positioning and capability boundaries.
+  - id: claim-local-first-ownership
+    text: KansoBooks local-first posture keeps business books in files the owner controls.
+    type: product
+    source: content/_truth/product.yml
+    refresh: on-release
+    notes: Avoids cloud-books implication.
+  - id: claim-professional-boundary
+    text: KansoBooks content excludes tax, legal, audit, payroll, sales tax, filing, and entity-specific advice.
+    type: positioning
+    source: content/_truth/legal-boundaries.yml
+    refresh: stable
+    notes: Required professional boundary for medium-risk content.

@@ -61,6 +61,21 @@ Use the accountant package checklist when you are preparing a month, quarter, or
 
 The useful question is not "did software categorize everything?" The useful question is "could someone review this package and see what is checked, what is still uncertain, and what evidence supports the numbers?"
 
+## The Handoff Packet
+
+Do not send your accountant a scavenger hunt. Send a packet.
+
+| Packet item | What it should answer | What to avoid |
+|---|---|---|
+| Scope note | Which dates, accounts, and files are included? | "Everything should be in there." |
+| Source file list | Which statements, exports, receipts, invoices, and notes support the work? | Links or folders with no index. |
+| Reconciliation note | Which balances tie out, and which differences remain open? | Categorized transactions with unchecked balances. |
+| Review log | Which items were accepted, changed, deferred, or questioned? | Silent AI edits or unexplained category changes. |
+| Exception list | Which owner, loan, refund, duplicate-looking, personal-looking, or unusual items need judgment? | Burying the weird stuff in normal categories. |
+| Accountant questions | What exactly do you need professional help deciding? | Vague messages like "please review my books." |
+
+The packet does not need to be fancy. It needs to make the next reviewer faster, calmer, and less dependent on guessing.
+
 ## What You Can Prove
 
 A cleaner accountant handoff can prove that a specific period was assembled from named source files, that statement balances were checked or differences were disclosed, that transactions were reviewed into categories or open items, and that evidence was preserved instead of replaced by AI confidence.

@@ -1,0 +1,10 @@
+pass: 2
+contentId: ai-bookkeeping-with-proof
+scores:
+  writing: 9
+  usefulness: 9
+  specificity: 9
+  safety: 10
+changes:
+  - Added receipt language and a concrete table of acceptable proof.
+  - Made "needs review" the default state when proof is missing.

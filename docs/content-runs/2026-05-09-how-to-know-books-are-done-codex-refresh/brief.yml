@@ -1,0 +1,11 @@
+contentId: how-to-know-books-are-done
+readerJob: know whether categorized transactions are actually finished books
+operatingQuestion: Are my books done enough to package, or just cleaned up?
+risk: medium
+jurisdiction: general
+requiredMove: Add a fast account-level test that exposes whether the period is really ready.
+mustAvoid:
+  - promising certainty
+  - tax advice
+  - audit or filing outcomes
+  - treating AI confidence as proof

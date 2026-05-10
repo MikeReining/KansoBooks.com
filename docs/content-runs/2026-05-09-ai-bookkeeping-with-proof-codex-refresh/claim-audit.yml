@@ -1,0 +1,10 @@
+contentId: ai-bookkeeping-with-proof
+status: pass
+claimsAdded:
+  - Accepted AI suggestions should retain evidence, reason, approval state, and rollback/review path where relevant.
+support:
+  - content/_truth/product.yml
+  - docs/KansoBooksVision.md#trust-model
+  - content/_truth/legal-boundaries.yml
+boundaryCheck: pass
+notes: New section strengthens existing AI boundary and does not create unsupported model performance claims.

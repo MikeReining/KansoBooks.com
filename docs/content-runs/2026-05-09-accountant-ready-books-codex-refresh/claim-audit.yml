@@ -1,0 +1,10 @@
+contentId: accountant-ready-books
+status: pass
+claimsAdded:
+  - A good handoff packet should include scope, source files, reconciliation notes, review log, exceptions, and accountant questions.
+support:
+  - content/_data/canonical-jobs.yml
+  - content/_truth/product.yml
+  - docs/KansoBooksVision.md#trust-model
+boundaryCheck: pass
+notes: New section is workflow guidance and does not assert tax, audit, legal, payroll, sales-tax, filing, or entity-specific outcomes.

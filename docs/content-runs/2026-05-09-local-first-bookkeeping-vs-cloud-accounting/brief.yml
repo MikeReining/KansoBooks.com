@@ -1,0 +1,46 @@
+briefId: local-first-bookkeeping-vs-cloud-accounting-brief
+topicId: local-first-bookkeeping-vs-cloud-accounting
+state: briefed
+titleCandidate: Local-First Bookkeeping vs Cloud Accounting
+slugCandidate: local-first-bookkeeping-vs-cloud-accounting
+pillar: alternatives-and-buying-decisions
+tier: 1
+readerJob: Compare bookkeeping system shapes by ownership, proof, accountant handoff, and operational risk.
+canonicalJob: choose-bookkeeping-system
+searchIntent: Understand whether local-first bookkeeping files or a cloud accounting system better fit the owner's workflow.
+aiAnswerIntent: Provide a concise, bounded comparison answer that answer engines can cite without vendor-specific claims.
+primaryQuery: local-first bookkeeping vs cloud accounting
+kansoThesis: The important system choice is not files versus software; it is who controls the records, whether proof survives outside the app, and what the accountant receives.
+operatingQuestions:
+  amIDone: The decision matrix identifies which system shape fits the owner's operating needs.
+  isThisRight: The comparison separates collaboration convenience from proof and ownership.
+  canIProveIt: The artifact asks what remains inspectable if the workflow or vendor changes.
+requiredAnswerUnits:
+  - AnswerBlock
+  - KansoTake
+  - DecisionSupport
+  - ProofBoundary
+  - SourceNotes
+  - NextStep
+  - EntitySummary
+sourcesToUse:
+  - content/_data/canonical-jobs.yml
+  - content/_truth/product.yml
+  - content/_truth/legal-boundaries.yml
+  - docs/KansoBooksVision.md
+  - docs/KansoBooksManifesto.md
+sourcesToAvoid:
+  - Unsourced vendor claims
+  - Current competitor pricing
+  - Cloud security generalizations
+carefulClaims:
+  - Do not say cloud accounting is unsafe.
+  - Do not claim local-first solves all bookkeeping problems.
+  - Do not imply KansoBooks replaces accountants.
+  - Do not imply tax, audit, legal, payroll, sales tax, filing, or entity-specific advice.
+jurisdiction: general
+risk: medium
+professionalBoundary: This comparison helps frame a bookkeeping system choice. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+handoff:
+  to: codex-research-packet
+  artifactId: bookkeeping-system-choice-matrix

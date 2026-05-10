@@ -1,0 +1,50 @@
+schemaVersion: 1
+id: bookkeeping-evidence-index-template
+title: Bookkeeping Evidence Index Template
+artifactType: template
+jurisdiction: general
+risk: medium
+sourceNotes:
+  - docs/content-engine/Vision.md
+  - docs/KansoBooksVision.md#trust-model
+  - content/_truth/product.yml
+  - content/_truth/legal-boundaries.yml
+professionalBoundary: This template helps organize bookkeeping handoff evidence. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+owner: KansoBooks Editorial System
+lastReviewed: 2026-05-09
+nextReview: 2026-08-09
+content:
+  purpose: Help a small-business owner prepare a bookkeeping handoff package with named source files, review notes, unresolved items, and accountant questions.
+  useWhen:
+    - You are preparing month, quarter, or year bookkeeping for accountant review.
+    - You need a repeatable evidence index that keeps uncertainty visible.
+    - You want a package that explains itself without overclaiming certainty.
+  doNotUseFor:
+    - Providing tax, legal, payroll, sales tax, audit, filing, or entity-specific advice.
+    - Declaring AI output as financial truth without validation and approval.
+    - Replacing accountant judgment.
+  checklist:
+    - name: Source file naming
+      doneWhen: Each source file has an exact filename and period label in the index.
+      evidence: Statement filenames, export filenames, and attachment references.
+    - name: Review notes
+      doneWhen: Each row states what was checked and the current review status.
+      evidence: Reconciliation notes, category review notes, and exception comments.
+    - name: Unresolved items
+      doneWhen: Open issues are explicit, not hidden in generic comments.
+      evidence: Open-item list with account, transaction, or document reference.
+    - name: Accountant questions
+      doneWhen: Each unresolved item has a direct question for professional judgment.
+      evidence: Question list linked to source rows.
+    - name: Handoff completeness
+      doneWhen: Evidence index is packaged with supporting files and handoff notes.
+      evidence: Folder or zip containing index, source files, and summary notes.
+  proofNeeded:
+    - A complete row list of source files included in scope.
+    - Review notes that explain what was checked.
+    - Explicit unresolved items with ownership and status.
+    - Accountant questions linked to unresolved items.
+  accountantQuestions:
+    - Which unresolved items require your judgment before filing or final reporting?
+    - Are any missing source files material for the standard you apply?
+    - Should any current owner assumptions be revised before this package is relied on?

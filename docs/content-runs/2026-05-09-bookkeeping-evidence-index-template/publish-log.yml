@@ -1,0 +1,17 @@
+publishLog:
+  contentId: bookkeeping-evidence-index-template
+  runId: 2026-05-09-bookkeeping-evidence-index-template
+  attemptedAt: 2026-05-09T00:00:00-07:00
+  action: blocked
+  publishAttempted: false
+  publishAllowed: false
+  reason: Publish intentionally blocked for draft-only E2E test.
+  checks:
+    finalAuditStatus: blocked
+    draftOnlyMode: true
+  notes:
+    - No commit performed.
+    - No push performed.
+    - No PR created.
+    - No deploy performed.
+    - No publish operation executed.

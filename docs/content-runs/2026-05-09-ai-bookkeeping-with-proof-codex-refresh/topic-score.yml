@@ -1,0 +1,11 @@
+contentId: ai-bookkeeping-with-proof
+runType: codex-refresh
+canonicalJob: validate-ai-bookkeeping-work
+scores:
+  businessValue: 10
+  readerPain: 9
+  productFit: 10
+  proofValue: 10
+  differentiation: 9
+decision: run-refresh
+reason: This is the clearest KansoBooks point of view article and needed a memorable validation frame.

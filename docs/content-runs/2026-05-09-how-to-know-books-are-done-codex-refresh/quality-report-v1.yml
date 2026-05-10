@@ -1,0 +1,9 @@
+pass: 1
+contentId: how-to-know-books-are-done
+scores:
+  writing: 8
+  usefulness: 8
+  specificity: 8
+  safety: 9
+weaknesses:
+  - The table was useful, but the reader still needed an immediate action.

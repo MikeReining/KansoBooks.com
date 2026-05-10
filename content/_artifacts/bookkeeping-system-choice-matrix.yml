@@ -1,0 +1,43 @@
+schemaVersion: 1
+id: bookkeeping-system-choice-matrix
+title: Bookkeeping System Choice Matrix
+artifactType: decision-tree
+jurisdiction: general
+risk: medium
+sourceNotes:
+  - content/_data/canonical-jobs.yml
+  - content/_truth/product.yml
+  - content/_truth/legal-boundaries.yml
+  - docs/KansoBooksVision.md#trust-model
+professionalBoundary: This matrix helps frame a bookkeeping system choice. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+owner: KansoBooks Editorial System
+lastReviewed: 2026-05-09
+nextReview: 2026-08-09
+content:
+  purpose: Help a small-business owner compare local-first bookkeeping files and cloud accounting systems by ownership, proof, accountant handoff, and operational risk.
+  decisionQuestions:
+    - question: If the app disappeared tomorrow, what would I still have?
+      localFirstSignal: Source files, local books, exports, notes, and evidence index remain inspectable.
+      cloudSignal: Access, exports, permissions, and account state are part of the operating dependency.
+    - question: Could my accountant review the package without guessing where the numbers came from?
+      localFirstSignal: Handoff folder includes reports, source files, reconciliation notes, and open questions.
+      cloudSignal: Handoff relies on account access, hosted views, exports, or product-specific reports.
+    - question: Can I prove what AI changed?
+      localFirstSignal: AI suggestions become decisions only after validation and approval against local records.
+      cloudSignal: AI or automation may be embedded in hosted workflows and must still produce a reviewable evidence trail.
+    - question: What collaboration do I actually need?
+      localFirstSignal: Good fit when portability and evidence matter more than always-online shared workflows.
+      cloudSignal: Good fit when team access inside one hosted account is the dominant requirement.
+  chooseLocalFirstWhen:
+    - You want books in files the owner controls.
+    - Accountant handoff needs a portable evidence package.
+    - You care about recovery, inspection, and review outside one hosted workflow.
+  chooseCloudWhen:
+    - Always-online multi-user workflow is the main requirement.
+    - The team accepts hosted-account dependency.
+    - The system can still produce exportable evidence and accountant-ready handoff materials.
+  doNotUseFor:
+    - Choosing a tax filing position.
+    - Replacing accountant judgment.
+    - Declaring one vendor universally better than another.
+    - Making legal, audit, payroll, sales tax, filing, or entity-specific decisions.

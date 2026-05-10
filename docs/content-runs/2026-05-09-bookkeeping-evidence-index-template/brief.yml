@@ -1,0 +1,75 @@
+briefId: bookkeeping-evidence-index-template-brief
+topicId: bookkeeping-evidence-index-template
+state: briefed
+titleCandidate: Bookkeeping Evidence Index Template
+slugCandidate: bookkeeping-evidence-index-template
+pillar: templates-tools-artifacts
+tier: 1
+readerJob: Use a template to name source files, review notes, unresolved items, and accountant questions in a bookkeeping handoff package.
+canonicalJob: use-handoff-template
+searchIntent: Find a practical bookkeeping evidence index template for accountant handoff.
+aiAnswerIntent: Provide a concise, citable template structure that supports proof-oriented handoff.
+primaryQuery: bookkeeping evidence index template
+secondaryQueries:
+  - bookkeeping handoff template
+  - accountant handoff evidence index
+  - bookkeeping source file index template
+kansoThesis: A bookkeeping handoff is stronger when evidence is indexed, unresolved items are named, and accountant questions are explicit instead of buried in transaction noise.
+operatingQuestions:
+  amIDone: The template shows whether each source file, note, unresolved item, and accountant question is present.
+  isThisRight: The index reveals what was reviewed, what remains open, and what needs professional judgment.
+  canIProveIt: Named source files and review notes make bookkeeping claims traceable.
+requiredAnswerUnits:
+  - AnswerBlock
+  - KansoTake
+  - DecisionSupport
+  - ProofBoundary
+  - SourceNotes
+  - NextStep
+  - EntitySummary
+requiredSections:
+  - Direct answer
+  - Kanso proof angle
+  - Evidence index template
+  - Proof boundary
+  - Source notes
+  - Next step
+  - Entity summary
+selectedArtifactId: bookkeeping-evidence-index-template
+artifactUse: The page body includes a fillable template table and usage notes for accountant handoff packages.
+internalLinks: []
+sourcesToUse:
+  - docs/content-engine/Vision.md
+  - docs/KansoBooksVision.md
+  - docs/KansoBooksWedge.md
+  - content/_truth/product.yml
+  - content/_truth/legal-boundaries.yml
+sourcesToAvoid:
+  - Unsourced tax filing checklists
+  - Jurisdiction-specific legal guidance
+  - Audit outcome claims
+carefulClaims:
+  - Do not say tax-ready or audit-ready.
+  - Do not imply KansoBooks replaces accountants.
+  - Do not imply AI is financial truth.
+  - Do not imply cloud storage of user books.
+jurisdiction: general
+risk: medium
+professionalBoundary: This template is general workflow guidance. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+conversionPath: Template page to artifact adoption in owner handoff workflow.
+publishPriority: draft-only-test
+refreshCadence: quarterly
+handoff:
+  to: kanso-research-packet
+  briefPath: docs/content-runs/2026-05-09-bookkeeping-evidence-index-template/brief.yml
+  briefId: bookkeeping-evidence-index-template-brief
+  risk: medium
+  jurisdiction: general
+  sourcePlan:
+    - canonical Kanso docs for trust model and reader-job framing
+    - truth files for product and professional boundaries
+  carefulClaims:
+    - no tax-ready or audit-ready wording
+    - accountant support, not replacement
+    - AI drafts are not financial truth
+  artifactId: bookkeeping-evidence-index-template

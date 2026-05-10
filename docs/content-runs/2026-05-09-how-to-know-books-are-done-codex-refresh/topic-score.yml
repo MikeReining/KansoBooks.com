@@ -1,0 +1,11 @@
+contentId: how-to-know-books-are-done
+runType: codex-refresh
+canonicalJob: understand-books-readiness
+scores:
+  businessValue: 10
+  readerPain: 10
+  productFit: 10
+  proofValue: 9
+  differentiation: 8
+decision: run-refresh
+reason: The page is central to KansoBooks' proof promise and needed a faster owner-facing readiness test.

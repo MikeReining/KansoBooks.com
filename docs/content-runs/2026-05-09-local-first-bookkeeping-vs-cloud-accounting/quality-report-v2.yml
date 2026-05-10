@@ -1,0 +1,17 @@
+pass: 2
+model: codex-gpt-5.5
+contentId: local-first-bookkeeping-vs-cloud-accounting
+verdict: more-specific-after-second-pass
+scores:
+  writing: 9
+  usefulness: 9
+  specificity: 9
+  safety: 9
+  artifactValue: 9
+  memorability: 8
+editsMade:
+  - Added recovery/failure-mode framing to the decision table.
+  - Added five owner questions.
+  - Added the line "Pick the system whose failure mode you are willing to live with."
+remainingWeakness:
+  - Could still use a stronger immediate exercise before publish.

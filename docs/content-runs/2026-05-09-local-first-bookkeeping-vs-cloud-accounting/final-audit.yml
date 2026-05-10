@@ -1,0 +1,22 @@
+finalAudit:
+  contentId: local-first-bookkeeping-vs-cloud-accounting
+  status: blocked
+  checkedAt: 2026-05-09T17:10:00-07:00
+  checkedBy: codex-content-orchestration
+  contentPath: content/comparisons/local-first-bookkeeping-vs-cloud-accounting.md
+  artifactPath: content/_artifacts/bookkeeping-system-choice-matrix.yml
+  claimManifestPath: content/_claims/local-first-bookkeeping-vs-cloud-accounting.yml
+  checksPassed:
+    - metadata_complete
+    - claim_manifest_present
+    - claim_audit_pass
+    - answer_units_present
+    - entity_summary_present
+    - decision_support_present
+    - draft_only_state
+  checksFailed:
+    - publish_intentionally_blocked_for_draft_only_orchestration_run
+  publishAllowed: false
+  requiredFixes:
+    - Run publish-authorized final audit before changing state to published.
+  handoffTo: blocked-draft

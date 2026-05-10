@@ -64,6 +64,22 @@ Use the AI bookkeeping validation checklist when AI has drafted bookkeeping work
 
 The core test is simple: could another careful reviewer see the source, the check, the reason, and the decision? If not, the AI draft is still work in progress.
 
+## The AI Receipt Test
+
+Every accepted AI suggestion should leave a receipt.
+
+Not a confidence score. Not a fluent explanation. A receipt.
+
+| AI suggestion | Receipt that makes it reviewable |
+|---|---|
+| Category changed | Source transaction, rule or reason, prior decision if used, and approval state. |
+| Transfer matched | Both sides of the transfer, dates, amounts, and unresolved mismatch if any. |
+| Duplicate removed | Records compared, reason for duplicate decision, and rollback path. |
+| Evidence attached | Source file name, page or row reference when available, and missing-evidence flag if incomplete. |
+| Question deferred | Owner or accountant question, affected transaction, and reason it was not resolved. |
+
+If the system cannot show the receipt, the right state is not "approved." It is "needs review."
+
 ## What You Can Prove
 
 Validated AI bookkeeping can prove that a draft was checked against named source records, that statement totals or differences were reviewed, that uncertain items were not hidden, and that accepted changes came from user approval rather than AI confidence alone.

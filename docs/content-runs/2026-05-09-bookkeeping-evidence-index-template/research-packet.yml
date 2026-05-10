@@ -1,0 +1,83 @@
+packetId: bookkeeping-evidence-index-template-research
+briefId: bookkeeping-evidence-index-template-brief
+state: researched
+researcher: kanso-research
+dateChecked: 2026-05-09
+primarySources:
+  - title: Autonomous Content Engine Vision
+    url: docs/content-engine/Vision.md
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Reader-job and proof-oriented content contract.
+    reliability: primary
+  - title: KansoBooks Vision
+    url: docs/KansoBooksVision.md
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: AI boundary, trust model, and approval posture.
+    reliability: primary
+  - title: KansoBooks Wedge
+    url: docs/KansoBooksWedge.md
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Accountant handoff moment-of-value framing.
+    reliability: primary
+  - title: Product Truth
+    url: content/_truth/product.yml
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Local-first ownership and accountant-handoff positioning.
+    reliability: primary
+  - title: Legal Boundaries Truth
+    url: content/_truth/legal-boundaries.yml
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Professional boundary language and prohibited claim classes.
+    reliability: primary
+secondarySources: []
+competitorGaps: []
+definitions:
+  - term: evidence index
+    source: docs/content-engine/Vision.md
+    safeDefinition: A structured list that links bookkeeping claims to source files, review notes, and unresolved items.
+  - term: accountant handoff package
+    source: docs/KansoBooksWedge.md
+    safeDefinition: A bundle of bookkeeping outputs and evidence that helps an accountant review what is done and what remains open.
+numbersAndDates: []
+uncertainClaims: []
+riskBoundaries:
+  tax: Do not provide tax treatment, filing positions, or deadline advice.
+  legal: Do not provide legal interpretations or entity-specific conclusions.
+  audit: Do not claim audit readiness or outcomes.
+  accounting: Keep to general bookkeeping workflow and route judgment calls to the accountant.
+sourceExcerpts:
+  - source: docs/content-engine/Vision.md
+    excerpt: Get the books ready. Know what is still uncertain. Send the accountant a package that explains itself.
+    useLimit: short excerpt only
+  - source: docs/KansoBooksVision.md
+    excerpt: AI prepares the work, Kanso proves it, and the user approves what becomes true.
+    useLimit: short excerpt only
+suggestedExamples:
+  - Show one template row that includes source file name, review status, unresolved item, and accountant question.
+writerWarnings:
+  - Do not promise compliance, filing accuracy, or audit outcomes.
+  - Do not frame the template as professional advice.
+  - Do not imply KansoBooks stores books in the cloud.
+handoff:
+  to: kanso-article-draft
+  packetPath: docs/content-runs/2026-05-09-bookkeeping-evidence-index-template/research-packet.yml
+  briefId: bookkeeping-evidence-index-template-brief
+  approvedSources:
+    - docs/content-engine/Vision.md
+    - docs/KansoBooksVision.md
+    - docs/KansoBooksWedge.md
+    - content/_truth/product.yml
+    - content/_truth/legal-boundaries.yml
+  forbiddenClaims:
+    - tax-ready
+    - audit-ready
+    - AI is financial truth
+    - KansoBooks replaces accountants
+    - books live in KansoBooks cloud
+  uncertainClaims: []
+  professionalBoundary: This template is general workflow guidance. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.

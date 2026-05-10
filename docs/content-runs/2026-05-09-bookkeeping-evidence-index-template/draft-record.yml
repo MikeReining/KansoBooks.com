@@ -1,0 +1,28 @@
+runId: 2026-05-09-bookkeeping-evidence-index-template-draft
+topicId: bookkeeping-evidence-index-template
+from: researched
+to: drafted
+agent: kanso-article-draft
+timestamp: 2026-05-09T00:00:00-07:00
+contentPath: content/templates/bookkeeping-evidence-index-template.md
+artifactPath: content/_artifacts/bookkeeping-evidence-index-template.yml
+claimManifest: content/_claims/bookkeeping-evidence-index-template.yml
+checksPassed:
+  - answer_block_present_within_opening
+  - kanso_take_present
+  - decision_support_template_present
+  - proof_boundary_present
+  - source_notes_present
+  - next_step_present
+  - entity_summary_present
+  - artifact_id_resolves_to_planned_artifact
+checksFailed: []
+knownRisks:
+  - Medium-risk general bookkeeping workflow; excludes tax, legal, audit, payroll, sales tax, filing, and entity-specific advice.
+handoff:
+  to: kanso-claim-audit
+  draftPath: content/templates/bookkeeping-evidence-index-template.md
+  claimManifestPath: content/_claims/bookkeeping-evidence-index-template.yml
+  briefId: bookkeeping-evidence-index-template-brief
+  packetId: bookkeeping-evidence-index-template-research
+  artifactId: bookkeeping-evidence-index-template

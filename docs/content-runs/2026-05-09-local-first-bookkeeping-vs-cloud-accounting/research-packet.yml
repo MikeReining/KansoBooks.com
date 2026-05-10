@@ -1,0 +1,54 @@
+packetId: local-first-bookkeeping-vs-cloud-accounting-research
+briefId: local-first-bookkeeping-vs-cloud-accounting-brief
+state: researched
+researcher: codex-content-orchestration
+dateChecked: 2026-05-09
+primarySources:
+  - title: Canonical Jobs
+    url: content/_data/canonical-jobs.yml
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Defines choose-bookkeeping-system decision context.
+    reliability: primary
+  - title: Product Truth
+    url: content/_truth/product.yml
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Local-first, accountant package, and AI proof boundary.
+    reliability: primary
+  - title: Legal Boundaries Truth
+    url: content/_truth/legal-boundaries.yml
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Professional boundary.
+    reliability: primary
+  - title: KansoBooks Vision
+    url: docs/KansoBooksVision.md
+    publisher: KansoBooks
+    dateChecked: 2026-05-09
+    claimUse: Trust model and approval posture.
+    reliability: primary
+definitions:
+  - term: local-first bookkeeping
+    safeDefinition: Bookkeeping where the working records live in files the owner controls.
+    source: content/_truth/product.yml
+  - term: cloud accounting system
+    safeDefinition: A hosted bookkeeping workflow accessed through an online account; this page makes no vendor-specific claims.
+    source: content/_data/canonical-jobs.yml
+writerWarnings:
+  - Do not make vendor security or pricing claims.
+  - Keep comparison at system-shape level unless source-backed.
+  - Keep accountant judgment boundary explicit.
+approvedSources:
+  - content/_data/canonical-jobs.yml
+  - content/_truth/product.yml
+  - content/_truth/legal-boundaries.yml
+  - docs/KansoBooksVision.md
+forbiddenClaims:
+  - cloud accounting is unsafe
+  - local-first is always better
+  - KansoBooks replaces accountants
+  - AI makes bookkeeping true
+handoff:
+  to: codex-draft
+  packetPath: docs/content-runs/2026-05-09-local-first-bookkeeping-vs-cloud-accounting/research-packet.yml

@@ -1,0 +1,7 @@
+contentId: how-to-know-books-are-done
+sources:
+  - content/_truth/product.yml
+  - content/_truth/legal-boundaries.yml
+  - content/_data/canonical-jobs.yml
+  - docs/KansoBooksVision.md#trust-model
+sourceConclusion: Readiness should be framed as scope, source files, reconciliation status, transaction state, evidence, and explicit uncertainty.

@@ -1,0 +1,19 @@
+pass: 1
+model: codex-gpt-5.5
+contentId: local-first-bookkeeping-vs-cloud-accounting
+verdict: strong-structure-needs-more-edge
+scores:
+  writing: 8
+  usefulness: 8
+  specificity: 8
+  safety: 9
+  artifactValue: 8
+  memorability: 7
+issuesFound:
+  - The page is useful and safe but could hit harder emotionally.
+  - The comparison needs one more owner-centered diagnostic.
+  - The next step can be more actionable.
+editsPlanned:
+  - Add a sharper diagnostic section.
+  - Add a concrete 10-minute test.
+  - Make the central line more memorable.

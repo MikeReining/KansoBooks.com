@@ -1,0 +1,34 @@
+schemaVersion: 1
+pageId: local-first-bookkeeping-vs-cloud-accounting
+risk: medium
+claims:
+  - id: claim-local-first
+    text: KansoBooks is local-first and the user's books live in files they own.
+    type: product
+    source: content/_truth/product.yml
+    refresh: on-release
+    notes: Supports local-first ownership language.
+  - id: claim-ai-proof-approval
+    text: AI can draft bookkeeping work, but validation and user approval determine what becomes trusted record truth.
+    type: positioning
+    source: docs/KansoBooksVision.md#trust-model
+    refresh: stable
+    notes: Supports the AI boundary and approval posture.
+  - id: claim-accountant-package
+    text: KansoBooks is positioned around preparing cleaner packages for accountant review.
+    type: product
+    source: content/_truth/product.yml
+    refresh: on-release
+    notes: Supports accountant-handoff framing without replacement claims.
+  - id: claim-canonical-job
+    text: The choose-bookkeeping-system canonical job compares options by ownership, proof, accountant handoff, cost posture, and operational risk.
+    type: positioning
+    source: content/_data/canonical-jobs.yml
+    refresh: stable
+    notes: Defines the decision context for the comparison.
+  - id: claim-professional-boundary
+    text: KansoBooks content must not provide tax, legal, audit, payroll, sales tax, filing, or entity-specific advice.
+    type: positioning
+    source: content/_truth/legal-boundaries.yml
+    refresh: stable
+    notes: Required professional boundary for this medium-risk comparison.

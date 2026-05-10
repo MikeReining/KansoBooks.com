@@ -1,0 +1,11 @@
+pass: 3
+contentId: ai-bookkeeping-with-proof
+verdict: ready-for-publish-authorization
+scores:
+  writing: 10
+  usefulness: 9
+  specificity: 9
+  safety: 10
+  distinctiveness: 10
+bestLine: Every accepted AI suggestion should leave a receipt.
+remainingQuestion: This frame is strong enough to become product copy and validation UI language later.
