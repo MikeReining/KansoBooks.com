@@ -1,0 +1,26 @@
+claimAudit:
+  contentId: monthly-bookkeeping-checklist-small-business
+  status: pass
+  checkedAt: 2026-05-10T00:00:00-07:00
+  checkedBy: next-article-workflow
+  claimsChecked:
+    - id: claim-monthly-books-confidence
+      source: docs/content-engine/CopyGuide.md
+      result: supported
+    - id: claim-ai-proof-approval
+      source: docs/KansoBooksVision.md#trust-model
+      result: supported
+    - id: claim-books-readiness
+      source: content/_artifacts/books-readiness-checklist.yml
+      result: supported
+    - id: claim-professional-boundary
+      source: content/_truth/legal-boundaries.yml
+      result: supported
+  claimsFailed: []
+  boundaryChecks:
+    noTaxLegalAuditAdvice: pass
+    noAccountantReplacement: pass
+    noAiAsFinancialTruth: pass
+    noCloudBooksImplication: pass
+    noUnsupportedExternalClaims: pass
+  handoffTo: final-audit

@@ -1,0 +1,12 @@
+pass: 2
+contentId: monthly-bookkeeping-checklist-small-business
+scores:
+  writing: 9
+  usefulness: 9
+  specificity: 9
+  safety: 9
+  artifactValue: 9
+whatImproved:
+  - Added 10-minute monthly close test.
+  - Tightened the distinction between monthly routine and final readiness.
+  - Made open questions and source-file proof more visible.

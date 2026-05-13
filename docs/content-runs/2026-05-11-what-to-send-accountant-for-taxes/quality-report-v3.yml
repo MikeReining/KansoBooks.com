@@ -1,0 +1,15 @@
+qualityReport:
+  pass: 3
+  contentId: what-to-send-accountant-for-taxes
+  status: ready-for-review
+  scores:
+    usefulness: 5
+    specificity: 5
+    proofBoundary: 5
+    voice: 5
+    artifactValue: 5
+  memorableLine: You do not need to make the package perfect before sending it. You do need to make uncertainty visible.
+  finalRecommendation: ready-for-founder-review
+  notes:
+    - Article answers a concrete owner fear without crossing into professional advice.
+    - Reusable checklist artifact will render through the shared presentation block.

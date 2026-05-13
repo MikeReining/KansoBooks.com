@@ -1,0 +1,33 @@
+finalAudit:
+  contentId: how-to-check-if-bookkeeping-is-correct
+  status: ready-for-review
+  checkedAt: 2026-05-13T00:00:00-07:00
+  checkedBy: next-article-workflow
+  contentPath: content/resources/how-to-check-if-bookkeeping-is-correct.md
+  artifactPath: content/_artifacts/correctness-checklist.yml
+  claimManifestPath: content/_claims/how-to-check-if-bookkeeping-is-correct.yml
+  checksPassed:
+    - metadata_complete
+    - claim_manifest_present
+    - artifact_id_present
+    - artifact_id_resolves
+    - claim_audit_pass
+    - image_audit_no_image_approved
+    - presentation_layer_applied
+    - answer_units_present
+    - entity_summary_present
+    - decision_support_present
+    - copy_guide_applied
+    - internal_links_resolve
+    - markdown_links_resolve
+    - no_placeholder_links
+    - no_tax_legal_audit_payroll_sales_tax_filing_or_entity_specific_advice
+    - no_accountant_replacement_claim
+    - no_ai_as_financial_truth_claim
+    - no_cloud_books_claim
+  checksFailed: []
+  publishAllowed: false
+  requiredFixes:
+    - Founder review required before publication.
+    - Publish cadence must be checked before changing state to published.
+  handoffTo: founder-review

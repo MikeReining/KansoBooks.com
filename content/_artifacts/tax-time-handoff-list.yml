@@ -1,0 +1,59 @@
+schemaVersion: 1
+id: tax-time-handoff-list
+title: Tax-Time Accountant Handoff List
+artifactType: checklist
+jurisdiction: general
+risk: medium
+sourceNotes:
+  - docs/KansoBooksVision.md#core-insight
+  - docs/KansoBooksVision.md#trust-model
+  - docs/content-engine/CopyGuide.md
+  - content/_artifacts/accountant-package-checklist.yml
+  - content/_truth/legal-boundaries.yml
+professionalBoundary: This checklist helps organize records before accountant review. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+owner: KansoBooks Editorial System
+lastReviewed: 2026-05-11
+nextReview: 2026-08-11
+content:
+  purpose: Help a busy small-business owner send a clearer tax-time package without pretending to make tax decisions.
+  useWhen:
+    - You need to send your accountant records for a year, quarter, or other tax-time review period.
+    - You want to know whether the package has enough bookkeeping context to review efficiently.
+    - You need to separate owner-safe organization work from accountant judgment.
+  doNotUseFor:
+    - Choosing deductions, filing positions, payroll treatment, sales tax treatment, legal conclusions, audit conclusions, or entity-specific decisions.
+    - Replacing a document request from your accountant.
+    - Treating AI-drafted bookkeeping as final without validation and approval.
+  checklist:
+    - name: Scope note is written
+      doneWhen: The business, period, included accounts, excluded accounts, and known gaps are named.
+      proof: Scope note or package cover sheet.
+    - name: Bank and card statements are included
+      doneWhen: Statements or exports exist for every included bank, credit card, loan, and payment account.
+      proof: Source-file list grouped by account and month.
+    - name: Payment processor detail is included
+      doneWhen: Stripe, PayPal, Shopify, Square, or similar exports support deposits and fees when used by the business.
+      proof: Processor export list and matching notes.
+    - name: Reviewed reports are generated
+      doneWhen: P&L and balance sheet when applicable reflect the reviewed period.
+      proof: Report files, generated-at notes, and period labels.
+    - name: Reconciliation status is visible
+      doneWhen: Ending balances tie to statements, or unresolved differences are listed.
+      proof: Reconciliation notes and difference list.
+    - name: Evidence index is included
+      doneWhen: Statements, receipts, invoices, contracts, and notes are indexed or grouped so the accountant can find support.
+      proof: Evidence index or organized package folder.
+    - name: Unusual items are flagged
+      doneWhen: Owner, loan, refund, duplicate-looking, personal-looking, large, or one-time items have notes or questions.
+      proof: Exception list with transaction references.
+    - name: Accountant questions are specific
+      doneWhen: Every professional question names the item, amount or file reference when useful, and what decision is needed.
+      proof: Accountant question list.
+    - name: Accountant-specific requests are attached
+      doneWhen: Any checklist, portal request, or email request from the accountant is included or linked in the package.
+      proof: Request list or attached accountant instructions.
+  taxTimeOutcome:
+    - The accountant can see what period and accounts are included.
+    - Source files support the numbers.
+    - Open questions are explicit.
+    - Professional decisions stay with the professional.

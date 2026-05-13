@@ -1,0 +1,19 @@
+draftRecord:
+  draftId: monthly-bookkeeping-checklist-small-business-draft
+  contentId: monthly-bookkeeping-checklist-small-business
+  state: drafted
+  createdAt: 2026-05-10T00:00:00-07:00
+  workflow: next-article
+  contentPath: content/resources/monthly-bookkeeping-checklist-small-business.md
+  artifactPath: content/_artifacts/monthly-close-checklist.yml
+  claimManifestPath: content/_claims/monthly-bookkeeping-checklist-small-business.yml
+  briefPath: docs/content-runs/2026-05-10-monthly-bookkeeping-checklist-small-business/brief.yml
+  researchPacketPath: docs/content-runs/2026-05-10-monthly-bookkeeping-checklist-small-business/research-packet.yml
+  selectedBecause:
+    - Highest-priority candidate in topic inventory.
+    - Answers a recurring monthly pain, not the existing period-readiness page.
+    - Strong artifact potential.
+  publishState:
+    current: drafted
+    publishAuthorized: false
+    reason: Next Article Workflow stops before publication.

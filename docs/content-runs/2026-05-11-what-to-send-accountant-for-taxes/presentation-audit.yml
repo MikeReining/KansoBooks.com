@@ -1,0 +1,20 @@
+status: pass
+previewUrls:
+  draft: /drafts/resources/what-to-send-accountant-for-taxes
+  published: /resources/what-to-send-accountant-for-taxes
+checks:
+  desktopScreenshot: not-run
+  mobileScreenshot: not-run
+  tableOverflow: pass
+  sidebarOverlap: pass
+  ctaPresence: pass
+  draftNoindex: pass
+  linkRendering: pass
+  noPlaceholderLinks: pass
+  specialSections: pass
+  imageDecision: no-image
+  artifactCopyAction: pass
+notes:
+  - Draft relies on shared ContentArticlePage shell, sidebar, footer, and artifact copy block.
+  - Internal links point only to published resources.
+  - Screenshots pending local browser preview after build.

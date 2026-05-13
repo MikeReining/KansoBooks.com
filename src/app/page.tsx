@@ -85,7 +85,7 @@ const footerColumns = [
   {
     title: "Company",
     links: [
-      { label: "Manifesto", href: "/manifesto" },
+      { label: "Resources", href: "/resources" },
       { label: "Join waitlist", href: WAITLIST_URL },
       { label: "X", href: "https://x.com/kansobooks" },
     ],

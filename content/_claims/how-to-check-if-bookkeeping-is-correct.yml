@@ -1,0 +1,28 @@
+schemaVersion: 1
+pageId: how-to-check-if-bookkeeping-is-correct
+risk: medium
+claims:
+  - id: claim-core-reader-fear
+    text: KansoBooks content should answer the owner's confidence questions, especially whether the numbers are correct and what still needs review.
+    type: positioning
+    source: docs/content-engine/CopyGuide.md
+    refresh: stable
+    notes: Supports the correctness-first framing.
+  - id: claim-books-readiness
+    text: Finished bookkeeping needs named source records, reconciliation status, reviewed transaction states, visible evidence, and explicit open questions.
+    type: positioning
+    source: content/_artifacts/books-readiness-checklist.yml
+    refresh: stable
+    notes: Supports the correctness checklist criteria.
+  - id: claim-ai-proof-approval
+    text: AI can draft bookkeeping work, but validation and user approval determine what becomes trusted record truth.
+    type: positioning
+    source: docs/KansoBooksVision.md#trust-model
+    refresh: stable
+    notes: Supports the AI boundary in the article.
+  - id: claim-professional-boundary
+    text: KansoBooks content must not provide tax, legal, audit, payroll, sales tax, filing, or entity-specific advice.
+    type: positioning
+    source: content/_truth/legal-boundaries.yml
+    refresh: stable
+    notes: Required professional boundary for this medium-risk article.

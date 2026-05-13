@@ -87,7 +87,7 @@ topics:
       - Make artifact visible or downloadable.
       - Add template presentation.
   - id: monthly-bookkeeping-checklist-small-business
-    status: candidate
+    status: published
     priority: 1
     title: Monthly Bookkeeping Checklist For Small Business
     canonicalPath: /resources/monthly-bookkeeping-checklist-small-business
@@ -99,6 +99,8 @@ topics:
     distinctAngle: Monthly operating checklist, not year-end handoff.
     targetAction: Run a monthly close checklist.
     artifactId: monthly-close-checklist
+    contentPath: content/resources/monthly-bookkeeping-checklist-small-business.md
+    runDirectory: docs/content-runs/2026-05-10-monthly-bookkeeping-checklist-small-business
     readerPain: 5
     searchSpecificity: 5
     kansoDifferentiation: 4
@@ -106,7 +108,7 @@ topics:
     duplicateRisk: 2
     publishEase: 5
   - id: what-to-send-accountant-for-taxes
-    status: candidate
+    status: drafted
     priority: 2
     title: What To Send Your Accountant For Taxes
     canonicalPath: /resources/what-to-send-accountant-for-taxes
@@ -124,8 +126,10 @@ topics:
     artifactPotential: 5
     duplicateRisk: 2
     publishEase: 4
+    contentPath: content/resources/what-to-send-accountant-for-taxes.md
+    runDirectory: docs/content-runs/2026-05-11-what-to-send-accountant-for-taxes
   - id: how-to-check-if-bookkeeping-is-correct
-    status: candidate
+    status: drafted
     priority: 3
     title: How To Check If Bookkeeping Is Correct
     canonicalPath: /resources/how-to-check-if-bookkeeping-is-correct
@@ -143,6 +147,8 @@ topics:
     artifactPotential: 5
     duplicateRisk: 2
     publishEase: 4
+    contentPath: content/resources/how-to-check-if-bookkeeping-is-correct.md
+    runDirectory: docs/content-runs/2026-05-13-how-to-check-if-bookkeeping-is-correct
   - id: ai-bookkeeping-mistakes-to-review
     status: candidate
     priority: 4

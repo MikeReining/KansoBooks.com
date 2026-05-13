@@ -1,0 +1,31 @@
+packetId: monthly-bookkeeping-checklist-small-business-research
+briefId: monthly-bookkeeping-checklist-small-business-brief
+sources:
+  - title: KansoBooks Vision
+    url: docs/KansoBooksVision.md#trust-model
+    publisher: KansoBooks
+    claimUse: AI drafting, validation, approval, and evidence-backed trust model.
+  - title: KansoBooks Copy Guide
+    url: docs/content-engine/CopyGuide.md
+    publisher: KansoBooks
+    claimUse: Reader fears, tone, and confidence-centered framing.
+  - title: Books Readiness Checklist
+    url: content/_artifacts/books-readiness-checklist.yml
+    publisher: KansoBooks
+    claimUse: Readiness criteria for source files, reconciliation, review states, evidence, and open questions.
+  - title: Legal Boundaries
+    url: content/_truth/legal-boundaries.yml
+    publisher: KansoBooks
+    claimUse: Professional boundary and forbidden advice areas.
+supportedClaims:
+  - claim: Monthly bookkeeping should show what is checked and what remains uncertain.
+    source: content/_artifacts/books-readiness-checklist.yml
+  - claim: AI-drafted bookkeeping requires validation and approval before it becomes reliable.
+    source: docs/KansoBooksVision.md#trust-model
+  - claim: Content must avoid tax, legal, audit, payroll, sales tax, filing, or entity-specific advice.
+    source: content/_truth/legal-boundaries.yml
+uncertainClaims: []
+rejectedClaims:
+  - KansoBooks guarantees tax readiness.
+  - Monthly close proves filing positions.
+  - AI can finish monthly books without review.

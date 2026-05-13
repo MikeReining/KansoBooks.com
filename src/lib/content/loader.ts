@@ -11,6 +11,7 @@ import {
 } from "./paths";
 import type {
   ClaimManifest,
+  ContentArtifact,
   ContentItem,
   ContentMetadata,
   ContentType,
@@ -137,4 +138,15 @@ export function readYamlFile<T>(relativePath: string): T {
 
 export function readClaimManifest(relativePath: string): ClaimManifest {
   return readYamlFile<ClaimManifest>(relativePath);
+}
+
+export function getArtifactById(artifactId: string): ContentArtifact | null {
+  const artifactPath = path.join("content", "_artifacts", `${artifactId}.yml`);
+  const absolutePath = path.join(rootDirectory, artifactPath);
+
+  if (!fs.existsSync(absolutePath)) {
+    return null;
+  }
+
+  return readYamlFile<ContentArtifact>(artifactPath);
 }

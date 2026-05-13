@@ -1,0 +1,15 @@
+qualityReport:
+  pass: 3
+  contentId: how-to-check-if-bookkeeping-is-correct
+  status: ready-for-review
+  scores:
+    usefulness: 5
+    specificity: 5
+    proofBoundary: 5
+    voice: 5
+    artifactValue: 5
+  memorableLine: Clean formatting is not the same as correct books.
+  finalRecommendation: ready-for-founder-review
+  notes:
+    - Article answers the owner's core fear directly.
+    - Reusable checklist artifact will render through the shared presentation block.

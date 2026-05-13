@@ -1,0 +1,21 @@
+researchPacket:
+  contentId: what-to-send-accountant-for-taxes
+  sourcePlan: internal-canonical
+  externalSources: []
+  internalSources:
+    - docs/KansoBooksVision.md
+    - docs/KansoBooksManifesto.md
+    - docs/content-engine/CopyGuide.md
+    - docs/content-engine/ContentImageStyleGuide.md
+    - content/_truth/legal-boundaries.yml
+    - content/_artifacts/accountant-package-checklist.yml
+    - content/_artifacts/monthly-close-checklist.yml
+  sourceNotes:
+    - Use KansoBooks trust model: AI prepares, Kanso proves, user approves.
+    - Use accountant package artifact as the handoff standard.
+    - Keep "taxes" language focused on organizing records for accountant review, not giving tax treatment or filing advice.
+  freshness:
+    currentEventsNeeded: false
+    pricingOrCompetitorClaims: false
+    legalOrTaxRuleClaims: false
+    notes: No external factual or current tax-rule claims are made.

@@ -1,0 +1,18 @@
+publishLog:
+  contentId: what-to-send-accountant-for-taxes
+  runId: 2026-05-11-what-to-send-accountant-for-taxes
+  attemptedAt: 2026-05-11T00:00:00-07:00
+  action: draft-ready
+  publishAttempted: false
+  publishAllowed: false
+  reason: Next Article Workflow stops before publication.
+  notes:
+    - No commit performed.
+    - No push performed.
+    - No PR created.
+    - No deploy performed.
+    - Article saved as drafted for founder review.
+  lastPublishedArticle:
+    id: monthly-bookkeeping-checklist-small-business
+    publishedAt: 2026-05-11
+  nextEligiblePublishDate: 2026-05-12

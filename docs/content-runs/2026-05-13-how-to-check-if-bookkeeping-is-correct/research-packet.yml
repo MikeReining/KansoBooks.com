@@ -1,0 +1,20 @@
+researchPacket:
+  contentId: how-to-check-if-bookkeeping-is-correct
+  sourcePlan: internal-canonical
+  externalSources: []
+  internalSources:
+    - docs/KansoBooksVision.md
+    - docs/content-engine/CopyGuide.md
+    - docs/content-engine/ContentImageStyleGuide.md
+    - content/_truth/legal-boundaries.yml
+    - content/_artifacts/books-readiness-checklist.yml
+    - content/_artifacts/monthly-close-checklist.yml
+  sourceNotes:
+    - Use the core KansoBooks question: Am I done? Is this right? Can I prove it?
+    - Keep the article about owner-visible checks, not accounting standards or tax rules.
+    - Use published internal resources for next steps.
+  freshness:
+    currentEventsNeeded: false
+    pricingOrCompetitorClaims: false
+    legalOrTaxRuleClaims: false
+    notes: No external factual, pricing, competitor, or current tax-rule claims are made.

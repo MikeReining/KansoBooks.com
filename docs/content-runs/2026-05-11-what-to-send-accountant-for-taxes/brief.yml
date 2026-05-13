@@ -1,0 +1,34 @@
+brief:
+  contentId: what-to-send-accountant-for-taxes
+  title: What To Send Your Accountant For Taxes
+  contentType: resource
+  targetPath: content/resources/what-to-send-accountant-for-taxes.md
+  targetReader: Busy small-business owner preparing to send records to an accountant before tax time.
+  readerFear: Will tax time expose missing, messy, or incorrect books?
+  primaryOperatingQuestion: Can I send this package without forcing my accountant to guess?
+  primaryQuery: what to send accountant for taxes small business
+  secondaryQueries:
+    - what to send accountant for taxes
+    - small business tax documents for accountant
+    - accountant tax time checklist small business
+    - tax time bookkeeping handoff
+  canonicalJob: prepare-books-for-accountant
+  angle: General tax-time bookkeeping handoff list that separates owner-safe organization from accountant judgment.
+  artifact:
+    id: tax-time-handoff-list
+    path: content/_artifacts/tax-time-handoff-list.yml
+    type: checklist
+  mustInclude:
+    - direct answer in opening
+    - tax-time handoff table
+    - owner-safe versus accountant-work boundary
+    - ten-minute exit test
+    - proof boundary
+    - source notes
+    - next step with only live internal links
+  mustAvoid:
+    - tax advice
+    - deduction or filing recommendations
+    - accountant replacement claim
+    - implying AI makes records true
+    - placeholder links or unpublished artifact links

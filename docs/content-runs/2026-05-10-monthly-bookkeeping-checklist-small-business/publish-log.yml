@@ -1,0 +1,16 @@
+publishLog:
+  contentId: monthly-bookkeeping-checklist-small-business
+  runId: 2026-05-10-monthly-bookkeeping-checklist-small-business
+  attemptedAt: 2026-05-11T00:00:00-07:00
+  action: published
+  publishAttempted: true
+  publishAllowed: true
+  reason: Founder explicitly approved publishing this draft.
+  notes:
+    - No commit performed.
+    - No push performed.
+    - No PR created.
+    - No deploy performed.
+    - Article state changed to published.
+  publishedAt: 2026-05-11
+  nextEligiblePublishDate: 2026-05-12

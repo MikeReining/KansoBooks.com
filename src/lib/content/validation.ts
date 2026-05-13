@@ -384,23 +384,44 @@ function validateForbiddenPhrases(item: ContentItem, phrases: string[]): Validat
   );
 }
 
-function validateDuplicateJobs(items: ContentItem[]): ValidationIssue[] {
-  const byJob = new Map<string, ContentItem[]>();
+function validateUniqueField(
+  items: ContentItem[],
+  fieldName: "id" | "canonicalPath" | "primaryQuery",
+  valueFor: (item: ContentItem) => string,
+): ValidationIssue[] {
+  const byValue = new Map<string, ContentItem[]>();
   for (const item of items) {
-    byJob.set(item.metadata.canonicalJob, [
-      ...(byJob.get(item.metadata.canonicalJob) ?? []),
+    const value = valueFor(item).toLowerCase();
+    byValue.set(value, [
+      ...(byValue.get(value) ?? []),
       item,
     ]);
   }
 
-  return [...byJob.entries()].flatMap(([job, matches]) =>
+  return [...byValue.entries()].flatMap(([value, matches]) =>
     matches.length > 1
       ? matches.map((item) => ({
           file: item.filePath,
-          message: `Canonical job ${job} is used by ${matches.length} pages`,
+          message: `Duplicate ${fieldName}: ${value}`,
         }))
       : [],
   );
+}
+
+function validateDuplicateContentIdentity(items: ContentItem[]): ValidationIssue[] {
+  return [
+    ...validateUniqueField(items, "id", (item) => item.metadata.id),
+    ...validateUniqueField(
+      items,
+      "canonicalPath",
+      (item) => item.metadata.canonicalPath,
+    ),
+    ...validateUniqueField(
+      items,
+      "primaryQuery",
+      (item) => item.metadata.primaryQuery,
+    ),
+  ];
 }
 
 export function validateContent(): ValidationIssue[] {
@@ -425,7 +446,7 @@ export function validateContent(): ValidationIssue[] {
     ...items.flatMap(validateMarkdownLinks),
     ...validatePresentationLinks(),
     ...items.flatMap((item) => validateForbiddenPhrases(item, phrases)),
-    ...validateDuplicateJobs(items),
+    ...validateDuplicateContentIdentity(items),
   ];
 }
 

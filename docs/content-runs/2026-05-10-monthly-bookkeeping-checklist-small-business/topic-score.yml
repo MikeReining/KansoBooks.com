@@ -1,0 +1,36 @@
+runId: 2026-05-10-monthly-bookkeeping-checklist-small-business-topic-score
+topicId: monthly-bookkeeping-checklist-small-business
+state: scored
+scoredAt: 2026-05-10T00:00:00-07:00
+scoredBy: next-article-workflow
+candidate:
+  resource: /resources/monthly-bookkeeping-checklist-small-business
+  artifact: monthly-close-checklist
+weightedScore:
+  readerPain: { score: 5, weight: 3, points: 15 }
+  searchSpecificity: { score: 5, weight: 2, points: 10 }
+  kansoDifferentiation: { score: 4, weight: 3, points: 12 }
+  artifactPotential: { score: 5, weight: 2, points: 10 }
+  duplicateRiskInverted: { score: 4, weight: 2, points: 8 }
+  publishEase: { score: 5, weight: 1, points: 5 }
+total: 60
+threshold: 40
+decision: brief
+pillar: small-business-bookkeeping-basics
+tier: 1
+readerJob: Keep monthly bookkeeping from becoming a year-end cleanup project by checking records, balances, categories, and open questions each month.
+operatingQuestion: Am I done?
+canonicalJob: understand-books-readiness
+risk: medium
+artifactRequired: monthly-close-checklist
+duplicateReview:
+  status: pass
+  notes:
+    - Existing readiness article answers whether a period is done.
+    - This article owns the recurring monthly routine before handoff.
+    - Same canonical job is acceptable because the reader action and artifact differ.
+handoff:
+  to: content-brief
+  notes:
+    - Draft under Next Article Workflow.
+    - Stop before publishing regardless of cadence.

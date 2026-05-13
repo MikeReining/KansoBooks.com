@@ -1,0 +1,18 @@
+pass: 3
+contentId: monthly-bookkeeping-checklist-small-business
+verdict: ready-for-founder-review
+scores:
+  writing: 9
+  usefulness: 9
+  specificity: 9
+  safety: 9
+  artifactValue: 9
+  aieo: 8
+  loop: 9
+bestLine: A good month does not end with "the dashboard looks fine."
+publishRecommendation:
+  decision: ready-for-founder-review
+  reason: Draft is concrete, owner-centered, bounded, and distinct from the existing books-readiness article.
+  requiredBeforePublish:
+    - Founder review.
+    - Publish cadence check or explicit override.

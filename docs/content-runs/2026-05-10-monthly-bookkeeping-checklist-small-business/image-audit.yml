@@ -1,0 +1,21 @@
+status: no-image
+imageType: none
+presentation: none
+assetPath: ""
+ogPath: ""
+styleGuide: docs/content-engine/ContentImageStyleGuide.md
+promptPath: ""
+checks:
+  improvesComprehension: true
+  notDecorativeFiller: true
+  noPrivateData: true
+  noReadableFinancialData: true
+  noRealBrands: true
+  noCloudImplication: true
+  noFakeDashboard: true
+  cropSafe: true
+  seoFilename: true
+  altText: true
+notes:
+  - No hero image is stronger for this article because the checklist and tables carry the reader job.
+  - Avoids making a monthly operations article feel decorative or stock-like.

@@ -1,0 +1,31 @@
+briefId: monthly-bookkeeping-checklist-small-business-brief
+topicId: monthly-bookkeeping-checklist-small-business
+contentType: resource
+slugCandidate: monthly-bookkeeping-checklist-small-business
+canonicalPath: /resources/monthly-bookkeeping-checklist-small-business
+readerJob: Keep monthly bookkeeping from becoming a year-end cleanup project by checking records, balances, categories, and open questions each month.
+canonicalJob: understand-books-readiness
+primaryQuery: monthly bookkeeping checklist for small business
+secondaryQueries:
+  - monthly bookkeeping checklist
+  - small business monthly bookkeeping tasks
+  - monthly bookkeeping routine
+  - monthly close checklist small business
+readerFear: How do I keep up every month?
+kansoThesis: Monthly bookkeeping should end with checked numbers, visible open questions, and a handoff-ready package, not a vague feeling that the dashboard looks fine.
+artifactId: monthly-close-checklist
+internalLinks:
+  - /resources/how-to-know-books-are-done
+  - /resources/accountant-ready-books
+  - /resources/ai-bookkeeping-with-proof
+sourcePlan:
+  - docs/KansoBooksVision.md#trust-model
+  - docs/content-engine/CopyGuide.md
+  - content/_artifacts/books-readiness-checklist.yml
+  - content/_truth/legal-boundaries.yml
+boundaries:
+  - Do not give tax, legal, audit, payroll, sales tax, filing, or entity-specific advice.
+  - Do not imply AI output is financial truth.
+  - Do not imply KansoBooks replaces an accountant.
+  - Do not imply user books live in KansoBooks cloud.
+professionalBoundary: This checklist helps organize monthly bookkeeping review. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.

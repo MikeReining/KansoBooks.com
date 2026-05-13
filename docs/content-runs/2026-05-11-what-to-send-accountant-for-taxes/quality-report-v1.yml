@@ -1,0 +1,16 @@
+qualityReport:
+  pass: 1
+  contentId: what-to-send-accountant-for-taxes
+  status: revised
+  scores:
+    usefulness: 4
+    specificity: 4
+    proofBoundary: 5
+    voice: 4
+    artifactValue: 5
+  weaknesses:
+    - Opening needed to name the user's tax-time anxiety more plainly.
+    - Table risked becoming a generic document checklist without enough Kanso proof language.
+  changesMade:
+    - Added direct handoff framing in the opening.
+    - Added warning signs and accountant boundary language.

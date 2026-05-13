@@ -1,0 +1,17 @@
+claimAudit:
+  contentId: what-to-send-accountant-for-taxes
+  status: pass
+  checkedAt: 2026-05-11T00:00:00-07:00
+  claimManifest: content/_claims/what-to-send-accountant-for-taxes.yml
+  checks:
+    manifestPresent: pass
+    manifestPageIdMatches: pass
+    sourcesResolve: pass
+    noUnsupportedPricingClaims: pass
+    noCompetitorClaims: pass
+    noTaxLegalAuditPayrollSalesTaxFilingAdvice: pass
+    noAccountantReplacementClaim: pass
+    noAiAsFinancialTruthClaim: pass
+  notes:
+    - The article uses tax-time language only to describe record organization and accountant handoff.
+    - No external tax-rule claims are made.

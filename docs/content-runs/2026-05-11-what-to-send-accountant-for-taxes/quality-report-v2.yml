@@ -1,0 +1,16 @@
+qualityReport:
+  pass: 2
+  contentId: what-to-send-accountant-for-taxes
+  status: revised
+  scores:
+    usefulness: 5
+    specificity: 5
+    proofBoundary: 5
+    voice: 4
+    artifactValue: 5
+  changesMade:
+    - Added owner-safe versus accountant-work decision table.
+    - Added 10-minute exit test with source, balance, unusual item, and decision checks.
+    - Strengthened the open-question framing.
+  remainingRisk:
+    - Must keep tax-time title while avoiding tax advice.

@@ -1,0 +1,25 @@
+topicScore:
+  contentId: what-to-send-accountant-for-taxes
+  selectedAt: 2026-05-11T00:00:00-07:00
+  source: content/_data/topic-inventory.yml
+  primaryQuery: what to send accountant for taxes small business
+  canonicalJob: prepare-books-for-accountant
+  pillar: accountant-ready-books
+  scores:
+    readerPain: 5
+    searchSpecificity: 5
+    kansoDifferentiation: 4
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 4
+  selectionReason:
+    - Highest-priority qualifying candidate after publishing the monthly checklist.
+    - Strong small-business owner fear: tax time will reveal missing or incorrect books.
+    - Distinct from Accountant-Ready Books by focusing on the tax-time send package and owner-safe preparation boundary.
+  duplicateReview:
+    existingRelated:
+      - /resources/accountant-ready-books
+      - /resources/monthly-bookkeeping-checklist-small-business
+      - /resources/how-to-know-books-are-done
+    decision: proceed
+    notes: Keep this article scoped to what to send before accountant review; do not expand into tax preparation advice.

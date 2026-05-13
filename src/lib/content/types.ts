@@ -100,6 +100,24 @@ export type ClaimManifest = {
   }>;
 };
 
+export type ContentArtifact = {
+  schemaVersion: 1;
+  id: string;
+  title: string;
+  artifactType: string;
+  professionalBoundary?: string;
+  content?: {
+    purpose?: string;
+    checklist?: Array<{
+      name: string;
+      readyWhen?: string;
+      doneWhen?: string;
+      evidence?: string;
+      proof?: string;
+    }>;
+  };
+};
+
 export type ValidationIssue = {
   file: string;
   message: string;

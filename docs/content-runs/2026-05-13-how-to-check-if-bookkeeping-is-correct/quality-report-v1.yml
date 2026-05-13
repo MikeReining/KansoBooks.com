@@ -1,0 +1,16 @@
+qualityReport:
+  pass: 1
+  contentId: how-to-check-if-bookkeeping-is-correct
+  status: revised
+  scores:
+    usefulness: 4
+    specificity: 4
+    proofBoundary: 5
+    voice: 4
+    artifactValue: 5
+  weaknesses:
+    - Needed to stay distinct from the existing books-readiness page.
+    - Needed to avoid sounding like professional assurance.
+  changesMade:
+    - Focused the page on owner-visible correctness checks.
+    - Added warning signs to prevent clean-looking reports from being mistaken for checked books.

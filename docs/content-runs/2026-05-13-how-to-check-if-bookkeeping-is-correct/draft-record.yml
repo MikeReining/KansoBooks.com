@@ -1,0 +1,17 @@
+draftRecord:
+  contentId: how-to-check-if-bookkeeping-is-correct
+  runId: 2026-05-13-how-to-check-if-bookkeeping-is-correct
+  createdAt: 2026-05-13T00:00:00-07:00
+  status: drafted
+  contentPath: content/resources/how-to-check-if-bookkeeping-is-correct.md
+  artifactPath: content/_artifacts/correctness-checklist.yml
+  claimManifestPath: content/_claims/how-to-check-if-bookkeeping-is-correct.yml
+  appliedStandards:
+    - docs/content-engine/CodexContentOrchestration.md
+    - docs/content-engine/NextArticleWorkflow.md
+    - docs/content-engine/CopyGuide.md
+    - docs/content-engine/ContentImageStyleGuide.md
+  notes:
+    - Draft stopped before publication.
+    - Article uses no draft-only internal links.
+    - Article avoids tax, legal, audit, payroll, sales tax, filing, and entity-specific advice.

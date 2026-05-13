@@ -1,0 +1,16 @@
+qualityReport:
+  pass: 2
+  contentId: how-to-check-if-bookkeeping-is-correct
+  status: revised
+  scores:
+    usefulness: 5
+    specificity: 5
+    proofBoundary: 5
+    voice: 4
+    artifactValue: 5
+  changesMade:
+    - Added the 10-minute correctness test.
+    - Added a reusable artifact checklist.
+    - Tightened the next step to live published resources only.
+  remainingRisk:
+    - Keep correctness language framed as review confidence, not a guarantee.

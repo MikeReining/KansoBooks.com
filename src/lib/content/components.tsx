@@ -11,12 +11,14 @@ import {
 
 import {
   getContentForSection,
+  getArtifactById,
   getKnownInternalPaths,
   getPublishedContentItems,
 } from "./loader";
+import { ArtifactCopyButton } from "./ArtifactCopyButton";
 import { getArticleSections, renderMarkdown } from "./render";
 import { articleJsonLd, breadcrumbJsonLd } from "./schema";
-import type { ContentItem, ContentType } from "./types";
+import type { ContentArtifact, ContentItem, ContentType } from "./types";
 
 const sectionCopy = {
   resources: {
@@ -137,6 +139,32 @@ function relatedItemsFor(item: ContentItem): ContentItem[] {
     )
     .filter((candidate): candidate is ContentItem => Boolean(candidate))
     .slice(0, 3);
+}
+
+function artifactForItem(item: ContentItem): ContentArtifact | null {
+  if (!item.metadata.artifactId) {
+    return null;
+  }
+
+  return getArtifactById(item.metadata.artifactId);
+}
+
+function checklistCopyText(artifact: ContentArtifact): string {
+  const checklist = artifact.content?.checklist ?? [];
+  const lines = [
+    `# ${artifact.title}`,
+    "",
+    artifact.content?.purpose ?? "",
+    "",
+    ...checklist.flatMap((item, index) => [
+      `${index + 1}. ${item.name}`,
+      `   Done when: ${item.doneWhen ?? item.readyWhen ?? "Review this item."}`,
+      `   Proof: ${item.proof ?? item.evidence ?? "Add supporting evidence or notes."}`,
+      "",
+    ]),
+  ];
+
+  return lines.filter((line, index) => line || lines[index - 1]).join("\n");
 }
 
 function sectionForType(type: ContentType): Section {
@@ -462,6 +490,51 @@ function ContentArticleFooter({ item }: { item: ContentItem }) {
   );
 }
 
+function ArtifactActionBlock({ item }: { item: ContentItem }) {
+  const artifact = artifactForItem(item);
+  const checklist = artifact?.content?.checklist ?? [];
+
+  if (!artifact || checklist.length === 0) {
+    return null;
+  }
+
+  return (
+    <section className="mt-12 border-y border-border bg-card px-5 py-6 sm:px-6">
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div className="max-w-xl">
+          <div className="text-[0.6875rem] font-medium uppercase tracking-normal text-primary">
+            Use this checklist
+          </div>
+          <h2 className="mt-2 text-xl font-semibold tracking-normal text-foreground">
+            {artifact.title}
+          </h2>
+          {artifact.content?.purpose ? (
+            <p className="mt-3 text-sm leading-7 text-muted-foreground">
+              {artifact.content.purpose}
+            </p>
+          ) : null}
+        </div>
+        <ArtifactCopyButton text={checklistCopyText(artifact)} />
+      </div>
+      <ol className="mt-5 grid gap-3 text-sm leading-6 text-foreground">
+        {checklist.slice(0, 6).map((entry) => (
+          <li key={entry.name} className="border-l border-border pl-4">
+            <div className="font-medium">{entry.name}</div>
+            <div className="mt-1 text-xs leading-5 text-muted-foreground">
+              {entry.doneWhen ?? entry.readyWhen}
+            </div>
+          </li>
+        ))}
+      </ol>
+      {checklist.length > 6 ? (
+        <p className="mt-4 text-xs leading-5 text-muted-foreground">
+          Copy the checklist for the full {checklist.length}-step version.
+        </p>
+      ) : null}
+    </section>
+  );
+}
+
 function CtaAnchor({
   cta,
   className = "",
@@ -516,7 +589,6 @@ function ContentSiteFooter() {
             title="Product"
             links={[
               { label: "Manifesto", href: "/manifesto" },
-              { label: "Proof model", href: "/manifesto" },
               { label: "Join waitlist", href: WAITLIST_URL },
             ]}
           />
@@ -642,6 +714,7 @@ export function ContentArticlePage({
             <div className="border-l-2 border-primary pl-5 text-sm leading-7 text-foreground">
               {renderMarkdown(item.body)}
             </div>
+            <ArtifactActionBlock item={item} />
             <ContentArticleFooter item={item} />
           </div>
           <ContentArticleSidebar item={item} sections={sections} />

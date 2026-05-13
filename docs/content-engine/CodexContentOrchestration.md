@@ -229,6 +229,9 @@ Apply presentation by structure, not by hand-editing page chrome:
 - use markdown tables for decision support, proof tests, and comparisons
 - use `internalLinks`, `artifactId`, `risk`, `jurisdiction`, and
   `professionalBoundary` metadata to populate sidebar and footer modules
+- when `artifactId` points to a checklist or template artifact, let the shared
+  article shell render the reusable "Use this checklist" block and copy action;
+  do not hand-build copy/download controls inside one article
 
 Make an image decision using `docs/content-engine/ContentImageStyleGuide.md`:
 

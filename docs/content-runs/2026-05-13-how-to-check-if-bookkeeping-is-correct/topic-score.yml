@@ -1,0 +1,25 @@
+topicScore:
+  contentId: how-to-check-if-bookkeeping-is-correct
+  selectedAt: 2026-05-13T00:00:00-07:00
+  source: content/_data/topic-inventory.yml
+  primaryQuery: how to check if bookkeeping is correct
+  canonicalJob: understand-books-readiness
+  pillar: small-business-bookkeeping-basics
+  scores:
+    readerPain: 5
+    searchSpecificity: 5
+    kansoDifferentiation: 5
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 4
+  selectionReason:
+    - Next qualifying candidate after the tax-time handoff draft.
+    - Directly targets the core customer fear: Are my numbers right?
+    - Strong fit for a reusable checklist artifact and internal links to existing published resources.
+  duplicateReview:
+    existingRelated:
+      - /resources/how-to-know-books-are-done
+      - /resources/monthly-bookkeeping-checklist-small-business
+      - /resources/accountant-ready-books
+    decision: proceed
+    notes: Keep this article scoped to correctness checks; keep readiness and handoff packaging on their existing pages.

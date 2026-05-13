@@ -1,0 +1,17 @@
+draftRecord:
+  contentId: what-to-send-accountant-for-taxes
+  runId: 2026-05-11-what-to-send-accountant-for-taxes
+  createdAt: 2026-05-11T00:00:00-07:00
+  status: drafted
+  contentPath: content/resources/what-to-send-accountant-for-taxes.md
+  artifactPath: content/_artifacts/tax-time-handoff-list.yml
+  claimManifestPath: content/_claims/what-to-send-accountant-for-taxes.yml
+  appliedStandards:
+    - docs/content-engine/CodexContentOrchestration.md
+    - docs/content-engine/NextArticleWorkflow.md
+    - docs/content-engine/CopyGuide.md
+    - docs/content-engine/ContentImageStyleGuide.md
+  notes:
+    - Draft stopped before publication by workflow.
+    - Public copy avoids named bookkeeping-service comparisons.
+    - Public copy avoids tax, legal, audit, payroll, sales tax, filing, and entity-specific advice.

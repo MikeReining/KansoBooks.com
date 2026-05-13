@@ -1,0 +1,18 @@
+status: no-image
+imageType: none
+assetPath: ""
+ogPath: ""
+styleGuide: docs/content-engine/ContentImageStyleGuide.md
+checks:
+  improvesComprehension: true
+  notDecorativeFiller: true
+  noPrivateData: true
+  noRealBrands: true
+  noCloudImplication: true
+  noFakeDashboard: true
+  cropSafe: true
+  seoFilename: true
+  altText: true
+notes:
+  - No hero image selected because the article is stronger as checklist, tables, and proof modules.
+  - A future artifact-preview image can be added if checklist downloads become a richer resource format.

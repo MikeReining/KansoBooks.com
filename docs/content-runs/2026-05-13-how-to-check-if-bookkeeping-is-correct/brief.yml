@@ -1,0 +1,32 @@
+brief:
+  contentId: how-to-check-if-bookkeeping-is-correct
+  title: How To Check If Bookkeeping Is Correct
+  contentType: resource
+  targetPath: content/resources/how-to-check-if-bookkeeping-is-correct.md
+  targetReader: Busy small-business owner who wants to know whether the numbers are right before relying on reports.
+  readerFear: Are my numbers right?
+  primaryOperatingQuestion: Can I see what was checked and what still needs review?
+  primaryQuery: how to check if bookkeeping is correct
+  secondaryQueries:
+    - how do I know if my bookkeeping is correct
+    - check bookkeeping accuracy small business
+    - bookkeeping correctness checklist
+    - how to review bookkeeping
+  canonicalJob: understand-books-readiness
+  angle: Owner-safe correctness checks before relying on reports.
+  artifact:
+    id: correctness-checklist
+    path: content/_artifacts/correctness-checklist.yml
+    type: checklist
+  mustInclude:
+    - direct answer in opening
+    - correctness checklist table
+    - ten-minute correctness test
+    - proof boundary
+    - source notes
+    - next step using only live links
+  mustAvoid:
+    - tax advice
+    - accountant replacement claim
+    - AI-as-financial-truth claim
+    - placeholder or draft links

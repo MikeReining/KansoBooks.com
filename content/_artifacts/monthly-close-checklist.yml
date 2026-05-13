@@ -1,0 +1,59 @@
+schemaVersion: 1
+id: monthly-close-checklist
+title: Monthly Close Checklist
+artifactType: checklist
+jurisdiction: general
+risk: medium
+sourceNotes:
+  - docs/KansoBooksVision.md#core-insight
+  - docs/KansoBooksVision.md#trust-model
+  - docs/content-engine/CopyGuide.md
+  - content/_truth/legal-boundaries.yml
+professionalBoundary: This checklist helps organize monthly bookkeeping review. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+owner: KansoBooks Editorial System
+lastReviewed: 2026-05-10
+nextReview: 2026-08-10
+content:
+  purpose: Help a busy owner keep monthly bookkeeping from becoming a year-end cleanup project.
+  useWhen:
+    - You want a repeatable monthly routine that shows what is done and what still needs attention.
+    - You need to know whether the month is ready to review before sending anything to an accountant.
+    - You want AI-drafted bookkeeping work checked before it becomes part of the records.
+  doNotUseFor:
+    - Choosing tax treatment, filing positions, payroll treatment, sales tax treatment, legal conclusions, audit conclusions, or entity-specific decisions.
+    - Treating clean-looking reports as final without source files, reconciliation status, and review notes.
+    - Replacing accountant judgment on unusual or uncertain items.
+  checklist:
+    - name: Month is defined
+      doneWhen: The month, included accounts, and excluded accounts are named.
+      proof: Month label, account list, and exclusion notes.
+    - name: Source files are collected
+      doneWhen: Statements or exports exist for each included bank, card, loan, and payment processor account.
+      proof: Source-file list and missing-source notes.
+    - name: Transactions are imported or listed
+      doneWhen: All transactions from included source files are present in the working records.
+      proof: Transaction count, import log, source file list, or exception notes.
+    - name: Transfers and duplicates are reviewed
+      doneWhen: Transfers are paired where possible, duplicates are removed or flagged, and unclear matches are review items.
+      proof: Transfer notes, duplicate list, and unresolved match list.
+    - name: Categories are reviewed
+      doneWhen: Routine transactions are categorized and unusual transactions have notes or review states.
+      proof: Category list, exception list, AI decision log, and owner notes.
+    - name: Statement totals are checked
+      doneWhen: Ending balances tie to statements, or differences are named as open items.
+      proof: Reconciliation status and unresolved difference list.
+    - name: Open questions are visible
+      doneWhen: Missing documents, unclear categories, owner questions, and accountant questions are listed explicitly.
+      proof: Open-question list grouped by account, transaction, or document.
+    - name: Reports are generated
+      doneWhen: P&L, balance sheet when applicable, and summary reports reflect the reviewed month.
+      proof: Report files and generated-at notes.
+    - name: Accountant package is ready when needed
+      doneWhen: Reports, source files, reconciliation notes, evidence index, and open questions point to the same month.
+      proof: Monthly package folder or index.
+  monthlyOutcome:
+    - What is done.
+    - What changed.
+    - What still needs the owner.
+    - What needs accountant review.
+    - Whether the month is ready to send forward.

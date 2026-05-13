@@ -1,0 +1,17 @@
+claimAudit:
+  contentId: how-to-check-if-bookkeeping-is-correct
+  status: pass
+  checkedAt: 2026-05-13T00:00:00-07:00
+  claimManifest: content/_claims/how-to-check-if-bookkeeping-is-correct.yml
+  checks:
+    manifestPresent: pass
+    manifestPageIdMatches: pass
+    sourcesResolve: pass
+    noUnsupportedPricingClaims: pass
+    noCompetitorClaims: pass
+    noTaxLegalAuditPayrollSalesTaxFilingAdvice: pass
+    noAccountantReplacementClaim: pass
+    noAiAsFinancialTruthClaim: pass
+  notes:
+    - Correctness claims are framed as owner-visible workflow checks.
+    - No external tax-rule or accounting-standard claims are made.

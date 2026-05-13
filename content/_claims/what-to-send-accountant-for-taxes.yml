@@ -1,0 +1,28 @@
+schemaVersion: 1
+pageId: what-to-send-accountant-for-taxes
+risk: medium
+claims:
+  - id: claim-tax-time-confidence
+    text: KansoBooks content should help owners know whether their numbers are correct, what still needs review, and what is safe to send forward.
+    type: positioning
+    source: docs/content-engine/CopyGuide.md
+    refresh: stable
+    notes: Supports the tax-time confidence and handoff framing.
+  - id: claim-accountant-package
+    text: A useful accountant handoff package should name the period, source records, reconciliation status, evidence trail, unusual items, and open questions.
+    type: positioning
+    source: content/_artifacts/accountant-package-checklist.yml
+    refresh: stable
+    notes: Supports the package contents and handoff list.
+  - id: claim-ai-proof-approval
+    text: AI can draft bookkeeping work, but validation and user approval determine what becomes trusted record truth.
+    type: positioning
+    source: docs/KansoBooksVision.md#trust-model
+    refresh: stable
+    notes: Supports the AI boundary in the article.
+  - id: claim-professional-boundary
+    text: KansoBooks content must not provide tax, legal, audit, payroll, sales tax, filing, or entity-specific advice.
+    type: positioning
+    source: content/_truth/legal-boundaries.yml
+    refresh: stable
+    notes: Required professional boundary for this medium-risk article.

@@ -1,0 +1,33 @@
+finalAudit:
+  contentId: what-to-send-accountant-for-taxes
+  status: ready-for-review
+  checkedAt: 2026-05-11T00:00:00-07:00
+  checkedBy: next-article-workflow
+  contentPath: content/resources/what-to-send-accountant-for-taxes.md
+  artifactPath: content/_artifacts/tax-time-handoff-list.yml
+  claimManifestPath: content/_claims/what-to-send-accountant-for-taxes.yml
+  checksPassed:
+    - metadata_complete
+    - claim_manifest_present
+    - artifact_id_present
+    - artifact_id_resolves
+    - claim_audit_pass
+    - image_audit_no_image_approved
+    - presentation_layer_applied
+    - answer_units_present
+    - entity_summary_present
+    - decision_support_present
+    - copy_guide_applied
+    - internal_links_resolve
+    - markdown_links_resolve
+    - no_placeholder_links
+    - no_tax_legal_audit_payroll_sales_tax_filing_or_entity_specific_advice
+    - no_accountant_replacement_claim
+    - no_ai_as_financial_truth_claim
+    - no_cloud_books_claim
+  checksFailed: []
+  publishAllowed: false
+  requiredFixes:
+    - Founder review required before publication.
+    - Publish cadence must be checked before changing state to published.
+  handoffTo: founder-review

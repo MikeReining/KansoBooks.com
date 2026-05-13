@@ -1,0 +1,20 @@
+status: pass
+previewUrls:
+  draft: /drafts/resources/monthly-bookkeeping-checklist-small-business
+  published: /resources/monthly-bookkeeping-checklist-small-business
+checks:
+  desktopScreenshot: not-run
+  mobileScreenshot: not-run
+  draftNoindex: pass
+  sidebar: pass
+  footerCta: pass
+  internalLinks: pass
+  placeholderLinks: pass
+  imageDecision: pass
+  artifactCopyAction: pass
+notes:
+  - Uses shared ContentArticlePage shell.
+  - Uses markdown tables for monthly checklist and 10-minute test.
+  - Reusable artifact block renders the monthly close checklist with copy action.
+  - Draft route remains noindex.
+  - No hero image selected.
