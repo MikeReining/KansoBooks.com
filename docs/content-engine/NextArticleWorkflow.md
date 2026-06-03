@@ -80,8 +80,16 @@ npm run lint
 npm run build
 ```
 
-Start a local preview server on an available port and provide the draft preview
-URL.
+Start a local preview server on the KansoBooks project port and provide the
+draft preview URL.
+
+```text
+npm run dev -- --port 48623
+```
+
+Never use port `3000` or `3001` for this repo. Those ports collide with other
+local projects. If `48623` is occupied, clear that exact port or choose another
+high, project-specific port.
 
 ## Step 5 - Update Inventory
 

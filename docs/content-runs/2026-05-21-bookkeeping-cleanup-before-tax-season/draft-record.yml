@@ -1,0 +1,34 @@
+runId: 2026-05-21-bookkeeping-cleanup-before-tax-season-draft
+topicId: bookkeeping-cleanup-before-tax-season
+from: candidate
+to: drafted
+agent: next-article-workflow
+timestamp: 2026-05-21T00:00:00-07:00
+contentPath: content/resources/bookkeeping-cleanup-before-tax-season.md
+artifactPath: content/_artifacts/cleanup-triage-table.yml
+claimManifest: content/_claims/bookkeeping-cleanup-before-tax-season.yml
+checksPassed:
+  - topic_selected_from_inventory
+  - duplicate_risk_within_threshold
+  - brief_created
+  - research_packet_created
+  - draft_only_state
+  - claim_manifest_created
+  - artifact_created
+checksFailed: []
+artifactsCreated:
+  - content/resources/bookkeeping-cleanup-before-tax-season.md
+  - content/_artifacts/cleanup-triage-table.yml
+  - content/_claims/bookkeeping-cleanup-before-tax-season.yml
+nextAction: founder-review
+escalation: null
+handoff:
+  to: kanso-headline-metadata
+  draftPath: content/resources/bookkeeping-cleanup-before-tax-season.md
+  claimManifestPath: content/_claims/bookkeeping-cleanup-before-tax-season.yml
+  briefPath: docs/content-runs/2026-05-21-bookkeeping-cleanup-before-tax-season/brief.yml
+  packetPath: docs/content-runs/2026-05-21-bookkeeping-cleanup-before-tax-season/research-packet.yml
+  artifactId: cleanup-triage-table
+  knownRisks:
+    - Medium-risk general bookkeeping workflow with tax-season wording.
+    - Avoid tax, legal, audit, payroll, sales tax, filing, and entity-specific advice.

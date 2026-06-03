@@ -1,0 +1,34 @@
+schemaVersion: 1
+pageId: bookkeeping-cleanup-before-tax-season
+risk: medium
+claims:
+  - id: claim-accountant-package-standard
+    text: Accountant handoff content should help define the period, preserve source evidence, show review status, and name unresolved questions.
+    type: positioning
+    source: content/_artifacts/accountant-package-checklist.yml
+    refresh: stable
+    notes: Supports cleanup as a handoff preparation workflow.
+  - id: claim-books-readiness
+    text: Finished bookkeeping needs named source records, reconciliation status, reviewed transaction states, visible evidence, and explicit open questions.
+    type: positioning
+    source: content/_artifacts/books-readiness-checklist.yml
+    refresh: stable
+    notes: Supports source files, reconciliation, review notes, and open questions.
+  - id: claim-monthly-close
+    text: A useful monthly bookkeeping routine collects source files, reviews transactions, checks balances, and names open questions.
+    type: positioning
+    source: content/_artifacts/monthly-close-checklist.yml
+    refresh: stable
+    notes: Supports cleanup triage order.
+  - id: claim-ai-proof-approval
+    text: AI can draft bookkeeping work, but validation and user approval determine what becomes trusted record truth.
+    type: positioning
+    source: docs/KansoBooksVision.md#trust-model
+    refresh: stable
+    notes: Supports the AI cleanup boundary in the article.
+  - id: claim-professional-boundary
+    text: KansoBooks content must not provide tax, legal, audit, payroll, sales tax, filing, or entity-specific advice.
+    type: positioning
+    source: content/_truth/legal-boundaries.yml
+    refresh: stable
+    notes: Required professional boundary for this medium-risk article.

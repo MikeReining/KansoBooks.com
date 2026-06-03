@@ -40,6 +40,7 @@ Statuses:
 | AI Bookkeeping With Proof | `/resources/ai-bookkeeping-with-proof` | `validate-ai-bookkeeping-work` | AI bookkeeping with proof | Can I trust AI with my books? | AI drafts, validation proves, user approves | Add AI validation checklist article later |
 | Local-First Bookkeeping vs Cloud Accounting | `/comparisons/local-first-bookkeeping-vs-cloud-accounting` | `choose-bookkeeping-system` | local-first bookkeeping vs cloud accounting | Which setup gives me more confidence? | System choice by correctness, time, cost, tax-time readiness, and handoff | Add QuickBooks-specific migration/comparison later |
 | Monthly Bookkeeping Checklist For Small Business | `/resources/monthly-bookkeeping-checklist-small-business` | `understand-books-readiness` | monthly bookkeeping checklist for small business | How do I keep up every month? | Monthly operating checklist, not year-end handoff | Add model-specific monthly routines later |
+| AI Bookkeeping Mistakes To Review | `/resources/ai-bookkeeping-mistakes-to-review` | `validate-ai-bookkeeping-work` | AI bookkeeping mistakes to review | Can AI quietly get my books wrong? | Concrete AI review risks; distinct from broader AI proof page | Add examples by cleanup scenario later |
 
 ## Drafted
 
@@ -48,13 +49,12 @@ Statuses:
 | Bookkeeping Evidence Index Template | `/templates/bookkeeping-evidence-index-template` | `use-handoff-template` | bookkeeping evidence index template | How do I organize proof for my accountant? | Overlaps with accountant package checklist | Make artifact visible/downloadable and add template presentation |
 | What To Send Your Accountant For Taxes | `/resources/what-to-send-accountant-for-taxes` | `prepare-books-for-accountant` | what to send accountant for taxes small business | Will tax time expose something I missed? | Distinct tax-time handoff package; medium overlap with accountant-ready books | Founder review and publish cadence check |
 | How To Check If Bookkeeping Is Correct | `/resources/how-to-check-if-bookkeeping-is-correct` | `understand-books-readiness` | how to check if bookkeeping is correct | Are my numbers right? | Owner-safe correctness checks; overlaps lightly with readiness page | Founder review and publish cadence check |
+| Bookkeeping Cleanup Before Tax Season | `/resources/bookkeeping-cleanup-before-tax-season` | `prepare-books-for-accountant` | bookkeeping cleanup before tax season | Can I get this done before tax time? | Cleanup order and triage before accountant handoff | Founder review and publish cadence check |
 
 ## Candidate Queue
 
 | Priority | Topic | Target URL | Canonical job | Primary long-tail query | Reader fear | Distinct angle | Artifact / decision aid |
 |---|---|---|---|---|---|---|---|
-| 4 | AI Bookkeeping Mistakes To Review | `/resources/ai-bookkeeping-mistakes-to-review` | `validate-ai-bookkeeping-work` | AI bookkeeping mistakes to review | Can AI quietly get my books wrong? | Concrete review risks and safe checks | AI review checklist |
-| 5 | Bookkeeping Cleanup Before Tax Season | `/resources/bookkeeping-cleanup-before-tax-season` | `prepare-books-for-accountant` | bookkeeping cleanup before tax season | Can I get this done before tax time? | Cleanup order and triage | Cleanup triage table |
 | 6 | QuickBooks Alternative For Accountant-Ready Books | `/comparisons/quickbooks-alternative-accountant-ready-books` | `choose-bookkeeping-system` | QuickBooks alternative for accountant-ready books | Is there a simpler way than QuickBooks? | Compare outcome and handoff, not feature parity | Decision table |
 | 7 | Small Business Books Not Reconciled | `/resources/small-business-books-not-reconciled` | `understand-books-readiness` | what if my books are not reconciled | Am I in trouble if reconciliation is off? | Explain what reconciliation status means generally | Reconciliation status table |
 | 8 | What Is An Accountant Package | `/resources/what-is-an-accountant-package` | `prepare-books-for-accountant` | what is an accountant package bookkeeping | What exactly should I send? | Plain definition with package anatomy | Package anatomy table |

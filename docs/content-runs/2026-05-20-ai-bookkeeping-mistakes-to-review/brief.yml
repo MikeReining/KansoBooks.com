@@ -1,0 +1,35 @@
+brief:
+  contentId: ai-bookkeeping-mistakes-to-review
+  title: AI Bookkeeping Mistakes To Review
+  contentType: resource
+  targetPath: content/resources/ai-bookkeeping-mistakes-to-review.md
+  targetReader: Busy small-business owner reviewing AI-drafted bookkeeping before trusting reports or sending work forward.
+  readerFear: Can AI quietly get my books wrong?
+  primaryOperatingQuestion: Is this right?
+  primaryQuery: AI bookkeeping mistakes to review
+  secondaryQueries:
+    - AI bookkeeping mistakes
+    - review AI bookkeeping
+    - AI bookkeeping review checklist
+    - can AI get bookkeeping wrong
+  canonicalJob: validate-ai-bookkeeping-work
+  angle: Concrete AI bookkeeping review risks and owner-safe checks, not a generic AI bookkeeping safety page.
+  artifact:
+    id: ai-review-risk-checklist
+    path: content/_artifacts/ai-review-risk-checklist.yml
+    type: checklist
+  mustInclude:
+    - direct answer in opening
+    - AI mistake review table
+    - fast review pass
+    - AI-draft versus approved-truth boundary
+    - proof boundary
+    - source notes
+    - next step with only live or draft-preview-resolving internal links
+  mustAvoid:
+    - tax advice
+    - deduction, filing, payroll, sales tax, legal, audit, or entity-specific recommendations
+    - accountant replacement claim
+    - implying AI makes records true
+    - implying KansoBooks stores books in the cloud
+    - placeholder links or unpublished artifact links

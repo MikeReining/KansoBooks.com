@@ -1,0 +1,54 @@
+schemaVersion: 1
+id: ai-review-risk-checklist
+title: AI Bookkeeping Review Risk Checklist
+artifactType: checklist
+jurisdiction: general
+risk: medium
+sourceNotes:
+  - docs/KansoBooksVision.md#trust-model
+  - docs/content-engine/CopyGuide.md
+  - content/_artifacts/books-readiness-checklist.yml
+  - content/_artifacts/correctness-checklist.yml
+  - content/_truth/legal-boundaries.yml
+professionalBoundary: This checklist helps organize owner-safe review of AI-drafted bookkeeping. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+owner: KansoBooks Editorial System
+lastReviewed: 2026-05-20
+nextReview: 2026-08-20
+content:
+  purpose: Help a busy owner review AI-drafted bookkeeping before accepting suggestions as part of the trusted record.
+  useWhen:
+    - AI has categorized transactions, suggested cleanup, matched transfers, removed duplicates, or summarized a period.
+    - You need to know which AI suggestions are safe to approve and which still need review.
+    - You want a visible exception list before sending books forward.
+  doNotUseFor:
+    - Choosing tax treatment, filing positions, payroll treatment, sales tax treatment, legal conclusions, audit conclusions, or entity-specific decisions.
+    - Replacing accountant review.
+    - Treating AI output as financial truth without source files, review notes, and approval.
+  checklist:
+    - name: Source files are complete
+      doneWhen: Every included bank, card, loan, and payment processor account has a statement or export for the period.
+      proof: Source-file list grouped by account and period.
+    - name: Imported activity is not duplicated
+      doneWhen: Duplicate-looking deposits, fees, transfers, refunds, and payment processor batches are removed or explained.
+      proof: Duplicate review list.
+    - name: Transfers are not income or expense
+      doneWhen: Transfers are paired between accounts or left as explicit review items.
+      proof: Transfer match notes and unresolved transfer list.
+    - name: Unusual items are reviewed
+      doneWhen: Large, one-time, owner, loan, refund, personal-looking, or unclear items have notes or review states.
+      proof: Exception list with evidence, notes, or questions.
+    - name: Rules still fit the current period
+      doneWhen: Auto-applied categories are spot-checked against current vendors, accounts, and business context.
+      proof: Rule review notes and changed-rule list.
+    - name: AI suggestions have approval status
+      doneWhen: Suggestions are marked accepted, fixed, needs owner, needs accountant, or out of scope.
+      proof: AI suggestion review log.
+    - name: Open questions are visible
+      doneWhen: Unresolved owner and accountant questions are listed before reports are relied on.
+      proof: Open-question list.
+  reviewOutcome:
+    - AI suggestions accepted.
+    - AI suggestions corrected.
+    - Items that need owner review.
+    - Items that need accountant review.
+    - Items excluded from this review.

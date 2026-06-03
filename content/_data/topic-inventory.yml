@@ -150,7 +150,7 @@ topics:
     contentPath: content/resources/how-to-check-if-bookkeeping-is-correct.md
     runDirectory: docs/content-runs/2026-05-13-how-to-check-if-bookkeeping-is-correct
   - id: ai-bookkeeping-mistakes-to-review
-    status: candidate
+    status: published
     priority: 4
     title: AI Bookkeeping Mistakes To Review
     canonicalPath: /resources/ai-bookkeeping-mistakes-to-review
@@ -168,8 +168,10 @@ topics:
     artifactPotential: 5
     duplicateRisk: 2
     publishEase: 4
+    contentPath: content/resources/ai-bookkeeping-mistakes-to-review.md
+    runDirectory: docs/content-runs/2026-05-20-ai-bookkeeping-mistakes-to-review
   - id: bookkeeping-cleanup-before-tax-season
-    status: candidate
+    status: drafted
     priority: 5
     title: Bookkeeping Cleanup Before Tax Season
     canonicalPath: /resources/bookkeeping-cleanup-before-tax-season
@@ -187,6 +189,8 @@ topics:
     artifactPotential: 5
     duplicateRisk: 2
     publishEase: 4
+    contentPath: content/resources/bookkeeping-cleanup-before-tax-season.md
+    runDirectory: docs/content-runs/2026-05-21-bookkeeping-cleanup-before-tax-season
   - id: quickbooks-alternative-accountant-ready-books
     status: candidate
     priority: 6

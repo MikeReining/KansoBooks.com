@@ -1,0 +1,25 @@
+topicScore:
+  contentId: ai-bookkeeping-mistakes-to-review
+  selectedAt: 2026-05-20T00:00:00-07:00
+  source: content/_data/topic-inventory.yml
+  primaryQuery: AI bookkeeping mistakes to review
+  canonicalJob: validate-ai-bookkeeping-work
+  pillar: ai-bookkeeping-with-proof
+  scores:
+    readerPain: 4
+    searchSpecificity: 5
+    kansoDifferentiation: 5
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 4
+  selectionReason:
+    - First qualifying candidate in the topic inventory.
+    - Directly targets the core AI trust fear: Can AI quietly get my books wrong?
+    - Distinct from the existing AI proof page because it focuses on concrete review risks and acceptance criteria.
+    - Strong fit for a reusable AI review checklist artifact.
+  duplicateReview:
+    existingRelated:
+      - /resources/ai-bookkeeping-with-proof
+      - /resources/how-to-know-books-are-done
+    decision: proceed
+    notes: Keep this article scoped to mistakes and review states; keep the broader AI trust model on /resources/ai-bookkeeping-with-proof.

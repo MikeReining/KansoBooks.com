@@ -1,0 +1,26 @@
+publishLog:
+  contentId: ai-bookkeeping-mistakes-to-review
+  timestamp: 2026-05-20T00:00:00-07:00
+  action: published
+  actor: founder-approved-codex-publish
+  contentPath: content/resources/ai-bookkeeping-mistakes-to-review.md
+  artifactPath: content/_artifacts/ai-review-risk-checklist.yml
+  claimManifest: content/_claims/ai-bookkeeping-mistakes-to-review.yml
+  publishedAt: 2026-05-20
+  publicUrl: /resources/ai-bookkeeping-mistakes-to-review
+  runArtifacts:
+    - docs/content-runs/2026-05-20-ai-bookkeeping-mistakes-to-review/topic-score.yml
+    - docs/content-runs/2026-05-20-ai-bookkeeping-mistakes-to-review/brief.yml
+    - docs/content-runs/2026-05-20-ai-bookkeeping-mistakes-to-review/research-packet.yml
+    - docs/content-runs/2026-05-20-ai-bookkeeping-mistakes-to-review/draft-record.yml
+    - docs/content-runs/2026-05-20-ai-bookkeeping-mistakes-to-review/claim-audit.yml
+    - docs/content-runs/2026-05-20-ai-bookkeeping-mistakes-to-review/presentation-audit.yml
+    - docs/content-runs/2026-05-20-ai-bookkeeping-mistakes-to-review/final-audit.yml
+  notes:
+    - Founder explicitly approved publication on 2026-05-20.
+    - State changed to published in content frontmatter.
+    - Public route is /resources/ai-bookkeeping-mistakes-to-review.
+  checksPassed:
+    - founder_approval_recorded
+    - final_audit_publish_allowed
+    - state_changed_to_published

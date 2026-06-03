@@ -47,13 +47,43 @@ The user's books live in local files they own.
 
 ```bash
 npm install
-npm run dev
+npm run dev -- --port 48623
 ```
 
 Open:
 
 ```text
-http://localhost:3000
+http://localhost:48623
+```
+
+Do not run this project on `3000` or `3001`; those ports are reserved for other
+local projects and commonly collide.
+
+Suggested shell helper:
+
+```zsh
+kanso.() (
+  set -euo pipefail
+
+  local SITE_DIR="$HOME/Documents/GitHub/KansoBooks.com"
+  local PORT=48623
+  local pids=""
+
+  cd "$SITE_DIR"
+
+  pids="$(lsof -tiTCP:$PORT -sTCP:LISTEN 2>/dev/null || true)"
+
+  if [[ -n "$pids" ]]; then
+    echo "Killing process on port $PORT: $pids"
+    kill -9 $pids 2>/dev/null || true
+  fi
+
+  echo "Clearing stale Next dev state..."
+  rm -rf .next/dev
+
+  echo "Starting KansoBooks.com at http://localhost:$PORT ..."
+  npm run dev -- --port "$PORT"
+)
 ```
 
 ## Verification

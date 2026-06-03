@@ -1,0 +1,27 @@
+topicScore:
+  contentId: bookkeeping-cleanup-before-tax-season
+  selectedAt: 2026-05-21T00:00:00-07:00
+  source: content/_data/topic-inventory.yml
+  primaryQuery: bookkeeping cleanup before tax season
+  canonicalJob: prepare-books-for-accountant
+  pillar: accountant-ready-books
+  scores:
+    readerPain: 5
+    searchSpecificity: 5
+    kansoDifferentiation: 4
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 4
+  selectionReason:
+    - First qualifying candidate after the AI bookkeeping mistakes article.
+    - Directly targets a strong time-pressure fear: Can I get this done before tax time?
+    - Distinct from accountant-ready books because it focuses on cleanup order before handoff.
+    - Strong fit for a reusable cleanup triage artifact.
+  duplicateReview:
+    existingRelated:
+      - /resources/accountant-ready-books
+      - /resources/monthly-bookkeeping-checklist-small-business
+      - /resources/how-to-know-books-are-done
+      - /resources/ai-bookkeeping-mistakes-to-review
+    decision: proceed
+    notes: Keep this article scoped to cleanup sequence and triage; keep final package contents on /resources/accountant-ready-books.

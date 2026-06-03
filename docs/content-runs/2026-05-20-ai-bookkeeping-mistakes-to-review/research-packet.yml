@@ -1,0 +1,30 @@
+researchPacket:
+  contentId: ai-bookkeeping-mistakes-to-review
+  sourcePlan: internal-canonical
+  externalSources: []
+  internalSources:
+    - docs/KansoBooksVision.md
+    - docs/KansoBooksManifesto.md
+    - docs/content-engine/CopyGuide.md
+    - content/_truth/product.yml
+    - content/_truth/legal-boundaries.yml
+    - content/_artifacts/books-readiness-checklist.yml
+    - content/_artifacts/correctness-checklist.yml
+  sourceNotes:
+    - Use KansoBooks trust model: AI prepares, Kanso proves, user approves.
+    - Use correctness checklist and books-readiness artifact for source files, balances, transfer, duplicate, unusual-item, and open-question review criteria.
+    - Keep mistake language focused on workflow risks, not professional tax or accounting determinations.
+  freshness:
+    currentEventsNeeded: false
+    pricingOrCompetitorClaims: false
+    legalOrTaxRuleClaims: false
+    notes: No external factual, current tax-rule, competitor, pricing, or software capability claims are made.
+  riskBoundaries:
+    tax: Route treatment and filing questions to accountant judgment.
+    legal: Do not provide legal conclusions.
+    audit: Do not provide audit conclusions or audit-ready guarantees.
+    accounting: Provide general workflow review, not entity-specific accounting treatment.
+  writerWarnings:
+    - Do not say AI guarantees correctness.
+    - Do not suggest KansoBooks replaces accountants.
+    - Do not turn review risks into tax or filing advice.

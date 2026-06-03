@@ -1,0 +1,34 @@
+schemaVersion: 1
+pageId: ai-bookkeeping-mistakes-to-review
+risk: medium
+claims:
+  - id: claim-ai-proof-approval
+    text: AI can draft bookkeeping work, but validation and user approval determine what becomes trusted record truth.
+    type: positioning
+    source: docs/KansoBooksVision.md#trust-model
+    refresh: stable
+    notes: Supports the core AI boundary in the article.
+  - id: claim-product-ai-boundary
+    text: KansoBooks positions AI as preparation, Kanso validation as proof, and user approval as the final trust step.
+    type: product
+    source: content/_truth/product.yml
+    refresh: on-release
+    notes: Supports AI prepares, Kanso checks, user approves language.
+  - id: claim-books-readiness
+    text: Finished bookkeeping needs named source records, reconciliation status, reviewed transaction states, visible evidence, and explicit open questions.
+    type: positioning
+    source: content/_artifacts/books-readiness-checklist.yml
+    refresh: stable
+    notes: Supports review checklist categories and source coverage.
+  - id: claim-correctness-review
+    text: Owner-safe bookkeeping review should check source files, completeness, balances, transfers, duplicates, unusual items, reports, and open questions.
+    type: positioning
+    source: content/_artifacts/correctness-checklist.yml
+    refresh: stable
+    notes: Supports the fast review pass.
+  - id: claim-professional-boundary
+    text: KansoBooks content must not provide tax, legal, audit, payroll, sales tax, filing, or entity-specific advice.
+    type: positioning
+    source: content/_truth/legal-boundaries.yml
+    refresh: stable
+    notes: Required professional boundary for this medium-risk article.

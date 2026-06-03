@@ -1,0 +1,34 @@
+runId: 2026-05-20-ai-bookkeeping-mistakes-to-review-draft
+topicId: ai-bookkeeping-mistakes-to-review
+from: candidate
+to: drafted
+agent: next-article-workflow
+timestamp: 2026-05-20T00:00:00-07:00
+contentPath: content/resources/ai-bookkeeping-mistakes-to-review.md
+artifactPath: content/_artifacts/ai-review-risk-checklist.yml
+claimManifest: content/_claims/ai-bookkeeping-mistakes-to-review.yml
+checksPassed:
+  - topic_selected_from_inventory
+  - duplicate_risk_within_threshold
+  - brief_created
+  - research_packet_created
+  - draft_only_state
+  - claim_manifest_created
+  - artifact_created
+checksFailed: []
+artifactsCreated:
+  - content/resources/ai-bookkeeping-mistakes-to-review.md
+  - content/_artifacts/ai-review-risk-checklist.yml
+  - content/_claims/ai-bookkeeping-mistakes-to-review.yml
+nextAction: founder-review
+escalation: null
+handoff:
+  to: kanso-headline-metadata
+  draftPath: content/resources/ai-bookkeeping-mistakes-to-review.md
+  claimManifestPath: content/_claims/ai-bookkeeping-mistakes-to-review.yml
+  briefPath: docs/content-runs/2026-05-20-ai-bookkeeping-mistakes-to-review/brief.yml
+  packetPath: docs/content-runs/2026-05-20-ai-bookkeeping-mistakes-to-review/research-packet.yml
+  artifactId: ai-review-risk-checklist
+  knownRisks:
+    - Medium-risk general bookkeeping workflow.
+    - Avoid tax, legal, audit, payroll, sales tax, filing, and entity-specific advice.

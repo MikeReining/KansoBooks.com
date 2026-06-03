@@ -1,0 +1,34 @@
+brief:
+  contentId: bookkeeping-cleanup-before-tax-season
+  title: Bookkeeping Cleanup Before Tax Season
+  contentType: resource
+  targetPath: content/resources/bookkeeping-cleanup-before-tax-season.md
+  targetReader: Busy small-business owner whose books are messy before accountant handoff.
+  readerFear: Can I get this done before tax time?
+  primaryOperatingQuestion: What should I clean first so the accountant can review the package?
+  primaryQuery: bookkeeping cleanup before tax season
+  secondaryQueries:
+    - small business bookkeeping cleanup before tax season
+    - cleanup messy books before accountant
+    - bookkeeping cleanup checklist
+    - tax season bookkeeping cleanup
+  canonicalJob: prepare-books-for-accountant
+  angle: Cleanup order and triage before accountant handoff, not tax advice or final filing preparation.
+  artifact:
+    id: cleanup-triage-table
+    path: content/_artifacts/cleanup-triage-table.yml
+    type: checklist
+  mustInclude:
+    - direct answer in opening
+    - cleanup triage table
+    - short time-boxed cleanup pass
+    - owner-safe versus accountant-work boundary
+    - proof boundary
+    - source notes
+    - next step with only published internal links
+  mustAvoid:
+    - tax advice
+    - deduction or filing recommendations
+    - accountant replacement claim
+    - implying AI makes records true
+    - placeholder links or unpublished artifact links

@@ -1,0 +1,20 @@
+claimAudit:
+  contentId: ai-bookkeeping-mistakes-to-review
+  status: pass
+  checkedAt: 2026-05-20T00:00:00-07:00
+  checkedBy: next-article-workflow
+  contentPath: content/resources/ai-bookkeeping-mistakes-to-review.md
+  claimManifest: content/_claims/ai-bookkeeping-mistakes-to-review.yml
+  checks:
+    manifestPresent: pass
+    manifestPageIdMatches: pass
+    sourcesResolve: pass
+    noUnsupportedPricingClaims: pass
+    noCompetitorClaims: pass
+    noTaxLegalAuditPayrollSalesTaxFilingAdvice: pass
+    noAccountantReplacementClaim: pass
+    noAiAsFinancialTruthClaim: pass
+    noCloudBooksClaim: pass
+  notes:
+    - The article uses AI mistake language to describe workflow review risks, not guaranteed error detection.
+    - No external tax-rule, pricing, competitor, or current software capability claims are made.

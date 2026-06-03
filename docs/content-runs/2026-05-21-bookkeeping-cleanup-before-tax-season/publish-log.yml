@@ -1,0 +1,23 @@
+publishLog:
+  contentId: bookkeeping-cleanup-before-tax-season
+  timestamp: 2026-05-21T00:00:00-07:00
+  action: draft-ready
+  actor: next-article-workflow
+  contentPath: content/resources/bookkeeping-cleanup-before-tax-season.md
+  artifactPath: content/_artifacts/cleanup-triage-table.yml
+  claimManifest: content/_claims/bookkeeping-cleanup-before-tax-season.yml
+  runArtifacts:
+    - docs/content-runs/2026-05-21-bookkeeping-cleanup-before-tax-season/topic-score.yml
+    - docs/content-runs/2026-05-21-bookkeeping-cleanup-before-tax-season/brief.yml
+    - docs/content-runs/2026-05-21-bookkeeping-cleanup-before-tax-season/research-packet.yml
+    - docs/content-runs/2026-05-21-bookkeeping-cleanup-before-tax-season/draft-record.yml
+    - docs/content-runs/2026-05-21-bookkeeping-cleanup-before-tax-season/claim-audit.yml
+    - docs/content-runs/2026-05-21-bookkeeping-cleanup-before-tax-season/presentation-audit.yml
+    - docs/content-runs/2026-05-21-bookkeeping-cleanup-before-tax-season/final-audit.yml
+  notes:
+    - Article saved as drafted for founder review.
+    - No publication state change was made.
+    - Draft preview route is /drafts/resources/bookkeeping-cleanup-before-tax-season.
+  checksPassed:
+    - draft_only
+    - no_publish_without_founder_review

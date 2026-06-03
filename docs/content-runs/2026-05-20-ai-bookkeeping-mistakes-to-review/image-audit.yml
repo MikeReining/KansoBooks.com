@@ -1,0 +1,17 @@
+status: approved
+contentId: ai-bookkeeping-mistakes-to-review
+checkedAt: 2026-05-20T00:00:00-07:00
+imageDecision: no-image
+imageType: none
+checks:
+  improvesComprehension: true
+  notDecorativeFiller: true
+  noPrivateData: true
+  noRealBrands: true
+  noCloudImplication: true
+  noFakeDashboard: true
+  cropSafe: true
+  seoFilename: true
+  altText: true
+notes:
+  - No hero image selected for this draft because the article is clearer as review tables and the reusable artifact copy block.

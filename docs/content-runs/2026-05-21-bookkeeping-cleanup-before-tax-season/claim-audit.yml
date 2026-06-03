@@ -1,0 +1,20 @@
+claimAudit:
+  contentId: bookkeeping-cleanup-before-tax-season
+  status: pass
+  checkedAt: 2026-05-21T00:00:00-07:00
+  checkedBy: next-article-workflow
+  contentPath: content/resources/bookkeeping-cleanup-before-tax-season.md
+  claimManifest: content/_claims/bookkeeping-cleanup-before-tax-season.yml
+  checks:
+    manifestPresent: pass
+    manifestPageIdMatches: pass
+    sourcesResolve: pass
+    noUnsupportedPricingClaims: pass
+    noCompetitorClaims: pass
+    noTaxLegalAuditPayrollSalesTaxFilingAdvice: pass
+    noAccountantReplacementClaim: pass
+    noAiAsFinancialTruthClaim: pass
+    noCloudBooksClaim: pass
+  notes:
+    - The article uses tax-season language only to describe cleanup timing and accountant handoff.
+    - No external tax-rule claims are made.

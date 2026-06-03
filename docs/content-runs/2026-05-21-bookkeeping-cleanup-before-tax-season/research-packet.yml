@@ -1,0 +1,29 @@
+researchPacket:
+  contentId: bookkeeping-cleanup-before-tax-season
+  sourcePlan: internal-canonical
+  externalSources: []
+  internalSources:
+    - docs/KansoBooksVision.md
+    - docs/content-engine/CopyGuide.md
+    - content/_truth/legal-boundaries.yml
+    - content/_artifacts/accountant-package-checklist.yml
+    - content/_artifacts/books-readiness-checklist.yml
+    - content/_artifacts/monthly-close-checklist.yml
+  sourceNotes:
+    - Use KansoBooks accountant package standard for handoff readiness.
+    - Use books-readiness and monthly-close artifacts for source file, balance, transfer, duplicate, unusual-item, and open-question checks.
+    - Keep tax-season language focused on cleanup timing and accountant handoff, not tax treatment or filing advice.
+  freshness:
+    currentEventsNeeded: false
+    pricingOrCompetitorClaims: false
+    legalOrTaxRuleClaims: false
+    notes: No external factual or current tax-rule claims are made.
+  riskBoundaries:
+    tax: Route treatment and filing questions to accountant judgment.
+    legal: Do not provide legal conclusions.
+    audit: Do not provide audit conclusions or audit-ready guarantees.
+    accounting: Provide general cleanup workflow, not entity-specific accounting treatment.
+  writerWarnings:
+    - Do not say the page makes books tax and audit ready.
+    - Do not suggest KansoBooks replaces accountants.
+    - Do not turn cleanup steps into tax or filing advice.
