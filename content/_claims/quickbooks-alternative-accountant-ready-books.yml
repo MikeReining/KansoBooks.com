@@ -1,0 +1,48 @@
+schemaVersion: 1
+pageId: quickbooks-alternative-accountant-ready-books
+risk: medium
+claims:
+  - id: claim-quickbooks-online-cloud
+    text: QuickBooks Online is an online, cloud-connected accounting product with access from devices connected to the internet.
+    type: competitor
+    source: https://quickbooks.intuit.com/online/
+    sourceCheckedAt: 2026-06-04
+    refresh: monthly
+    notes: Supports the article's high-level QuickBooks Online framing without making pricing or plan claims.
+  - id: claim-quickbooks-online-feature-scope
+    text: Intuit's QuickBooks materials describe online accounting workflows such as bank connection, reconciliation support, reporting, payments, dashboards, batch work, custom reporting, and user roles.
+    type: competitor
+    source: https://quickbooks.intuit.com/oidam/intuit/sbseg/en_us/accountants/web/content/DTM-what-new-QBO-QBOAV-toolkit-QBO.pdf
+    sourceCheckedAt: 2026-06-04
+    refresh: monthly
+    notes: Supports broad platform-scope language; article avoids plan-specific availability claims.
+  - id: claim-local-first
+    text: KansoBooks is local-first and the user's books live in files they own.
+    type: product
+    source: content/_truth/product.yml
+    refresh: on-release
+    notes: Supports local-first alternative framing.
+  - id: claim-ai-proof-approval
+    text: AI prepares bookkeeping work, Kanso validates it, and the user approves what becomes true.
+    type: positioning
+    source: content/_truth/product.yml
+    refresh: stable
+    notes: Supports the trust boundary used in the comparison.
+  - id: claim-accountant-package
+    text: KansoBooks helps prepare a cleaner package for accountant review.
+    type: product
+    source: content/_truth/product.yml
+    refresh: on-release
+    notes: Supports accountant-ready package language without replacement claims.
+  - id: claim-canonical-job
+    text: The choose-bookkeeping-system canonical job compares options by ownership, proof, accountant handoff, cost posture, and operational risk.
+    type: positioning
+    source: content/_data/canonical-jobs.yml
+    refresh: stable
+    notes: Defines the decision context for the comparison.
+  - id: claim-professional-boundary
+    text: KansoBooks content must not provide tax, legal, audit, payroll, sales tax, filing, or entity-specific advice.
+    type: positioning
+    source: content/_truth/legal-boundaries.yml
+    refresh: stable
+    notes: Required professional boundary for this medium-risk comparison.

@@ -1,0 +1,20 @@
+presentationAudit:
+  contentId: quickbooks-alternative-accountant-ready-books
+  checkedAt: 2026-06-04T00:00:00-07:00
+  checkedBy: content-presentation-layer
+  status: pass
+  contentPath: content/comparisons/quickbooks-alternative-accountant-ready-books.md
+  checksPassed:
+    - shared_content_renderer_used
+    - no_bespoke_page_chrome
+    - conventional_headings_present
+    - decision_tables_use_markdown_tables
+    - metadata_internal_links_present
+    - artifact_id_resolves
+    - no_placeholder_links
+    - no_unpublished_internal_links
+    - no_hero_image_needed
+  checksFailed: []
+  notes:
+    - Page relies on the existing comparison route and content renderer.
+    - Artifact is referenced through metadata and validates as YAML.

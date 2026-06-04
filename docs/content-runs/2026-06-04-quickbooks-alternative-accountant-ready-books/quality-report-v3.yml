@@ -1,0 +1,17 @@
+qualityReport:
+  contentId: quickbooks-alternative-accountant-ready-books
+  pass: 3
+  status: pass
+  scores:
+    readerUsefulness: 5
+    specificity: 5
+    kansoDifferentiation: 5
+    proofBoundary: 5
+    publishReadiness: 5
+  memorableLine: Do not buy a platform when your real pain is confidence.
+  finalRecommendation: publish
+  finalNotes:
+    - Article gives QuickBooks a fair fit case.
+    - KansoBooks angle is distinct and proof-oriented.
+    - Accountant-ready artifact is usable without a new presentation surface.
+    - Claims remain bounded and source-backed.

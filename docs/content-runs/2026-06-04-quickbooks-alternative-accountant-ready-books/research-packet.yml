@@ -1,0 +1,46 @@
+researchPacket:
+  contentId: quickbooks-alternative-accountant-ready-books
+  sourcePlan: internal-canonical-plus-current-competitor
+  externalSources:
+    - url: https://quickbooks.intuit.com/online/
+      checkedAt: 2026-06-04
+      sourceClass: primary-competitor
+      supports:
+        - QuickBooks Online is online/cloud-connected accounting software.
+      notes: Used only for high-level product framing, not pricing or plan details.
+    - url: https://quickbooks.intuit.com/oidam/intuit/sbseg/en_us/accountants/web/content/DTM-what-new-QBO-QBOAV-toolkit-QBO.pdf
+      checkedAt: 2026-06-04
+      sourceClass: primary-competitor
+      supports:
+        - QuickBooks Online materials describe bank connection, reconciliation support, reporting, payments, dashboards, batch work, custom reports, roles, and related online workflows.
+      notes: Used to support broad platform-scope language with feature-availability caveat.
+  internalSources:
+    - docs/KansoBooksVision.md
+    - docs/KansoBooksManifesto.md
+    - docs/KansoBooksWedge.md
+    - docs/content-engine/CopyGuide.md
+    - content/_truth/product.yml
+    - content/_truth/competitors.yml
+    - content/_truth/legal-boundaries.yml
+    - content/_data/canonical-jobs.yml
+    - content/_artifacts/bookkeeping-system-choice-matrix.yml
+    - content/_artifacts/accountant-package-checklist.yml
+  sourceNotes:
+    - Use competitor truth boundary: QuickBooks is a powerful cloud accounting product, but comparison should focus on user complexity, mistake risk, and accountant-ready outcome.
+    - Avoid QuickBooks pricing and plan names because current details require ongoing verification and are not needed for the article's decision job.
+    - Use KansoBooks trust model: AI prepares, Kanso proves, user approves.
+  freshness:
+    currentEventsNeeded: false
+    pricingOrCompetitorClaims: true
+    legalOrTaxRuleClaims: false
+    notes: Competitor source check completed on 2026-06-04. No pricing, legal, tax, or plan-specific claims are made.
+  riskBoundaries:
+    tax: Route treatment and filing questions to accountant judgment.
+    legal: Do not provide legal conclusions.
+    audit: Do not provide audit conclusions or audit-ready guarantees.
+    accounting: Provide general workflow and buying-decision framing, not entity-specific accounting treatment.
+  writerWarnings:
+    - Do not claim KansoBooks is a full QuickBooks replacement for every business.
+    - Do not make universal vendor superiority claims.
+    - Do not imply QuickBooks cannot produce accountant-ready books.
+    - Do not suggest KansoBooks replaces accountants.

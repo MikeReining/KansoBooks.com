@@ -1,0 +1,17 @@
+qualityReport:
+  contentId: quickbooks-alternative-accountant-ready-books
+  pass: 1
+  status: revise
+  scores:
+    readerUsefulness: 4
+    specificity: 4
+    kansoDifferentiation: 5
+    proofBoundary: 5
+    publishReadiness: 4
+  biggestWeaknesses:
+    - Initial structure risked becoming a broad QuickBooks comparison instead of an accountant-ready decision.
+    - Needed a clearer test for what a handoff packet must contain.
+  revisionsPlanned:
+    - Add accountant-ready test table.
+    - Add explicit buying job separation.
+    - Add current-source caveat for QuickBooks features.

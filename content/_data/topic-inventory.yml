@@ -192,7 +192,7 @@ topics:
     contentPath: content/resources/bookkeeping-cleanup-before-tax-season.md
     runDirectory: docs/content-runs/2026-05-21-bookkeeping-cleanup-before-tax-season
   - id: quickbooks-alternative-accountant-ready-books
-    status: candidate
+    status: published
     priority: 6
     title: QuickBooks Alternative For Accountant-Ready Books
     canonicalPath: /comparisons/quickbooks-alternative-accountant-ready-books
@@ -210,3 +210,5 @@ topics:
     artifactPotential: 4
     duplicateRisk: 2
     publishEase: 3
+    contentPath: content/comparisons/quickbooks-alternative-accountant-ready-books.md
+    runDirectory: docs/content-runs/2026-06-04-quickbooks-alternative-accountant-ready-books

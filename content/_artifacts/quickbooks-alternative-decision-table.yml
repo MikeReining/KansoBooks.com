@@ -1,0 +1,44 @@
+schemaVersion: 1
+id: quickbooks-alternative-decision-table
+title: QuickBooks Alternative Decision Table
+artifactType: decision-tree
+jurisdiction: general
+risk: medium
+sourceNotes:
+  - content/_data/canonical-jobs.yml
+  - content/_truth/product.yml
+  - content/_truth/competitors.yml
+  - content/_truth/legal-boundaries.yml
+  - docs/KansoBooksVision.md#trust-model
+professionalBoundary: This decision table helps frame a bookkeeping system choice. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+owner: KansoBooks Editorial System
+lastReviewed: 2026-06-04
+nextReview: 2026-09-04
+content:
+  purpose: Help a small-business owner decide whether they need a full cloud accounting platform or a narrower accountant-ready books workflow.
+  decisionQuestions:
+    - question: Do I need a full online accounting system or a cleanup-and-handoff workflow?
+      quickbooksSignal: The business needs ongoing work inside a hosted accounting platform with connected workflows and regular accounting operations.
+      kansoSignal: The urgent job is to clean up records, check balances, name open questions, and produce an accountant-ready package.
+    - question: What would make me confident enough to send the books forward?
+      quickbooksSignal: Reports, reconciliations, attachments, exports, and accountant access are already organized inside the system.
+      kansoSignal: Source files, reconciliation notes, evidence index, review log, and accountant questions are packaged together.
+    - question: Where should AI stop?
+      quickbooksSignal: Automation or AI may support the hosted workflow, but output still needs review before reliance.
+      kansoSignal: AI drafts routine cleanup; Kanso checks; the owner approves what becomes part of the trusted record.
+    - question: What does my accountant need?
+      quickbooksSignal: Accountant access, reports, exports, attachments, and notes are complete enough for review.
+      kansoSignal: A portable package includes reports, source evidence, reconciliation status, open questions, and owner decisions.
+  chooseQuickBooksWhen:
+    - The business needs a broad online accounting platform.
+    - Always-online access, team workflow, accountant familiarity, or connected accounting features are central.
+    - The owner or accounting team will maintain the system regularly.
+  chooseKansoWhen:
+    - The owner is behind and needs a checked accountant-ready package.
+    - Local files, evidence, reconciliation notes, and clear open questions matter more than platform breadth.
+    - AI should help draft cleanup work without becoming financial truth.
+  doNotUseFor:
+    - Choosing a tax filing position.
+    - Replacing accountant judgment.
+    - Declaring one vendor universally better than another.
+    - Making legal, audit, payroll, sales tax, filing, or entity-specific decisions.

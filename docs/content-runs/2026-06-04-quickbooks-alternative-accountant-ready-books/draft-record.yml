@@ -1,0 +1,27 @@
+draftRecord:
+  contentId: quickbooks-alternative-accountant-ready-books
+  draftedAt: 2026-06-04T00:00:00-07:00
+  draftPath: content/comparisons/quickbooks-alternative-accountant-ready-books.md
+  claimManifestPath: content/_claims/quickbooks-alternative-accountant-ready-books.yml
+  artifactPath: content/_artifacts/quickbooks-alternative-decision-table.yml
+  status: published-after-audit
+  passes:
+    - article-draft
+    - headline-metadata
+    - seo-aieo
+    - tone-pass
+    - content-review
+    - claim-audit
+    - final-audit
+    - publish
+  answerUnits:
+    AnswerBlock: opening gives direct QuickBooks versus KansoBooks-style alternative decision.
+    KansoTake: local-first accountant-ready thesis and AI prepares/Kanso checks/user approves boundary.
+    DecisionSupport: decision table, buying job table, and accountant-ready test.
+    ProofBoundary: What You Can Prove section.
+    SourceNotes: Source Notes section.
+    NextStep: internal links to local-first comparison and accountant-ready books guide.
+    EntitySummary: final entity summary.
+  notes:
+    - No image generated; comparison is stronger as tables and proof modules.
+    - No pricing or plan-specific QuickBooks claims included.

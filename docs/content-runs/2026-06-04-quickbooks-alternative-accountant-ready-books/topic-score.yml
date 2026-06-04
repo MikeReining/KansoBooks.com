@@ -1,0 +1,21 @@
+topicScore:
+  contentId: quickbooks-alternative-accountant-ready-books
+  scoredAt: 2026-06-04T00:00:00-07:00
+  source: content/_data/topic-inventory.yml
+  statusBeforeRun: candidate
+  primaryQuery: QuickBooks alternative for accountant-ready books
+  canonicalJob: choose-bookkeeping-system
+  readerPain: 5
+  searchSpecificity: 4
+  kansoDifferentiation: 5
+  artifactPotential: 4
+  duplicateRisk: 2
+  publishEase: 3
+  totalScore: 23
+  selectionReason: First qualifying candidate with duplicateRisk <= 2. Distinct from the existing local-first comparison because it frames a named QuickBooks-alternative buying job around accountant-ready handoff.
+  duplicateCheck:
+    existingOverlap:
+      - /comparisons/local-first-bookkeeping-vs-cloud-accounting
+      - /resources/accountant-ready-books
+    decision: proceed
+    reason: Existing pages cover broad system choice and accountant package readiness; this page answers the named QuickBooks-alternative decision and routes readers to those pages.

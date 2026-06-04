@@ -1,0 +1,36 @@
+brief:
+  contentId: quickbooks-alternative-accountant-ready-books
+  title: QuickBooks Alternative For Accountant-Ready Books
+  contentType: comparison
+  targetPath: content/comparisons/quickbooks-alternative-accountant-ready-books.md
+  targetReader: Busy small-business owner deciding whether they need QuickBooks Online or a narrower accountant-ready bookkeeping workflow.
+  readerFear: Is there a simpler way than QuickBooks?
+  primaryOperatingQuestion: Can I prove it?
+  primaryQuery: QuickBooks alternative for accountant-ready books
+  secondaryQueries:
+    - QuickBooks alternative for small business bookkeeping
+    - QuickBooks alternative accountant handoff
+    - accountant-ready bookkeeping alternative
+    - local-first bookkeeping alternative
+  canonicalJob: choose-bookkeeping-system
+  angle: Outcome and accountant handoff comparison, not full QuickBooks feature parity or pricing.
+  artifact:
+    id: quickbooks-alternative-decision-table
+    path: content/_artifacts/quickbooks-alternative-decision-table.yml
+    type: decision-tree
+  mustInclude:
+    - direct answer in opening
+    - QuickBooks versus KansoBooks decision table
+    - accountant-ready handoff test
+    - explicit professional boundary
+    - source notes with current QuickBooks source check
+    - next step with live internal links only
+  mustAvoid:
+    - pricing claims
+    - plan-specific QuickBooks claims
+    - tax advice
+    - deduction, filing, payroll, sales tax, legal, audit, or entity-specific recommendations
+    - accountant replacement claim
+    - implying AI makes records true
+    - implying KansoBooks stores books in the cloud
+    - shaming readers for using QuickBooks

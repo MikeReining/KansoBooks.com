@@ -1,0 +1,44 @@
+claimAudit:
+  contentId: quickbooks-alternative-accountant-ready-books
+  status: pass
+  checkedAt: 2026-06-04T00:00:00-07:00
+  checkedBy: kanso-claim-audit
+  claimsChecked:
+    - id: claim-quickbooks-online-cloud
+      source: https://quickbooks.intuit.com/online/
+      result: supported
+      sourceCheckedAt: 2026-06-04
+    - id: claim-quickbooks-online-feature-scope
+      source: https://quickbooks.intuit.com/oidam/intuit/sbseg/en_us/accountants/web/content/DTM-what-new-QBO-QBOAV-toolkit-QBO.pdf
+      result: supported
+      sourceCheckedAt: 2026-06-04
+    - id: claim-local-first
+      source: content/_truth/product.yml
+      result: supported
+    - id: claim-ai-proof-approval
+      source: content/_truth/product.yml
+      result: supported
+    - id: claim-accountant-package
+      source: content/_truth/product.yml
+      result: supported
+    - id: claim-canonical-job
+      source: content/_data/canonical-jobs.yml
+      result: supported
+    - id: claim-professional-boundary
+      source: content/_truth/legal-boundaries.yml
+      result: supported
+  claimsFailed: []
+  boundaryChecks:
+    noPricingClaims: pass
+    noPlanSpecificClaims: pass
+    noTaxLegalAuditAdvice: pass
+    noAccountantReplacement: pass
+    noAiAsFinancialTruth: pass
+    noCloudBooksImplicationForKansoBooks: pass
+    noUniversalVendorSuperiorityClaim: pass
+  requiredEdits: []
+  escalation:
+    needed: false
+    reason: ""
+    narrowDecisionNeeded: ""
+  handoffTo: kanso-final-audit

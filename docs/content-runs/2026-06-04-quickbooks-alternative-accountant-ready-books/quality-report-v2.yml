@@ -1,0 +1,19 @@
+qualityReport:
+  contentId: quickbooks-alternative-accountant-ready-books
+  pass: 2
+  status: revise
+  scores:
+    readerUsefulness: 5
+    specificity: 5
+    kansoDifferentiation: 5
+    proofBoundary: 5
+    publishReadiness: 4
+  beforeAfter:
+    - before: Broad system-choice language.
+      after: Concrete buying jobs, handoff packet rows, and owner fear statements.
+    - before: QuickBooks comparison could be read as universal vendor judgment.
+      after: Added when QuickBooks is the better choice and when a KansoBooks-style workflow is the better choice.
+  revisionsPlanned:
+    - Tighten opening.
+    - Remove any phrasing that sounds like QuickBooks cannot produce good handoffs.
+    - Make next step point only to live published pages.
