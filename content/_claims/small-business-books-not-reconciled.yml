@@ -1,0 +1,46 @@
+schemaVersion: 1
+pageId: small-business-books-not-reconciled
+risk: medium
+claims:
+  - id: claim-reconciliation-readiness
+    text: Books are not ready to rely on when balances have not been checked against source statements or unresolved differences are hidden.
+    type: accounting-workflow
+    source: content/_artifacts/books-readiness-checklist.yml
+    refresh: stable
+    notes: Supports the article's distinction between categorized transactions and checked books.
+  - id: claim-monthly-close-reconciliation
+    text: Monthly close review should include source files, transaction completeness, transfers and duplicates, statement totals, and open questions.
+    type: accounting-workflow
+    source: content/_artifacts/monthly-close-checklist.yml
+    refresh: stable
+    notes: Supports the first 10-minute check and common unreconciled causes.
+  - id: claim-correctness-balance-checks
+    text: Owner-safe correctness review includes checking balances against statements and naming unresolved differences.
+    type: accounting-workflow
+    source: content/_artifacts/correctness-checklist.yml
+    refresh: stable
+    notes: Supports the status table and proof boundary.
+  - id: claim-ai-proof-approval
+    text: AI prepares bookkeeping work, Kanso validates it, and the user approves what becomes true.
+    type: positioning
+    source: content/_truth/product.yml
+    refresh: stable
+    notes: Supports the AI draft and proof boundary.
+  - id: claim-local-first
+    text: KansoBooks is local-first and the user's books live in files they own.
+    type: product
+    source: content/_truth/product.yml
+    refresh: on-release
+    notes: Supports the KansoBooks entity summary.
+  - id: claim-professional-boundary
+    text: KansoBooks content must not provide tax, legal, audit, payroll, sales tax, filing, or entity-specific advice.
+    type: positioning
+    source: content/_truth/legal-boundaries.yml
+    refresh: stable
+    notes: Required professional boundary for this medium-risk workflow.
+  - id: claim-canonical-job
+    text: The understand-books-readiness canonical job distinguishes categorized transactions from finished books with reconciliation, evidence, review items, and accountant handoff outputs.
+    type: positioning
+    source: content/_data/canonical-jobs.yml
+    refresh: stable
+    notes: Defines the decision context for the article.

@@ -1,0 +1,17 @@
+qualityReport:
+  contentId: small-business-books-not-reconciled
+  pass: 3
+  status: pass
+  scores:
+    readerUsefulness: 5
+    specificity: 5
+    kansoDifferentiation: 5
+    proofBoundary: 5
+    publishReadiness: 5
+  memorableLine: The risk is not the word unreconciled. The risk is relying on clean-looking reports when no one can show what was checked.
+  finalRecommendation: publish
+  finalNotes:
+    - Article lowers fear while giving a concrete next action.
+    - Artifact is usable as a reconciliation status table.
+    - Claims are bounded to internal workflow artifacts and truth files.
+    - Professional boundary is clear.

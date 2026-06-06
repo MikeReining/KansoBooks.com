@@ -1,0 +1,19 @@
+status: no-image
+imageType: none
+assetPath: ""
+ogPath: ""
+styleGuide: docs/content-engine/ContentImageStyleGuide.md
+checks:
+  improvesComprehension: true
+  notDecorativeFiller: true
+  noPrivateData: true
+  noRealBrands: true
+  noCloudImplication: true
+  noFakeDashboard: true
+  cropSafe: true
+  seoFilename: true
+  altText: true
+notes:
+  - The article is stronger as a status table and handoff checklist.
+  - A generated image would likely be generic accounting stock or imply fake financial data.
+  - No image is required for validation because no heroImage metadata is set.

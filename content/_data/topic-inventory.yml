@@ -234,7 +234,7 @@ topics:
     contentPath: content/resources/payment-processor-bookkeeping-checklist.md
     runDirectory: docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist
   - id: small-business-books-not-reconciled
-    status: candidate
+    status: published
     priority: 8
     title: Small Business Books Not Reconciled
     canonicalPath: /resources/small-business-books-not-reconciled
@@ -252,6 +252,8 @@ topics:
     artifactPotential: 4
     duplicateRisk: 2
     publishEase: 5
+    contentPath: content/resources/small-business-books-not-reconciled.md
+    runDirectory: docs/content-runs/2026-06-06-small-business-books-not-reconciled
   - id: what-is-an-accountant-package
     status: candidate
     priority: 9

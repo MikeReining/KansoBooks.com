@@ -1,7 +1,7 @@
 # KansoBooks Roadmap and MVP Sprint Plan
 
 **Status:** Strategic reference. Sprint definitions, MCP slip rules, and gate conditions live here.
-**Live execution tracking (what to build next, actual statuses):** `Docs/phases/README.md`
+**Live execution tracking (what to build next, actual statuses):** `docs/phases/README.md`
 
 ## Operating Principle
 

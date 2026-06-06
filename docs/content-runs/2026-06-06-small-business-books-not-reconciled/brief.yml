@@ -1,0 +1,37 @@
+brief:
+  contentId: small-business-books-not-reconciled
+  title: Small Business Books Not Reconciled
+  contentType: resource
+  targetPath: content/resources/small-business-books-not-reconciled.md
+  targetReader: Small-business owner who sees unreconciled books or balance differences and needs to know what to do before relying on reports.
+  readerFear: Am I in trouble if reconciliation is off?
+  primaryOperatingQuestion: Is this right?
+  primaryQuery: what if my books are not reconciled
+  secondaryQueries:
+    - small business books not reconciled
+    - what does unreconciled books mean
+    - unreconciled bookkeeping
+    - books not reconciled before accountant
+  canonicalJob: understand-books-readiness
+  angle: Reconciliation status triage and handoff boundary, not a full correctness checklist or tax-risk article.
+  artifact:
+    id: reconciliation-status-table
+    path: content/_artifacts/reconciliation-status-table.yml
+    type: checklist
+  mustInclude:
+    - direct answer in opening
+    - reconciliation status table
+    - first 10-minute check
+    - common causes table
+    - accountant handoff table
+    - proof boundary
+    - source notes
+    - next step with live internal links only
+  mustAvoid:
+    - tax advice
+    - audit advice
+    - payroll, sales tax, filing, legal, or entity-specific recommendations
+    - claiming unreconciled books always mean wrongdoing
+    - accountant replacement claim
+    - implying AI makes records true
+    - implying KansoBooks stores books in the cloud

@@ -1,0 +1,41 @@
+claimAudit:
+  contentId: small-business-books-not-reconciled
+  status: pass
+  checkedAt: 2026-06-06T00:00:00-07:00
+  checkedBy: kanso-claim-audit
+  claimsChecked:
+    - id: claim-reconciliation-readiness
+      source: content/_artifacts/books-readiness-checklist.yml
+      result: supported
+    - id: claim-monthly-close-reconciliation
+      source: content/_artifacts/monthly-close-checklist.yml
+      result: supported
+    - id: claim-correctness-balance-checks
+      source: content/_artifacts/correctness-checklist.yml
+      result: supported
+    - id: claim-ai-proof-approval
+      source: content/_truth/product.yml
+      result: supported
+    - id: claim-local-first
+      source: content/_truth/product.yml
+      result: supported
+    - id: claim-professional-boundary
+      source: content/_truth/legal-boundaries.yml
+      result: supported
+    - id: claim-canonical-job
+      source: content/_data/canonical-jobs.yml
+      result: supported
+  claimsFailed: []
+  boundaryChecks:
+    noTaxLegalAuditAdvice: pass
+    noPayrollSalesTaxFilingAdvice: pass
+    noAccountantReplacement: pass
+    noAiAsFinancialTruth: pass
+    noCloudBooksImplication: pass
+    noCurrentPlatformPricingOrDeadlineClaims: pass
+  requiredEdits: []
+  escalation:
+    needed: false
+    reason: ""
+    narrowDecisionNeeded: ""
+  handoffTo: kanso-final-audit

@@ -1,0 +1,48 @@
+publishLog:
+  contentId: small-business-books-not-reconciled
+  runId: 2026-06-06-small-business-books-not-reconciled
+  attemptedAt: 2026-06-06T00:00:00-07:00
+  action: published
+  publishAttempted: true
+  publishAllowed: true
+  reason: User explicitly authorized creating and publishing one article today.
+  from: final-audit
+  to: published
+  agent: kanso-publish
+  url: /resources/small-business-books-not-reconciled
+  contentPath: content/resources/small-business-books-not-reconciled.md
+  artifactPath: content/_artifacts/reconciliation-status-table.yml
+  claimManifest: content/_claims/small-business-books-not-reconciled.yml
+  runArtifacts:
+    - docs/content-runs/2026-06-06-small-business-books-not-reconciled/topic-score.yml
+    - docs/content-runs/2026-06-06-small-business-books-not-reconciled/brief.yml
+    - docs/content-runs/2026-06-06-small-business-books-not-reconciled/research-packet.yml
+    - docs/content-runs/2026-06-06-small-business-books-not-reconciled/draft-record.yml
+    - docs/content-runs/2026-06-06-small-business-books-not-reconciled/quality-report-v1.yml
+    - docs/content-runs/2026-06-06-small-business-books-not-reconciled/quality-report-v2.yml
+    - docs/content-runs/2026-06-06-small-business-books-not-reconciled/quality-report-v3.yml
+    - docs/content-runs/2026-06-06-small-business-books-not-reconciled/image-audit.yml
+    - docs/content-runs/2026-06-06-small-business-books-not-reconciled/presentation-audit.yml
+    - docs/content-runs/2026-06-06-small-business-books-not-reconciled/claim-audit.yml
+    - docs/content-runs/2026-06-06-small-business-books-not-reconciled/final-audit.yml
+    - docs/content-runs/2026-06-06-small-business-books-not-reconciled/publish-log.yml
+  notes:
+    - No commit performed.
+    - No push performed.
+    - No PR created.
+    - No deploy performed.
+    - State changed to published in content frontmatter.
+    - Generated sitemap and resource index include this article after build.
+  checksPassed:
+    - user_publish_authorization
+    - final_audit_publish_allowed
+    - state_set_to_published_after_audit
+    - content_validation_passed
+    - typecheck_passed
+    - lint_passed
+    - build_passed
+    - autopublish_path_guard_passed
+    - production_preview_route_200
+    - sitemap_includes_article
+    - resources_index_includes_article
+  checksFailed: []

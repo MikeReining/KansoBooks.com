@@ -1,0 +1,27 @@
+draftRecord:
+  contentId: small-business-books-not-reconciled
+  draftedAt: 2026-06-06T00:00:00-07:00
+  draftPath: content/resources/small-business-books-not-reconciled.md
+  claimManifestPath: content/_claims/small-business-books-not-reconciled.yml
+  artifactPath: content/_artifacts/reconciliation-status-table.yml
+  status: published-after-audit
+  passes:
+    - article-draft
+    - headline-metadata
+    - seo-aieo
+    - tone-pass
+    - content-review
+    - claim-audit
+    - final-audit
+    - publish
+  answerUnits:
+    AnswerBlock: opening explains what unreconciled books mean and what to do next.
+    KansoTake: reconciliation is framed as part of the proof trail.
+    DecisionSupport: reconciliation status table, 10-minute check, common causes, and accountant handoff table.
+    ProofBoundary: What You Can Prove section.
+    SourceNotes: Source Notes section.
+    NextStep: live internal links to readiness, monthly close, and accountant-ready guides.
+    EntitySummary: final entity summary.
+  notes:
+    - No image generated; status tables are the useful surface.
+    - No tax, legal, audit, platform, or deadline claims included.

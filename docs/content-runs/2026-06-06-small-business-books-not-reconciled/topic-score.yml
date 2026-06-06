@@ -1,0 +1,22 @@
+topicScore:
+  contentId: small-business-books-not-reconciled
+  scoredAt: 2026-06-06T00:00:00-07:00
+  source: content/_data/topic-inventory.yml
+  statusBeforeRun: candidate
+  primaryQuery: what if my books are not reconciled
+  canonicalJob: understand-books-readiness
+  readerPain: 5
+  searchSpecificity: 4
+  kansoDifferentiation: 4
+  artifactPotential: 4
+  duplicateRisk: 2
+  publishEase: 5
+  totalScore: 22
+  selectionReason: First qualifying candidate after yesterday's article. Distinct from correctness and readiness pages because it focuses on reconciliation status and what to do when books are not reconciled.
+  duplicateCheck:
+    existingOverlap:
+      - /resources/how-to-know-books-are-done
+      - /resources/how-to-check-if-bookkeeping-is-correct
+      - /resources/monthly-bookkeeping-checklist-small-business
+    decision: proceed
+    reason: Existing pages cover broad readiness and correctness; this page owns unreconciled status triage and handoff wording.

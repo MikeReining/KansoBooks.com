@@ -1,7 +1,7 @@
 version: 1
 status: phase-5-repo-side-template
 authority:
-  - docs/phases/!Execution.md
+  - docs/operations/Execution-Playbook.md
   - docs/phases/AutonomousContentEngine.md
   - docs/content-engine/CodexSkillStrategy.md
   - docs/content-engine/EscalationPolicy.md

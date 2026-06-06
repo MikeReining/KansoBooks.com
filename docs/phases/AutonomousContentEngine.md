@@ -4,7 +4,7 @@
 **Authority:** Website organic growth and autonomous publishing plan.
 Subordinate to `docs/KansoBooksManifesto.md`, `docs/KansoBooksVision.md`,
 `docs/KansoBooksWedge.md`, `docs/phases/FoundationSetup.md`, and
-`docs/phases/!Execution.md`.
+`docs/operations/Execution-Playbook.md`.
 
 ## Phase 1 Status
 

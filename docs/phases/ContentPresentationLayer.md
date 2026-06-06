@@ -4,7 +4,7 @@
 **Authority:** Presentation, visual packaging, and editorial UI system for
 Autonomous Content Engine pages.
 **Parent:** `docs/phases/AutonomousContentEngine.md`
-**Execution:** Use with `docs/phases/!Execution.md`.
+**Execution:** Use with `docs/operations/Execution-Playbook.md`.
 
 This phase turns KansoBooks content from correct markdown into a polished,
 trustworthy publication system. The content engine already knows how to produce

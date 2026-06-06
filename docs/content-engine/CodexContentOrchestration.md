@@ -1,7 +1,7 @@
 # Codex Content Orchestration
 
 **Status:** Active orchestration playbook for Codex-run content engine work.
-**Authority:** Subordinate to `docs/phases/!Execution.md`,
+**Authority:** Subordinate to `docs/operations/Execution-Playbook.md`,
 `docs/phases/AutonomousContentEngine.md`, canonical product docs, truth files,
 content validators, and claim audits.
 

@@ -1,0 +1,17 @@
+qualityReport:
+  contentId: small-business-books-not-reconciled
+  pass: 1
+  status: revise
+  scores:
+    readerUsefulness: 4
+    specificity: 4
+    kansoDifferentiation: 4
+    proofBoundary: 5
+    publishReadiness: 4
+  biggestWeaknesses:
+    - Initial framing risked sounding scary instead of operational.
+    - Needed clearer distinction between unknown status and professional judgment.
+  revisionsPlanned:
+    - Add reconciliation status table.
+    - Add first 10-minute check.
+    - Add accountant handoff table.

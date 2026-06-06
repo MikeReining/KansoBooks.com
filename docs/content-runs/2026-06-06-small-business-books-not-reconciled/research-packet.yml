@@ -1,0 +1,35 @@
+researchPacket:
+  contentId: small-business-books-not-reconciled
+  sourcePlan: internal-canonical
+  externalSources: []
+  internalSources:
+    - docs/KansoBooksVision.md
+    - docs/KansoBooksManifesto.md
+    - docs/content-engine/CopyGuide.md
+    - content/_truth/product.yml
+    - content/_truth/legal-boundaries.yml
+    - content/_data/canonical-jobs.yml
+    - content/_artifacts/books-readiness-checklist.yml
+    - content/_artifacts/monthly-close-checklist.yml
+    - content/_artifacts/correctness-checklist.yml
+    - content/_artifacts/accountant-package-checklist.yml
+  sourceNotes:
+    - Use books-readiness artifact for reconciliation, evidence, open questions, and handoff outputs.
+    - Use monthly close and correctness artifacts for source files, balance checks, transfer/duplicate review, and unresolved difference lists.
+    - Keep the page in owner-safe workflow language. Do not turn unreconciled status into tax, legal, audit, or filing advice.
+  freshness:
+    currentEventsNeeded: false
+    pricingOrCompetitorClaims: false
+    legalOrTaxRuleClaims: false
+    notes: No current platform, legal, tax, pricing, or deadline claims are made.
+  riskBoundaries:
+    tax: Route treatment and filing questions to accountant judgment.
+    legal: Do not provide legal conclusions.
+    audit: Do not provide audit conclusions or audit-ready guarantees.
+    salesTax: Do not provide sales tax advice.
+    accounting: Provide general reconciliation readiness workflow, not entity-specific accounting treatment.
+  writerWarnings:
+    - Do not imply unreconciled books always create legal or tax exposure.
+    - Do not say reports are unusable for every purpose; say they are not finished enough to rely on without the status note.
+    - Do not suggest KansoBooks replaces accountants.
+    - Do not treat AI output as proof.

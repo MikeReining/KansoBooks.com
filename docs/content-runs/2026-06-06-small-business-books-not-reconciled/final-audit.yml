@@ -1,0 +1,40 @@
+finalAudit:
+  contentId: small-business-books-not-reconciled
+  status: publish
+  checkedAt: 2026-06-06T00:00:00-07:00
+  checkedBy: kanso-final-audit
+  contentPath: content/resources/small-business-books-not-reconciled.md
+  artifactPath: content/_artifacts/reconciliation-status-table.yml
+  claimManifestPath: content/_claims/small-business-books-not-reconciled.yml
+  checksPassed:
+    - metadata_complete
+    - claim_manifest_present
+    - artifact_id_present
+    - artifact_id_resolves
+    - claim_audit_pass
+    - image_audit_no_image_approved
+    - presentation_layer_applied
+    - answer_units_present
+    - entity_summary_present
+    - decision_support_present
+    - copy_guide_applied
+    - internal_links_resolve
+    - markdown_links_resolve
+    - no_placeholder_links
+    - no_tax_legal_audit_payroll_sales_tax_filing_or_entity_specific_advice
+    - no_accountant_replacement_claim
+    - no_ai_as_financial_truth_claim
+    - no_cloud_books_claim
+    - no_current_platform_pricing_deadline_or_legal_claims
+  checksFailed: []
+  publishAllowed: true
+  founderApproval:
+    approvedAt: 2026-06-06T00:00:00-07:00
+    approvedBy: founder
+    instruction: Makes sense. Please create and publish one article today.
+  requiredFixes: []
+  escalation:
+    needed: false
+    reason: ""
+    narrowDecisionNeeded: ""
+  handoffTo: kanso-publish

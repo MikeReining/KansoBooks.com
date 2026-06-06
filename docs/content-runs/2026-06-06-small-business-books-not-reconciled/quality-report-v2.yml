@@ -1,0 +1,19 @@
+qualityReport:
+  contentId: small-business-books-not-reconciled
+  pass: 2
+  status: revise
+  scores:
+    readerUsefulness: 5
+    specificity: 5
+    kansoDifferentiation: 4
+    proofBoundary: 5
+    publishReadiness: 4
+  beforeAfter:
+    - before: General explanation of unreconciled books.
+      after: Concrete statuses for not started, source missing, difference found, transfer review, duplicate review, and needs accountant.
+    - before: Next action was too broad.
+      after: Added a six-step 10-minute check and handoff packet table.
+  revisionsPlanned:
+    - Tighten opening.
+    - Add common causes table.
+    - Verify internal links resolve to published pages.
