@@ -1,0 +1,20 @@
+presentationAudit:
+  contentId: payment-processor-bookkeeping-checklist
+  checkedAt: 2026-06-05T00:00:00-07:00
+  checkedBy: content-presentation-layer
+  status: pass
+  contentPath: content/resources/payment-processor-bookkeeping-checklist.md
+  checksPassed:
+    - shared_content_renderer_used
+    - no_bespoke_page_chrome
+    - conventional_headings_present
+    - decision_tables_use_markdown_tables
+    - metadata_internal_links_present
+    - artifact_id_resolves
+    - no_placeholder_links
+    - no_unpublished_internal_links
+    - no_hero_image_needed
+  checksFailed: []
+  notes:
+    - Page relies on the existing resources route and content renderer.
+    - Artifact is referenced through metadata and validates as YAML.

@@ -1,0 +1,17 @@
+qualityReport:
+  contentId: payment-processor-bookkeeping-checklist
+  pass: 1
+  status: revise
+  scores:
+    readerUsefulness: 4
+    specificity: 4
+    kansoDifferentiation: 4
+    proofBoundary: 5
+    publishReadiness: 4
+  biggestWeaknesses:
+    - Needed to separate processor source collection from accountant judgment.
+    - Needed more concrete statuses for payout review.
+  revisionsPlanned:
+    - Add payout review table.
+    - Add status labels.
+    - Add explicit no-sales-tax/no-treatment boundary.

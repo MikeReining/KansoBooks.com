@@ -212,3 +212,214 @@ topics:
     publishEase: 3
     contentPath: content/comparisons/quickbooks-alternative-accountant-ready-books.md
     runDirectory: docs/content-runs/2026-06-04-quickbooks-alternative-accountant-ready-books
+  - id: payment-processor-bookkeeping-checklist
+    status: published
+    priority: 7
+    title: Payment Processor Bookkeeping Checklist
+    canonicalPath: /resources/payment-processor-bookkeeping-checklist
+    canonicalJob: understand-books-readiness
+    pillar: small-business-bookkeeping-basics
+    primaryQuery: payment processor bookkeeping checklist
+    readerFear: Do my deposits match my sales and fees?
+    searchIntent: Review processor payouts, fees, refunds, duplicates, transfers, and evidence before monthly close.
+    distinctAngle: Processor-specific payout review, not a generic monthly close checklist.
+    targetAction: Run a processor payout review checklist.
+    artifactId: payment-processor-review-checklist
+    readerPain: 5
+    searchSpecificity: 5
+    kansoDifferentiation: 4
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 5
+    contentPath: content/resources/payment-processor-bookkeeping-checklist.md
+    runDirectory: docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist
+  - id: small-business-books-not-reconciled
+    status: candidate
+    priority: 8
+    title: Small Business Books Not Reconciled
+    canonicalPath: /resources/small-business-books-not-reconciled
+    canonicalJob: understand-books-readiness
+    pillar: small-business-bookkeeping-basics
+    primaryQuery: what if my books are not reconciled
+    readerFear: Am I in trouble if reconciliation is off?
+    searchIntent: Understand what unreconciled books mean before relying on reports.
+    distinctAngle: Reconciliation status explanation, not a full correctness checklist.
+    targetAction: Use a reconciliation status table.
+    artifactId: reconciliation-status-table
+    readerPain: 5
+    searchSpecificity: 4
+    kansoDifferentiation: 4
+    artifactPotential: 4
+    duplicateRisk: 2
+    publishEase: 5
+  - id: what-is-an-accountant-package
+    status: candidate
+    priority: 9
+    title: What Is An Accountant Package
+    canonicalPath: /resources/what-is-an-accountant-package
+    canonicalJob: prepare-books-for-accountant
+    pillar: accountant-ready-books
+    primaryQuery: what is an accountant package bookkeeping
+    readerFear: What exactly should I send?
+    searchIntent: Learn the anatomy of a bookkeeping package for accountant review.
+    distinctAngle: Package anatomy definition, not a complete handoff guide.
+    targetAction: Use a package anatomy table.
+    artifactId: accountant-package-anatomy-table
+    readerPain: 4
+    searchSpecificity: 4
+    kansoDifferentiation: 4
+    artifactPotential: 4
+    duplicateRisk: 2
+    publishEase: 5
+  - id: bookkeeping-review-checklist-non-accountants
+    status: candidate
+    priority: 10
+    title: Bookkeeping Review Checklist For Non-Accountants
+    canonicalPath: /resources/bookkeeping-review-checklist-non-accountants
+    canonicalJob: understand-books-readiness
+    pillar: small-business-bookkeeping-basics
+    primaryQuery: bookkeeping review checklist for non accountants
+    readerFear: Can I do this myself?
+    searchIntent: Find owner-safe review steps before sending books forward.
+    distinctAngle: Non-accountant owner review scope, not correctness proof in full.
+    targetAction: Run an owner review checklist.
+    artifactId: non-accountant-review-checklist
+    readerPain: 5
+    searchSpecificity: 5
+    kansoDifferentiation: 4
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 4
+  - id: local-bookkeeping-software-small-business
+    status: candidate
+    priority: 11
+    title: Local Bookkeeping Software For Small Business
+    canonicalPath: /comparisons/local-bookkeeping-software-small-business
+    canonicalJob: choose-bookkeeping-system
+    pillar: alternatives-and-buying-decisions
+    primaryQuery: local bookkeeping software for small business
+    readerFear: Do I need cloud accounting?
+    searchIntent: Compare local-first bookkeeping workflows with cloud-first tools.
+    distinctAngle: Category explainer, not a named competitor comparison.
+    targetAction: Use a local-versus-cloud choice matrix.
+    artifactId: local-bookkeeping-choice-matrix
+    readerPain: 4
+    searchSpecificity: 4
+    kansoDifferentiation: 5
+    artifactPotential: 4
+    duplicateRisk: 2
+    publishEase: 4
+  - id: missing-receipts-bookkeeping-checklist
+    status: candidate
+    priority: 12
+    title: Missing Receipts Bookkeeping Checklist
+    canonicalPath: /resources/missing-receipts-bookkeeping-checklist
+    canonicalJob: understand-books-readiness
+    pillar: small-business-bookkeeping-basics
+    primaryQuery: missing receipts bookkeeping checklist
+    readerFear: Are missing receipts going to break my books?
+    searchIntent: Organize missing receipt notes before accountant review.
+    distinctAngle: Missing evidence workflow, not tax deductibility.
+    targetAction: Create a missing evidence list.
+    artifactId: missing-receipts-review-checklist
+    readerPain: 5
+    searchSpecificity: 5
+    kansoDifferentiation: 4
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 4
+  - id: reconcile-bank-statements-before-accountant
+    status: candidate
+    priority: 13
+    title: Reconcile Bank Statements Before Sending Books To Accountant
+    canonicalPath: /resources/reconcile-bank-statements-before-accountant
+    canonicalJob: prepare-books-for-accountant
+    pillar: accountant-ready-books
+    primaryQuery: reconcile bank statements before accountant
+    readerFear: Will my accountant find balance problems?
+    searchIntent: Learn what reconciliation status to package before handoff.
+    distinctAngle: Bank-statement reconciliation handoff, not general readiness.
+    targetAction: Build a reconciliation handoff note.
+    artifactId: reconciliation-handoff-note
+    readerPain: 5
+    searchSpecificity: 4
+    kansoDifferentiation: 4
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 4
+  - id: bookkeeping-exception-list-template
+    status: candidate
+    priority: 14
+    title: Bookkeeping Exception List Template
+    canonicalPath: /templates/bookkeeping-exception-list-template
+    canonicalJob: use-handoff-template
+    pillar: templates-tools-artifacts
+    primaryQuery: bookkeeping exception list template
+    readerFear: How do I show what still needs review?
+    searchIntent: Find a template for unresolved bookkeeping items.
+    distinctAngle: Exception list artifact, not full accountant package.
+    targetAction: Fill out an exception list.
+    artifactId: bookkeeping-exception-list-template
+    readerPain: 5
+    searchSpecificity: 5
+    kansoDifferentiation: 5
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 3
+  - id: bookkeeping-cleanup-for-consultants
+    status: candidate
+    priority: 15
+    title: Bookkeeping Cleanup For Consultants
+    canonicalPath: /resources/bookkeeping-cleanup-for-consultants
+    canonicalJob: prepare-books-for-accountant
+    pillar: accountant-ready-books
+    primaryQuery: bookkeeping cleanup for consultants
+    readerFear: Can I clean this up without missing client income or expenses?
+    searchIntent: Triage consultant bookkeeping before accountant handoff.
+    distinctAngle: Service-business cleanup context with invoice, payment, and expense review.
+    targetAction: Use a consultant cleanup checklist.
+    artifactId: consultant-cleanup-checklist
+    readerPain: 4
+    searchSpecificity: 4
+    kansoDifferentiation: 4
+    artifactPotential: 4
+    duplicateRisk: 2
+    publishEase: 4
+  - id: ecommerce-bookkeeping-cleanup-checklist
+    status: candidate
+    priority: 16
+    title: Ecommerce Bookkeeping Cleanup Checklist
+    canonicalPath: /resources/ecommerce-bookkeeping-cleanup-checklist
+    canonicalJob: prepare-books-for-accountant
+    pillar: accountant-ready-books
+    primaryQuery: ecommerce bookkeeping cleanup checklist
+    readerFear: Are my sales, fees, refunds, and payouts wrong?
+    searchIntent: Triage ecommerce sales channels and processor records before handoff.
+    distinctAngle: Ecommerce cleanup context without tax or inventory treatment advice.
+    targetAction: Use an ecommerce cleanup checklist.
+    artifactId: ecommerce-cleanup-checklist
+    readerPain: 5
+    searchSpecificity: 5
+    kansoDifferentiation: 4
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 3
+  - id: bookkeeping-open-questions-for-accountant
+    status: candidate
+    priority: 17
+    title: Bookkeeping Open Questions For Accountant
+    canonicalPath: /resources/bookkeeping-open-questions-for-accountant
+    canonicalJob: prepare-books-for-accountant
+    pillar: accountant-ready-books
+    primaryQuery: bookkeeping questions to ask accountant
+    readerFear: What should I ask instead of saying please review everything?
+    searchIntent: Turn unresolved bookkeeping items into useful accountant questions.
+    distinctAngle: Question-writing guide, not package checklist.
+    targetAction: Write specific accountant questions.
+    artifactId: accountant-question-list-template
+    readerPain: 5
+    searchSpecificity: 4
+    kansoDifferentiation: 5
+    artifactPotential: 5
+    duplicateRisk: 2
+    publishEase: 4

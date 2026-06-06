@@ -1,0 +1,22 @@
+topicScore:
+  contentId: payment-processor-bookkeeping-checklist
+  scoredAt: 2026-06-05T00:00:00-07:00
+  source: content/_data/topic-inventory.yml
+  statusBeforeRun: candidate
+  primaryQuery: payment processor bookkeeping checklist
+  canonicalJob: understand-books-readiness
+  readerPain: 5
+  searchSpecificity: 5
+  kansoDifferentiation: 4
+  artifactPotential: 5
+  duplicateRisk: 2
+  publishEase: 5
+  totalScore: 24
+  selectionReason: Highest-quality new candidate after queue exhaustion. Distinct from monthly close because it isolates processor payout evidence, fees, refunds, duplicate risk, and timing differences.
+  duplicateCheck:
+    existingOverlap:
+      - /resources/monthly-bookkeeping-checklist-small-business
+      - /resources/accountant-ready-books
+      - /resources/how-to-know-books-are-done
+    decision: proceed
+    reason: Existing pages cover general monthly and handoff readiness; this page owns processor-specific review work.

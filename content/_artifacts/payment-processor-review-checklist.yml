@@ -1,0 +1,57 @@
+schemaVersion: 1
+id: payment-processor-review-checklist
+title: Payment Processor Review Checklist
+artifactType: checklist
+jurisdiction: general
+risk: medium
+sourceNotes:
+  - docs/KansoBooksVision.md#trust-model
+  - docs/content-engine/CopyGuide.md
+  - content/_artifacts/monthly-close-checklist.yml
+  - content/_artifacts/accountant-package-checklist.yml
+  - content/_truth/legal-boundaries.yml
+professionalBoundary: This checklist helps organize payment processor bookkeeping review. Ask your accountant before relying on it for filing, tax treatment, payroll, sales tax, audit, legal, or entity-specific matters.
+owner: KansoBooks Editorial System
+lastReviewed: 2026-06-05
+nextReview: 2026-09-05
+content:
+  purpose: Help a small-business owner review payment processor activity before relying on reports or sending books forward.
+  useWhen:
+    - Sales, fees, refunds, deposits, or payouts flow through a processor before reaching the bank.
+    - Processor deposits do not clearly match bank deposits.
+    - The owner needs a reviewable source trail for accountant handoff.
+  doNotUseFor:
+    - Choosing tax treatment, filing positions, payroll treatment, sales tax treatment, legal conclusions, audit conclusions, or entity-specific decisions.
+    - Replacing accountant review.
+    - Treating net deposits as complete proof without processor source files.
+  checklist:
+    - name: Processor accounts are named
+      doneWhen: Every processor, marketplace, checkout, and payment account in scope is listed.
+      proof: Processor account list and period scope note.
+    - name: Source exports are saved
+      doneWhen: Each processor has a statement, payout report, transaction export, or missing-file note for the period.
+      proof: Source-file list grouped by processor and period.
+    - name: Payouts are traced
+      doneWhen: Bank deposits tie to processor payouts, batches, summaries, or explicit unresolved items.
+      proof: Payout match table and unresolved payout list.
+    - name: Fees are visible
+      doneWhen: Processor fees are separated, summarized, or named as part of the payout review.
+      proof: Fee summary, source report, or open accountant question.
+    - name: Refunds and disputes are reviewed
+      doneWhen: Refunds, chargebacks, reversals, holds, and reserves are listed or flagged.
+      proof: Refund/dispute list and source references.
+    - name: Transfers are not duplicated
+      doneWhen: Movement between processor, bank, and clearing accounts is paired or flagged.
+      proof: Transfer match notes and duplicate review list.
+    - name: Timing differences are named
+      doneWhen: Payouts crossing month-end have timing notes instead of silent mismatches.
+      proof: Period note, payout date, activity date, and open differences.
+    - name: Open questions are packaged
+      doneWhen: Unclear items have owner notes or accountant questions tied to source files.
+      proof: Processor question list and handoff notes.
+  processorReviewOutcome:
+    - Processor accounts included.
+    - Source exports collected.
+    - Payouts matched or flagged.
+    - Fees, refunds, disputes, transfers, and timing differences reviewed.
+    - Owner and accountant questions listed.

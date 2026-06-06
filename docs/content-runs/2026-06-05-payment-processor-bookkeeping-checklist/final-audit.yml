@@ -1,0 +1,40 @@
+finalAudit:
+  contentId: payment-processor-bookkeeping-checklist
+  status: publish
+  checkedAt: 2026-06-05T00:00:00-07:00
+  checkedBy: kanso-final-audit
+  contentPath: content/resources/payment-processor-bookkeeping-checklist.md
+  artifactPath: content/_artifacts/payment-processor-review-checklist.yml
+  claimManifestPath: content/_claims/payment-processor-bookkeeping-checklist.yml
+  checksPassed:
+    - metadata_complete
+    - claim_manifest_present
+    - artifact_id_present
+    - artifact_id_resolves
+    - claim_audit_pass
+    - image_audit_no_image_approved
+    - presentation_layer_applied
+    - answer_units_present
+    - entity_summary_present
+    - decision_support_present
+    - copy_guide_applied
+    - internal_links_resolve
+    - markdown_links_resolve
+    - no_placeholder_links
+    - no_tax_legal_audit_payroll_sales_tax_filing_or_entity_specific_advice
+    - no_accountant_replacement_claim
+    - no_ai_as_financial_truth_claim
+    - no_cloud_books_claim
+    - no_current_platform_or_pricing_claims
+  checksFailed: []
+  publishAllowed: true
+  founderApproval:
+    approvedAt: 2026-06-05T00:00:00-07:00
+    approvedBy: founder
+    instruction: Please use the content engine to write another article and publish it, just like we did yesterday.
+  requiredFixes: []
+  escalation:
+    needed: false
+    reason: ""
+    narrowDecisionNeeded: ""
+  handoffTo: kanso-publish

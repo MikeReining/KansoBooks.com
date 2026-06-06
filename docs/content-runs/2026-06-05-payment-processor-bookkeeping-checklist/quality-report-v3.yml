@@ -1,0 +1,17 @@
+qualityReport:
+  contentId: payment-processor-bookkeeping-checklist
+  pass: 3
+  status: pass
+  scores:
+    readerUsefulness: 5
+    specificity: 5
+    kansoDifferentiation: 5
+    proofBoundary: 5
+    publishReadiness: 5
+  memorableLine: If you cannot trace processor deposits back to a source export, the issue is not just categorization. The issue is evidence.
+  finalRecommendation: publish
+  finalNotes:
+    - Article has a specific owner action.
+    - The artifact is usable as a checklist.
+    - Claims are source-backed by internal workflow artifacts and truth files.
+    - Professional boundary is visible and repeated where needed.

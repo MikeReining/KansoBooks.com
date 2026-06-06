@@ -1,0 +1,19 @@
+qualityReport:
+  contentId: payment-processor-bookkeeping-checklist
+  pass: 2
+  status: revise
+  scores:
+    readerUsefulness: 5
+    specificity: 5
+    kansoDifferentiation: 4
+    proofBoundary: 5
+    publishReadiness: 4
+  beforeAfter:
+    - before: Generic processor cleanup advice.
+      after: Concrete checklist rows for source exports, payout trace, fees, refunds, duplicate risk, timing, and open questions.
+    - before: Review status was implied.
+      after: Added matched, partial match, duplicate risk, missing source, needs owner, and needs accountant statuses.
+  revisionsPlanned:
+    - Tighten opening.
+    - Add a 10-minute check.
+    - Verify all internal links resolve to published pages.

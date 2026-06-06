@@ -1,0 +1,34 @@
+researchPacket:
+  contentId: payment-processor-bookkeeping-checklist
+  sourcePlan: internal-canonical
+  externalSources: []
+  internalSources:
+    - docs/KansoBooksVision.md
+    - docs/KansoBooksManifesto.md
+    - docs/content-engine/CopyGuide.md
+    - content/_truth/product.yml
+    - content/_truth/legal-boundaries.yml
+    - content/_data/canonical-jobs.yml
+    - content/_artifacts/monthly-close-checklist.yml
+    - content/_artifacts/accountant-package-checklist.yml
+    - content/_artifacts/correctness-checklist.yml
+  sourceNotes:
+    - Use monthly close artifact for source files, transactions, transfers, duplicates, statement totals, and open questions.
+    - Use accountant package artifact for evidence trail and handoff packet framing.
+    - Treat processor activity as general workflow organization; do not make platform-specific or treatment-specific claims.
+  freshness:
+    currentEventsNeeded: false
+    pricingOrCompetitorClaims: false
+    legalOrTaxRuleClaims: false
+    notes: No current processor pricing, product behavior, platform rule, tax rule, legal deadline, or competitor claim is made.
+  riskBoundaries:
+    tax: Route tax treatment and filing questions to accountant judgment.
+    legal: Do not provide legal conclusions.
+    audit: Do not provide audit conclusions or audit-ready guarantees.
+    salesTax: Do not provide sales tax advice or marketplace-tax treatment.
+    accounting: Provide general workflow review, not entity-specific accounting treatment.
+  writerWarnings:
+    - Do not say net deposits should be booked in a specific way.
+    - Do not name processor-specific feature behavior.
+    - Do not suggest KansoBooks replaces accountants.
+    - Do not treat AI output as proof.

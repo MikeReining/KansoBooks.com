@@ -1,0 +1,27 @@
+draftRecord:
+  contentId: payment-processor-bookkeeping-checklist
+  draftedAt: 2026-06-05T00:00:00-07:00
+  draftPath: content/resources/payment-processor-bookkeeping-checklist.md
+  claimManifestPath: content/_claims/payment-processor-bookkeeping-checklist.yml
+  artifactPath: content/_artifacts/payment-processor-review-checklist.yml
+  status: published-after-audit
+  passes:
+    - article-draft
+    - headline-metadata
+    - seo-aieo
+    - tone-pass
+    - content-review
+    - claim-audit
+    - final-audit
+    - publish
+  answerUnits:
+    AnswerBlock: opening defines when processor bookkeeping is ready to review.
+    KansoTake: processor cleanup is framed as a proof problem with AI draft and owner approval boundary.
+    DecisionSupport: checklist table, payout review table, statuses, and 10-minute check.
+    ProofBoundary: What You Can Prove section.
+    SourceNotes: Source Notes section.
+    NextStep: live internal links to monthly checklist and accountant-ready guide.
+    EntitySummary: final entity summary.
+  notes:
+    - No image generated; tables and checklist are the useful surface.
+    - No platform-specific or tax-rule claims included.

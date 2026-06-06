@@ -1,0 +1,38 @@
+claimAudit:
+  contentId: payment-processor-bookkeeping-checklist
+  status: pass
+  checkedAt: 2026-06-05T00:00:00-07:00
+  checkedBy: kanso-claim-audit
+  claimsChecked:
+    - id: claim-payment-processor-workflow
+      source: content/_artifacts/monthly-close-checklist.yml
+      result: supported
+    - id: claim-accountant-package
+      source: content/_artifacts/accountant-package-checklist.yml
+      result: supported
+    - id: claim-ai-proof-approval
+      source: content/_truth/product.yml
+      result: supported
+    - id: claim-local-first
+      source: content/_truth/product.yml
+      result: supported
+    - id: claim-professional-boundary
+      source: content/_truth/legal-boundaries.yml
+      result: supported
+    - id: claim-canonical-job
+      source: content/_data/canonical-jobs.yml
+      result: supported
+  claimsFailed: []
+  boundaryChecks:
+    noPlatformSpecificClaims: pass
+    noTaxLegalAuditAdvice: pass
+    noPayrollSalesTaxFilingAdvice: pass
+    noAccountantReplacement: pass
+    noAiAsFinancialTruth: pass
+    noCloudBooksImplication: pass
+  requiredEdits: []
+  escalation:
+    needed: false
+    reason: ""
+    narrowDecisionNeeded: ""
+  handoffTo: kanso-final-audit

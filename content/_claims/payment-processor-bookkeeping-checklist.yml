@@ -1,0 +1,40 @@
+schemaVersion: 1
+pageId: payment-processor-bookkeeping-checklist
+risk: medium
+claims:
+  - id: claim-payment-processor-workflow
+    text: Payment processor bookkeeping review should make source exports, payout trails, fees, refunds, duplicate risk, timing differences, and open questions visible before reports are relied on.
+    type: accounting-workflow
+    source: content/_artifacts/monthly-close-checklist.yml
+    refresh: stable
+    notes: Supported by existing monthly close checklist requirements for source files, transactions, transfers, duplicates, balances, and open questions.
+  - id: claim-accountant-package
+    text: A useful accountant handoff package separates verified records, evidence, open questions, and review notes.
+    type: accounting-workflow
+    source: content/_artifacts/accountant-package-checklist.yml
+    refresh: stable
+    notes: Supports the processor handoff packet framing.
+  - id: claim-ai-proof-approval
+    text: AI prepares bookkeeping work, Kanso validates it, and the user approves what becomes true.
+    type: positioning
+    source: content/_truth/product.yml
+    refresh: stable
+    notes: Supports the AI draft and proof boundary.
+  - id: claim-local-first
+    text: KansoBooks is local-first and the user's books live in files they own.
+    type: product
+    source: content/_truth/product.yml
+    refresh: on-release
+    notes: Supports the KansoBooks entity summary.
+  - id: claim-professional-boundary
+    text: KansoBooks content must not provide tax, legal, audit, payroll, sales tax, filing, or entity-specific advice.
+    type: positioning
+    source: content/_truth/legal-boundaries.yml
+    refresh: stable
+    notes: Required professional boundary for this medium-risk workflow.
+  - id: claim-canonical-job
+    text: The understand-books-readiness canonical job distinguishes categorized transactions from finished books with reconciliation, evidence, review items, and accountant handoff outputs.
+    type: positioning
+    source: content/_data/canonical-jobs.yml
+    refresh: stable
+    notes: Defines the decision context for the article.

@@ -1,0 +1,19 @@
+status: no-image
+imageType: none
+assetPath: ""
+ogPath: ""
+styleGuide: docs/content-engine/ContentImageStyleGuide.md
+checks:
+  improvesComprehension: true
+  notDecorativeFiller: true
+  noPrivateData: true
+  noRealBrands: true
+  noCloudImplication: true
+  noFakeDashboard: true
+  cropSafe: true
+  seoFilename: true
+  altText: true
+notes:
+  - The article is stronger as a processor review checklist and payout table.
+  - A generated image would risk fake processor data, fake dashboards, or generic accounting stock.
+  - No image is required for validation because no heroImage metadata is set.

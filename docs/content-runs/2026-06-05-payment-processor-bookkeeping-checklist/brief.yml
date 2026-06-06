@@ -1,0 +1,37 @@
+brief:
+  contentId: payment-processor-bookkeeping-checklist
+  title: Payment Processor Bookkeeping Checklist
+  contentType: resource
+  targetPath: content/resources/payment-processor-bookkeeping-checklist.md
+  targetReader: Small-business owner whose processor deposits, fees, refunds, and payouts are hard to reconcile before monthly close or accountant handoff.
+  readerFear: Do my deposits match my sales and fees?
+  primaryOperatingQuestion: Can I prove it?
+  primaryQuery: payment processor bookkeeping checklist
+  secondaryQueries:
+    - payment processor bookkeeping
+    - reconcile payment processor deposits
+    - payment processor fees bookkeeping
+    - bookkeeping checklist for processor payouts
+  canonicalJob: understand-books-readiness
+  angle: Processor-specific source trail and payout review, not a generic monthly bookkeeping checklist.
+  artifact:
+    id: payment-processor-review-checklist
+    path: content/_artifacts/payment-processor-review-checklist.yml
+    type: checklist
+  mustInclude:
+    - direct answer in opening
+    - processor checklist table
+    - payout review table
+    - review statuses
+    - 10-minute processor check
+    - proof boundary
+    - source notes
+    - next step with live internal links only
+  mustAvoid:
+    - tax advice
+    - sales tax advice
+    - platform-specific current claims
+    - payroll, filing, legal, audit, or entity-specific recommendations
+    - accountant replacement claim
+    - implying AI makes records true
+    - implying KansoBooks stores books in the cloud

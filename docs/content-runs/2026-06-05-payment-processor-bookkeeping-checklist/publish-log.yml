@@ -1,0 +1,48 @@
+publishLog:
+  contentId: payment-processor-bookkeeping-checklist
+  runId: 2026-06-05-payment-processor-bookkeeping-checklist
+  attemptedAt: 2026-06-05T00:00:00-07:00
+  action: published
+  publishAttempted: true
+  publishAllowed: true
+  reason: User explicitly authorized writing and publishing another article.
+  from: final-audit
+  to: published
+  agent: kanso-publish
+  url: /resources/payment-processor-bookkeeping-checklist
+  contentPath: content/resources/payment-processor-bookkeeping-checklist.md
+  artifactPath: content/_artifacts/payment-processor-review-checklist.yml
+  claimManifest: content/_claims/payment-processor-bookkeeping-checklist.yml
+  runArtifacts:
+    - docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist/topic-score.yml
+    - docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist/brief.yml
+    - docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist/research-packet.yml
+    - docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist/draft-record.yml
+    - docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist/quality-report-v1.yml
+    - docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist/quality-report-v2.yml
+    - docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist/quality-report-v3.yml
+    - docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist/image-audit.yml
+    - docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist/presentation-audit.yml
+    - docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist/claim-audit.yml
+    - docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist/final-audit.yml
+    - docs/content-runs/2026-06-05-payment-processor-bookkeeping-checklist/publish-log.yml
+  notes:
+    - No commit performed.
+    - No push performed.
+    - No PR created.
+    - No deploy performed.
+    - State changed to published in content frontmatter.
+    - Generated sitemap and resource index include this article after build.
+  checksPassed:
+    - user_publish_authorization
+    - final_audit_publish_allowed
+    - state_set_to_published_after_audit
+    - content_validation_passed
+    - typecheck_passed
+    - lint_passed
+    - build_passed
+    - autopublish_path_guard_passed
+    - production_preview_route_200
+    - sitemap_includes_article
+    - resources_index_includes_article
+  checksFailed: []
